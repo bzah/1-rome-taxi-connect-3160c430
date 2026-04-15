@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap-style.xsl"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<sitemap>
+		<loc>https://taxifiumicino.com/sitemap-pages.xml</loc>
+		<lastmod>2026-04-15T00:00:00+00:00</lastmod>
+	</sitemap>
+	<sitemap>
+		<loc>https://taxifiumicino.com/sitemap-en.xml</loc>
+		<lastmod>2026-04-15T00:00:00+00:00</lastmod>
+	</sitemap>
+	<sitemap>
+		<loc>https://taxifiumicino.com/sitemap-es.xml</loc>
+		<lastmod>2026-04-15T00:00:00+00:00</lastmod>
+	</sitemap>
+	<sitemap>
+		<loc>https://taxifiumicino.com/sitemap-fr.xml</loc>
+		<lastmod>2026-04-15T00:00:00+00:00</lastmod>
+	</sitemap>
+	<sitemap>
+		<loc>https://taxifiumicino.com/sitemap-ru.xml</loc>
+		<lastmod>2026-04-15T00:00:00+00:00</lastmod>
+	</sitemap>
+</sitemapindex>
