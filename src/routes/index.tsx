@@ -52,39 +52,6 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <>
-      <SEO
-        title="Taxi Roma Fiumicino — Aeroporto Roma Fiumicino Transfer e Tariffe 2026"
-        description="Taxi e transfer dall'aeroporto Roma Fiumicino: tariffa fissa €50, numeri radio taxi, prenotazioni online. Guida completa 2026 per turisti e residenti."
-        ogTitle="Taxi Roma — Guida Completa ai Taxi a Roma e Fiumicino"
-        ogDescription="Tariffe, numeri, prenotazioni taxi Roma. Trasferimenti aeroporto Fiumicino. La guida più completa."
-        keywords="taxi roma, aeroporto roma fiumicino, taxi roma fiumicino, aeroporto fiumicino, numero taxi roma, tariffe taxi roma, transfer aeroporto fiumicino, radio taxi roma"
-        canonical="https://taxifiumicino.com"
-        jsonLd={[
-          {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "TaxiFiumicino.com — Guida Taxi Roma",
-            "description": "Guida completa ai taxi a Roma: tariffe ufficiali, numeri radio taxi, trasferimenti aeroporto Fiumicino e prenotazioni online.",
-            "url": "https://taxifiumicino.com",
-            "areaServed": { "@type": "City", "name": "Roma", "sameAs": "https://it.wikipedia.org/wiki/Roma" },
-            "address": { "@type": "PostalAddress", "addressLocality": "Roma", "addressRegion": "Lazio", "addressCountry": "IT" },
-            "geo": { "@type": "GeoCoordinates", "latitude": 41.9028, "longitude": 12.4964 },
-            "priceRange": "€€",
-            "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" }
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              { "@type": "Question", "name": "Come prenotare un taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "Puoi prenotare un taxi a Roma chiamando una radio taxi (06.3570, 06.4994, 06.6645), usando un'app come itTaxi o Free Now, oppure prenotando un transfer privato online." } },
-              { "@type": "Question", "name": "Quanto costa un taxi da Fiumicino a Roma centro?", "acceptedAnswer": { "@type": "Answer", "text": "La tariffa fissa per un taxi da Fiumicino al centro di Roma (dentro le Mura Aureliane) è di €50." } },
-              { "@type": "Question", "name": "Qual è il numero di telefono per chiamare un taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "I principali numeri sono: Radio Taxi 3570 (06.3570), Samarcanda (06.5551), La Capitale (06.4994), Roma Taxi (06.6645)." } },
-              { "@type": "Question", "name": "Come chiamare un taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "Per telefono tramite radio taxi, con l'app itTaxi o Free Now, da una postazione taxi ufficiale, o fermandone uno per strada." } },
-              { "@type": "Question", "name": "Quanto costa un taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "La tariffa base è €3 di giorno (€6.50 di notte/festivi). Fiumicino: tariffa fissa €50, Ciampino: €31." } }
-            ]
-          }
-        ]}
-      />
       <HeroSection
         title="Taxi Roma"
         subtitle="La Guida Completa"
