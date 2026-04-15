@@ -160,7 +160,7 @@ export function Header() {
 
       {/* Mobile nav - fullscreen overlay */}
       {menuOpen && (
-        <nav className="fixed inset-0 top-[49px] bg-background z-40 overflow-y-auto lg:hidden">
+        <div className="fixed inset-x-0 top-[49px] bottom-0 bg-background overflow-y-auto lg:hidden">
           <div className="px-4 py-4 space-y-1">
             {navLinks.map((link) => (
               <Link
