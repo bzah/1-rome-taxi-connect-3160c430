@@ -335,34 +335,32 @@ function ParcheggioFiumicinoPage() {
               <ActivityCard
                 title="Transfer Privato Fiumicino → Roma"
                 description="Autista privato con auto di lusso, servizio porta a porta dall'aeroporto al tuo hotel a Roma."
-                price="Da €45"
-                url="https://www.getyourguide.com/rome-l33/private-transfer-fiumicino-airport-to-rome-t189750/?partner_id=0IQTGX8&utm_medium=online_publisher"
-                rating={4.7}
-                reviews={3200}
+                price="€45"
+                emoji="🚗"
+                gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-fiumicino-airport-to-rome-t189750/"
               />
               <ActivityCard
                 title="Shuttle Condiviso Fiumicino"
                 description="Shuttle condiviso economico dall'aeroporto di Fiumicino al centro di Roma. Servizio con orari flessibili."
-                price="Da €12"
-                url="https://www.getyourguide.com/rome-l33/shuttle-fiumicino-airport-to-rome-t67890/?partner_id=0IQTGX8&utm_medium=online_publisher"
-                rating={4.3}
-                reviews={1800}
+                price="€12"
+                emoji="🚌"
+                gygUrl="https://www.getyourguide.com/rome-l33/shuttle-fiumicino-airport-to-rome-t67890/"
               />
               <ActivityCard
                 title="Transfer Privato Roma → Fiumicino"
                 description="Servizio transfer dal tuo hotel a Roma direttamente all'aeroporto di Fiumicino. Puntuale e affidabile."
-                price="Da €45"
-                url="https://www.getyourguide.com/rome-l33/private-transfer-rome-to-fiumicino-airport-t234567/?partner_id=0IQTGX8&utm_medium=online_publisher"
-                rating={4.8}
-                reviews={2100}
+                price="€45"
+                emoji="✈️"
+                gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-rome-to-fiumicino-airport-t234567/"
               />
             </div>
 
-            <GetYourGuideCTA
-              title="Scopri tutti i transfer per Fiumicino"
-              description="Confronta prezzi e prenota il tuo transfer privato o condiviso dall'aeroporto di Roma Fiumicino."
-              url="https://www.getyourguide.com/rome-l33/?q=fiumicino+transfer&partner_id=0IQTGX8&utm_medium=online_publisher"
-            />
+            <div className="mt-8">
+              <GetYourGuideCTA
+                text="Scopri tutti i transfer per Fiumicino"
+                url="https://www.getyourguide.com/rome-l33/?q=fiumicino+transfer&partner_id=0IQTGX8&utm_medium=online_publisher"
+              />
+            </div>
           </div>
         </section>
 
