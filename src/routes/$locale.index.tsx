@@ -98,10 +98,10 @@ function LocaleIndex() {
         <p className="text-center text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base">{p.transfersSubtitle}</p>
         <div className="grid gap-3 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {p.activities.map((a: any, i: number) => (
-            <ActivityCard key={i} emoji={a.emoji} title={a.title} description={a.description} gygUrl={GYG_ACTIVITIES[i] || GYG_TRANSFER} price={a.price} />
+            <ActivityCard key={i} emoji={a.emoji} title={a.title} description={a.description} gygUrl={GYG_ACTIVITIES[i] || GYG_TRANSFER} price={a.price} pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
           ))}
         </div>
-        <div className="mt-8 sm:mt-12 text-center"><GetYourGuideCTA /></div>
+        <div className="mt-8 sm:mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
       </section>
 
       <section className="section-warm py-12 sm:py-20">
