@@ -20,38 +20,12 @@ export const Route = createFileRoute("/aeroporto-fiumicino-roma-termini")({
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Come andare dall'aeroporto di Fiumicino a Roma Termini?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Puoi raggiungere Roma Termini dall'aeroporto di Fiumicino con il Leonardo Express (treno diretto, 32 min, €14), taxi a tariffa fissa (€50, 30-50 min), bus navetta (€5-7, 50-75 min) o transfer privato (da €45)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quanto costa il Leonardo Express da Fiumicino a Termini?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Il biglietto del Leonardo Express costa €14 a tratta. Si può acquistare online, in biglietteria, o alle macchinette automatiche in aeroporto."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Ogni quanto parte il treno da Fiumicino a Roma Termini?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Il Leonardo Express parte ogni 15 minuti dall'aeroporto di Fiumicino verso Roma Termini, dalle 6:23 alle 23:23."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quanto costa un taxi da Fiumicino a Roma Termini?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "La tariffa fissa del taxi da Fiumicino a Roma Termini è di €50, essendo Termini all'interno delle Mura Aureliane. Valida per max 4 passeggeri con bagagli."
-              }
-            }
+            { "@type": "Question", "name": "Come andare dall'aeroporto di Fiumicino a Roma Termini?", "acceptedAnswer": { "@type": "Answer", "text": "Puoi raggiungere Roma Termini dall'aeroporto di Fiumicino con il Leonardo Express (treno diretto, 32 min, €14), taxi a tariffa fissa (€50, 30-50 min), bus navetta (€5-7, 50-75 min) o transfer privato (da €45)." } },
+            { "@type": "Question", "name": "Quanto costa il Leonardo Express da Fiumicino a Termini?", "acceptedAnswer": { "@type": "Answer", "text": "Il biglietto del Leonardo Express costa €14 a tratta. Si acquista online, in biglietteria o alle macchinette in aeroporto. Non serve prenotazione." } },
+            { "@type": "Question", "name": "Ogni quanto parte il treno da Fiumicino a Roma Termini?", "acceptedAnswer": { "@type": "Answer", "text": "Il Leonardo Express parte ogni 15 minuti dall'aeroporto di Fiumicino verso Roma Termini, dalle 6:23 alle 23:23." } },
+            { "@type": "Question", "name": "Quanto costa un taxi da Fiumicino a Roma Termini?", "acceptedAnswer": { "@type": "Answer", "text": "La tariffa fissa del taxi da Fiumicino a Roma Termini è di €50, essendo Termini dentro le Mura Aureliane. Valida per max 4 passeggeri con bagagli." } },
+            { "@type": "Question", "name": "Qual è il modo più economico per arrivare a Termini da Fiumicino?", "acceptedAnswer": { "@type": "Answer", "text": "Il bus navetta (Terravision, SIT) a €5-7 è il più economico. In 4 persone il taxi (€12.50 a testa) costa meno del Leonardo Express (€14 a testa)." } },
+            { "@type": "Question", "name": "Posso prendere il treno da Fiumicino a Termini di notte?", "acceptedAnswer": { "@type": "Answer", "text": "No, l'ultimo Leonardo Express parte alle 23:23. Di notte le opzioni sono taxi (€50, 24/7) o transfer privato prenotato." } }
           ]
         }),
       },
