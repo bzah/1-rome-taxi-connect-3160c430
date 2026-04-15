@@ -65,6 +65,9 @@ export function Header() {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setInfoOpen(false);
       }
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
