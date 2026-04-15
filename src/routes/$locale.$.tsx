@@ -7,7 +7,7 @@ import { sendContactEmail } from "@/utils/contact.functions";
 import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
 import taxiRomaImg from "@/assets/taxi-roma.jpg";
 
-const fullyTranslatedPages = ["fiumicino", "tariffe", "taxi-ciampino", "prenota", "about", "contact"];
+const fullyTranslatedPages = ["fiumicino", "tariffe", "taxi-ciampino", "prenota", "about", "contact", "numeri", "app-taxi-roma", "hotel-roma", "parcheggio-fiumicino"];
 
 export const Route = createFileRoute("/$locale/$")({
   head: ({ params }) => {
