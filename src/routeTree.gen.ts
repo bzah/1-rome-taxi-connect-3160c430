@@ -30,7 +30,10 @@ import { Route as AeroportoFiumicinoRomaTerminiRouteImport } from './routes/aero
 import { Route as AeroportoFiumicinoRomaCentroRouteImport } from './routes/aeroporto-fiumicino-roma-centro'
 import { Route as AeroportiDiRomaRouteImport } from './routes/aeroporti-di-roma'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as LocaleRouteImport } from './routes/$locale'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LocaleIndexRouteImport } from './routes/$locale.index'
+import { Route as LocaleSplatRouteImport } from './routes/$locale.$'
 
 const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
   id: '/terms-of-service',
@@ -139,14 +142,30 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LocaleRoute = LocaleRouteImport.update({
+  id: '/$locale',
+  path: '/$locale',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LocaleIndexRoute = LocaleIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LocaleRoute,
+} as any)
+const LocaleSplatRoute = LocaleSplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => LocaleRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$locale': typeof LocaleRouteWithChildren
   '/about': typeof AboutRoute
   '/aeroporti-di-roma': typeof AeroportiDiRomaRoute
   '/aeroporto-fiumicino-roma-centro': typeof AeroportoFiumicinoRomaCentroRoute
@@ -168,6 +187,8 @@ export interface FileRoutesByFullPath {
   '/tariffe': typeof TariffeRoute
   '/taxi-ciampino': typeof TaxiCiampinoRoute
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/$locale/$': typeof LocaleSplatRoute
+  '/$locale/': typeof LocaleIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -192,10 +213,13 @@ export interface FileRoutesByTo {
   '/tariffe': typeof TariffeRoute
   '/taxi-ciampino': typeof TaxiCiampinoRoute
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/$locale/$': typeof LocaleSplatRoute
+  '/$locale': typeof LocaleIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$locale': typeof LocaleRouteWithChildren
   '/about': typeof AboutRoute
   '/aeroporti-di-roma': typeof AeroportiDiRomaRoute
   '/aeroporto-fiumicino-roma-centro': typeof AeroportoFiumicinoRomaCentroRoute
@@ -217,11 +241,14 @@ export interface FileRoutesById {
   '/tariffe': typeof TariffeRoute
   '/taxi-ciampino': typeof TaxiCiampinoRoute
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/$locale/$': typeof LocaleSplatRoute
+  '/$locale/': typeof LocaleIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/$locale'
     | '/about'
     | '/aeroporti-di-roma'
     | '/aeroporto-fiumicino-roma-centro'
@@ -243,6 +270,8 @@ export interface FileRouteTypes {
     | '/tariffe'
     | '/taxi-ciampino'
     | '/terms-of-service'
+    | '/$locale/$'
+    | '/$locale/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -267,9 +296,12 @@ export interface FileRouteTypes {
     | '/tariffe'
     | '/taxi-ciampino'
     | '/terms-of-service'
+    | '/$locale/$'
+    | '/$locale'
   id:
     | '__root__'
     | '/'
+    | '/$locale'
     | '/about'
     | '/aeroporti-di-roma'
     | '/aeroporto-fiumicino-roma-centro'
@@ -291,10 +323,13 @@ export interface FileRouteTypes {
     | '/tariffe'
     | '/taxi-ciampino'
     | '/terms-of-service'
+    | '/$locale/$'
+    | '/$locale/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LocaleRoute: typeof LocaleRouteWithChildren
   AboutRoute: typeof AboutRoute
   AeroportiDiRomaRoute: typeof AeroportiDiRomaRoute
   AeroportoFiumicinoRomaCentroRoute: typeof AeroportoFiumicinoRomaCentroRoute
@@ -467,6 +502,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$locale': {
+      id: '/$locale'
+      path: '/$locale'
+      fullPath: '/$locale'
+      preLoaderRoute: typeof LocaleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -474,11 +516,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$locale/': {
+      id: '/$locale/'
+      path: '/'
+      fullPath: '/$locale/'
+      preLoaderRoute: typeof LocaleIndexRouteImport
+      parentRoute: typeof LocaleRoute
+    }
+    '/$locale/$': {
+      id: '/$locale/$'
+      path: '/$'
+      fullPath: '/$locale/$'
+      preLoaderRoute: typeof LocaleSplatRouteImport
+      parentRoute: typeof LocaleRoute
+    }
   }
 }
 
+interface LocaleRouteChildren {
+  LocaleSplatRoute: typeof LocaleSplatRoute
+  LocaleIndexRoute: typeof LocaleIndexRoute
+}
+
+const LocaleRouteChildren: LocaleRouteChildren = {
+  LocaleSplatRoute: LocaleSplatRoute,
+  LocaleIndexRoute: LocaleIndexRoute,
+}
+
+const LocaleRouteWithChildren =
+  LocaleRoute._addFileChildren(LocaleRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LocaleRoute: LocaleRouteWithChildren,
   AboutRoute: AboutRoute,
   AeroportiDiRomaRoute: AeroportiDiRomaRoute,
   AeroportoFiumicinoRomaCentroRoute: AeroportoFiumicinoRomaCentroRoute,
