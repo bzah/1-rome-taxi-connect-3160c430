@@ -13,6 +13,24 @@ export const Route = createFileRoute("/tariffe")({
       { property: "og:description", content: "Tutti i prezzi dei taxi a Roma: tariffa base, supplementi, tariffe fisse aeroporto." },
       { name: "keywords", content: "tariffe taxi roma, taxi roma prezzo, costo taxi roma, tariffa fissa taxi roma fiumicino, roma fiumicino taxi tariffa" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Tariffe Taxi Roma 2026",
+          "description": "Tariffe ufficiali taxi Roma: tariffa base, costo al km, supplementi e tariffe fisse aeroporto.",
+          "url": "https://taxifiumicino.com/tariffe",
+          "mainEntity": {
+            "@type": "PriceSpecification",
+            "priceCurrency": "EUR",
+            "description": "Tariffa fissa taxi Fiumicino — Centro Roma",
+            "price": "50"
+          }
+        }),
+      },
+    ],
   }),
 });
 

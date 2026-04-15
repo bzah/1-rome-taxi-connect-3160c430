@@ -13,6 +13,41 @@ export const Route = createFileRoute("/fiumicino")({
       { property: "og:description", content: "Transfer taxi aeroporto Fiumicino-Roma centro a €50 tariffa fissa. Guida completa." },
       { name: "keywords", content: "taxi roma fiumicino, taxi tariffa roma fiumicino, tariffa roma fiumicino taxi, quanto costa taxi fiumicino roma, transfer aeroporto fiumicino roma" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Quanto costa un taxi da Fiumicino a Roma?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La tariffa fissa per un taxi dall'aeroporto di Fiumicino al centro di Roma (dentro le Mura Aureliane) è di €50, valida per max 4 passeggeri con bagagli inclusi."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Dove trovare i taxi a Fiumicino?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "I taxi ufficiali si trovano all'uscita degli Arrivi, ai Terminal 1 e 3. Segui i cartelli 'Taxi' e mettiti in fila alla postazione ufficiale."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quanto tempo ci vuole da Fiumicino a Roma centro?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Il tragitto dura circa 30-50 minuti a seconda del traffico. Nelle ore di punta può arrivare a 60-75 minuti."
+              }
+            }
+          ]
+        }),
+      },
+    ],
   }),
 });
 
