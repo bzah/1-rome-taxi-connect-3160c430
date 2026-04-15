@@ -239,7 +239,8 @@ export function Header() {
               </a>
             </div>
           </div>
-        </nav>
+        </div>
+      )}
       )}
     </header>
   );
