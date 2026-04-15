@@ -46,10 +46,10 @@ function ContactPage() {
           {/* Contact Form */}
           <div className="lg:col-span-3">
             {status === "success" ? (
-              <div className="rounded-xl border border-green-200 bg-green-50 p-8 text-center">
+              <div className="rounded-xl border border-border bg-accent p-8 text-center">
                 <div className="text-4xl mb-3">✅</div>
-                <h2 className="font-display text-xl font-semibold text-green-800 mb-2">Messaggio Inviato!</h2>
-                <p className="text-green-700 text-sm">Grazie per averci contattato. Ti risponderemo il prima possibile.</p>
+                <h2 className="font-display text-xl font-semibold text-foreground mb-2">Messaggio Inviato!</h2>
+                <p className="text-muted-foreground text-sm">Grazie per averci contattato. Ti risponderemo il prima possibile.</p>
                 <button
                   onClick={() => setStatus("idle")}
                   className="mt-4 inline-flex items-center gap-2 rounded-lg gold-gradient px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:shadow-md active:scale-[0.98]"
