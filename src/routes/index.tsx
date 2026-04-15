@@ -24,29 +24,11 @@ export const Route = createFileRoute("/")({
           "name": "TaxiFiumicino.com — Guida Taxi Roma",
           "description": "Guida completa ai taxi a Roma: tariffe ufficiali, numeri radio taxi, trasferimenti aeroporto Fiumicino e prenotazioni online.",
           "url": "https://taxifiumicino.com",
-          "areaServed": {
-            "@type": "City",
-            "name": "Roma",
-            "sameAs": "https://it.wikipedia.org/wiki/Roma"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Roma",
-            "addressRegion": "Lazio",
-            "addressCountry": "IT"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 41.9028,
-            "longitude": 12.4964
-          },
+          "areaServed": { "@type": "City", "name": "Roma", "sameAs": "https://it.wikipedia.org/wiki/Roma" },
+          "address": { "@type": "PostalAddress", "addressLocality": "Roma", "addressRegion": "Lazio", "addressCountry": "IT" },
+          "geo": { "@type": "GeoCoordinates", "latitude": 41.9028, "longitude": 12.4964 },
           "priceRange": "€€",
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-            "opens": "00:00",
-            "closes": "23:59"
-          }
+          "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" }
         }),
       },
       {
@@ -55,46 +37,11 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Come prenotare un taxi a Roma?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Puoi prenotare un taxi a Roma chiamando una radio taxi (06.3570, 06.4994, 06.6645), usando un'app come itTaxi o Free Now, oppure prenotando un transfer privato online."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quanto costa un taxi da Fiumicino a Roma centro?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "La tariffa fissa per un taxi da Fiumicino al centro di Roma (dentro le Mura Aureliane) è di €50. Questa tariffa è valida per un massimo di 4 passeggeri con bagagli inclusi."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Qual è il numero di telefono per chiamare un taxi a Roma?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "I principali numeri sono: Radio Taxi 3570 (06.3570), Samarcanda (06.5551), La Capitale (06.4994), Roma Taxi (06.6645). Disponibili 24 ore su 24."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Come chiamare un taxi a Roma?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Puoi chiamare un taxi a Roma: 1) Per telefono tramite radio taxi, 2) Con l'app itTaxi o Free Now, 3) Da una postazione taxi ufficiale, 4) Fermandone uno per strada se ha la luce accesa."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quanto costa un taxi a Roma?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "La tariffa base è €3 di giorno (€6.50 di notte/festivi). Il costo al km varia da €1.10 a €1.60. Una corsa media in centro costa €8-15. Fiumicino: tariffa fissa €50, Ciampino: €31."
-              }
-            }
+            { "@type": "Question", "name": "Come prenotare un taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "Puoi prenotare un taxi a Roma chiamando una radio taxi (06.3570, 06.4994, 06.6645), usando un'app come itTaxi o Free Now, oppure prenotando un transfer privato online." } },
+            { "@type": "Question", "name": "Quanto costa un taxi da Fiumicino a Roma centro?", "acceptedAnswer": { "@type": "Answer", "text": "La tariffa fissa per un taxi da Fiumicino al centro di Roma (dentro le Mura Aureliane) è di €50. Questa tariffa è valida per un massimo di 4 passeggeri con bagagli inclusi." } },
+            { "@type": "Question", "name": "Qual è il numero di telefono per chiamare un taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "I principali numeri sono: Radio Taxi 3570 (06.3570), Samarcanda (06.5551), La Capitale (06.4994), Roma Taxi (06.6645). Disponibili 24 ore su 24." } },
+            { "@type": "Question", "name": "Come chiamare un taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "Puoi chiamare un taxi a Roma: 1) Per telefono tramite radio taxi, 2) Con l'app itTaxi o Free Now, 3) Da una postazione taxi ufficiale, 4) Fermandone uno per strada se ha la luce accesa." } },
+            { "@type": "Question", "name": "Quanto costa un taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "La tariffa base è €3 di giorno (€6.50 di notte/festivi). Il costo al km varia da €1.10 a €1.60. Una corsa media in centro costa €8-15. Fiumicino: tariffa fissa €50, Ciampino: €31." } }
           ]
         }),
       },
@@ -180,48 +127,12 @@ function Index() {
         </p>
 
         <div className="grid gap-3 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard
-            emoji="✈️"
-            title="Transfer Aeroporto Fiumicino"
-            description="Trasferimento privato dall'aeroporto di Fiumicino al centro di Roma. Autista professionale, veicolo con aria condizionata."
-            gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/"
-            price="€45"
-          />
-          <ActivityCard
-            emoji="🏛️"
-            title="Tour Colosseo e Foro Romano"
-            description="Visita guidata del Colosseo, Foro Romano e Palatino. Salta la fila con accesso prioritario."
-            gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-colosseum-roman-forum-palatine-hill-t67792/"
-            price="€35"
-          />
-          <ActivityCard
-            emoji="🏟️"
-            title="Vaticano — Musei e Cappella Sistina"
-            description="Accesso prioritario ai Musei Vaticani e alla Cappella Sistina. Guida esperta inclusa."
-            gygUrl="https://www.getyourguide.com/rome-l33/vatican-museums-sistine-chapel-skip-the-line-ticket-t44089/"
-            price="€30"
-          />
-          <ActivityCard
-            emoji="🚐"
-            title="Transfer Condiviso Fiumicino"
-            description="Navetta condivisa dall'aeroporto Fiumicino alla stazione Termini. Economico e affidabile."
-            gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/"
-            price="€7"
-          />
-          <ActivityCard
-            emoji="🍝"
-            title="Tour Gastronomico Trastevere"
-            description="Scopri i sapori autentici di Roma con un tour gastronomico nel cuore di Trastevere."
-            gygUrl="https://www.getyourguide.com/rome-l33/trastevere-food-tour-t226/"
-            price="€40"
-          />
-          <ActivityCard
-            emoji="🌅"
-            title="Tour Roma di Notte"
-            description="Ammira i monumenti illuminati di Roma in un tour serale indimenticabile."
-            gygUrl="https://www.getyourguide.com/rome-l33/rome-by-night-walking-tour-t392/"
-            price="€25"
-          />
+          <ActivityCard emoji="✈️" title="Transfer Aeroporto Fiumicino" description="Trasferimento privato dall'aeroporto di Fiumicino al centro di Roma." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" />
+          <ActivityCard emoji="🏛️" title="Tour Colosseo e Foro Romano" description="Visita guidata del Colosseo, Foro Romano e Palatino. Salta la fila." gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-colosseum-roman-forum-palatine-hill-t67792/" price="€35" />
+          <ActivityCard emoji="🏟️" title="Vaticano — Musei e Cappella Sistina" description="Accesso prioritario ai Musei Vaticani e alla Cappella Sistina." gygUrl="https://www.getyourguide.com/rome-l33/vatican-museums-sistine-chapel-skip-the-line-ticket-t44089/" price="€30" />
+          <ActivityCard emoji="🚐" title="Transfer Condiviso Fiumicino" description="Navetta condivisa dall'aeroporto Fiumicino alla stazione Termini." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" />
+          <ActivityCard emoji="🍝" title="Tour Gastronomico Trastevere" description="Scopri i sapori autentici di Roma con un tour gastronomico." gygUrl="https://www.getyourguide.com/rome-l33/trastevere-food-tour-t226/" price="€40" />
+          <ActivityCard emoji="🌅" title="Tour Roma di Notte" description="Ammira i monumenti illuminati di Roma in un tour serale." gygUrl="https://www.getyourguide.com/rome-l33/rome-by-night-walking-tour-t392/" price="€25" />
         </div>
 
         <div className="mt-8 sm:mt-12 text-center">
