@@ -135,7 +135,7 @@ function ParcheggioFiumicinoPage() {
                     <td className="px-4 py-4 font-semibold text-primary">€8</td>
                     <td className="px-4 py-4 text-muted-foreground">€52</td>
                     <td className="px-4 py-4 text-muted-foreground">10 min navetta</td>
-                    <td className="pl-4 py-4 text-green-600">✅ Gratis</td>
+                    <td className="pl-4 py-4 text-primary">✅ Gratis</td>
                   </tr>
                   <tr className="hover:bg-accent/30 transition-colors bg-primary/5">
                     <td className="py-4 pr-4 font-medium text-foreground">Low Cost Esterno ⭐</td>
@@ -143,7 +143,7 @@ function ParcheggioFiumicinoPage() {
                     <td className="px-4 py-4 font-semibold text-primary">da €5</td>
                     <td className="px-4 py-4 text-muted-foreground">da €29</td>
                     <td className="px-4 py-4 text-muted-foreground">15 min navetta</td>
-                    <td className="pl-4 py-4 text-green-600">✅ Gratis</td>
+                    <td className="pl-4 py-4 text-primary">✅ Gratis</td>
                   </tr>
                   <tr className="hover:bg-accent/30 transition-colors">
                     <td className="py-4 pr-4 font-medium text-foreground">Parcheggio VIP</td>
