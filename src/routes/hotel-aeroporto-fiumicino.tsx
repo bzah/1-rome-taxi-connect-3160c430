@@ -7,11 +7,11 @@ export const Route = createFileRoute("/hotel-aeroporto-fiumicino")({
   component: HotelAeroportoFiumicinoPage,
   head: () => ({
     meta: [
-      { title: "Hotel Aeroporto Fiumicino 2026 — I Migliori Hotel Vicino all'Aeroporto di Roma | TaxiFiumicino.com" },
-      { name: "description", content: "Migliori hotel vicino all'aeroporto di Fiumicino Roma: hotel con navetta gratuita, prezzi, distanza dal terminal e consigli per voli mattutini. Da €60/notte." },
-      { property: "og:title", content: "Hotel Aeroporto Fiumicino — Dove Dormire Vicino all'Aeroporto di Roma" },
-      { property: "og:description", content: "I migliori hotel vicino all'aeroporto di Roma Fiumicino: con navetta, parcheggio e a pochi minuti dal terminal." },
-      { name: "keywords", content: "hotel aeroporto fiumicino, fiumicino airport hotels rome italy, hotel at fiumicino airport rome, hotels at fiumicino airport italy, hotel vicino aeroporto fiumicino, hotel fiumicino con navetta, hotel fiumicino economico, dove dormire vicino fiumicino" },
+      { title: "Hotel Fiumicino 2026 — Hotels Near Fiumicino Rome, Migliori Hotel Aeroporto | TaxiFiumicino.com" },
+      { name: "description", content: "Hotels near Fiumicino Rome: i migliori hotel Fiumicino vicino all'aeroporto con navetta gratuita, prezzi da €60/notte. Hotel Fiumicino per voli mattutini e arrivi tardivi." },
+      { property: "og:title", content: "Hotel Fiumicino — Hotels Near Fiumicino Rome Airport 2026" },
+      { property: "og:description", content: "I migliori hotel Fiumicino vicino all'aeroporto di Roma: con navetta, parcheggio e a pochi minuti dal terminal. Hotels near Fiumicino Rome." },
+      { name: "keywords", content: "hotels near fiumicino rome, hotel fiumicino, hotel aeroporto fiumicino, fiumicino airport hotels rome italy, hotel at fiumicino airport rome, hotels at fiumicino airport italy, hotel vicino aeroporto fiumicino, hotel fiumicino con navetta, hotel fiumicino economico, dove dormire vicino fiumicino, hotel near rome fiumicino airport" },
     ],
     scripts: [
       {
