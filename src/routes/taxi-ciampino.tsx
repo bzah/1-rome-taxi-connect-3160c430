@@ -54,57 +54,60 @@ function CiampinoPage() {
         ctaHref="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/?partner_id=0IQTGX8&utm_medium=online_publisher"
       />
 
-      <section className="mx-auto max-w-4xl px-4 py-20 sm:px-6">
-        <h2 className="font-display text-3xl font-bold mb-8">Taxi Ciampino — Roma Centro</h2>
+      <section className="mx-auto max-w-4xl px-5 py-16 sm:py-24 sm:px-8">
+        {/* Intro */}
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mb-10 gap-4">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">Taxi Ciampino<br className="hidden sm:block" /> Roma Centro</h2>
+          <p className="text-muted-foreground max-w-xs text-sm leading-relaxed text-pretty">
+            Tariffa fissa €31 per il centro di Roma.
+          </p>
+        </div>
 
-        <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-          L'aeroporto di Roma Ciampino (G.B. Pastine) è il secondo scalo della Capitale, utilizzato principalmente da compagnie low-cost come Ryanair e Wizz Air. Il taxi è il modo più rapido per raggiungere il centro di Roma con una <strong>tariffa fissa di €31</strong>.
-        </p>
+        <div className="text-muted-foreground space-y-5 text-base leading-relaxed mb-16">
+          <p>
+            L'aeroporto di Roma Ciampino (G.B. Pastine) è il secondo scalo della Capitale, utilizzato principalmente da compagnie low-cost come Ryanair e Wizz Air. Il taxi è il modo più rapido per raggiungere il centro di Roma con una <strong className="text-foreground">tariffa fissa di €31</strong>.
+          </p>
+        </div>
 
         {/* Key info cards */}
-        <div className="grid gap-6 sm:grid-cols-2">
-          <div className="rounded-xl border border-border bg-card p-6">
-            <div className="text-3xl mb-3">💶</div>
-            <h3 className="font-display text-lg font-semibold">Tariffa Fissa €31</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              La tariffa fissa di €31 è valida per destinazioni dentro le <strong>Mura Aureliane</strong> (centro storico). Include fino a 4 passeggeri e bagagli. Comunica al tassista di voler usufruire della tariffa fissa.
-            </p>
-          </div>
-          <div className="rounded-xl border border-border bg-card p-6">
-            <div className="text-3xl mb-3">⏱️</div>
-            <h3 className="font-display text-lg font-semibold">Durata: 20-40 min</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Il tragitto Ciampino — centro Roma è più breve rispetto a Fiumicino: circa 20-30 minuti senza traffico, fino a 40 minuti nelle ore di punta.
-            </p>
-          </div>
-          <div className="rounded-xl border border-border bg-card p-6">
-            <div className="text-3xl mb-3">🚕</div>
-            <h3 className="font-display text-lg font-semibold">Dove Trovare i Taxi</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              All'uscita degli <strong>Arrivi</strong>, segui i cartelli "Taxi". La postazione taxi ufficiale è subito fuori dal terminal. Utilizza solo taxi bianchi con licenza.
-            </p>
-          </div>
-          <div className="rounded-xl border border-border bg-card p-6">
-            <div className="text-3xl mb-3">💳</div>
-            <h3 className="font-display text-lg font-semibold">Pagamento</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Contanti e carte di credito/debito accettate. I taxi romani sono obbligati per legge ad avere il POS funzionante.
-            </p>
-          </div>
+        <div className="grid gap-5 sm:grid-cols-2">
+          {[
+            { icon: "💶", title: "Tariffa Fissa €31", desc: "Valida per destinazioni dentro le Mura Aureliane (centro storico). Include fino a 4 passeggeri e bagagli. Comunica al tassista di voler usufruire della tariffa fissa." },
+            { icon: "⏱️", title: "Durata: 20-40 min", desc: "Il tragitto Ciampino — centro Roma è più breve rispetto a Fiumicino: circa 20-30 minuti senza traffico, fino a 40 minuti nelle ore di punta." },
+            { icon: "🚕", title: "Dove Trovare i Taxi", desc: "All'uscita degli Arrivi, segui i cartelli \"Taxi\". La postazione taxi ufficiale è subito fuori dal terminal. Utilizza solo taxi bianchi con licenza." },
+            { icon: "💳", title: "Pagamento", desc: "Contanti e carte di credito/debito accettate. I taxi romani sono obbligati per legge ad avere il POS funzionante." },
+          ].map((item, i) => (
+            <div key={item.title} className="rounded-sm border border-stone-warm bg-card p-7 hover:border-primary/30 transition-colors duration-500">
+              <div className="flex items-start gap-4">
+                <span className="text-2xl">{item.icon}</span>
+                <div>
+                  <span className="text-xs text-primary/60 font-display tracking-widest">{String(i + 1).padStart(2, '0')}.</span>
+                  <h3 className="font-display text-lg font-semibold mt-0.5">{item.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Comparison table */}
-        <h2 className="font-display text-3xl font-bold mt-16 mb-8">Ciampino vs Fiumicino — Confronto</h2>
-        <div className="overflow-hidden rounded-xl border border-border">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mt-20 mb-10 gap-4">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">Ciampino vs Fiumicino</h2>
+          <p className="text-muted-foreground max-w-xs text-sm leading-relaxed text-pretty">
+            Confronto rapido tra i due aeroporti di Roma.
+          </p>
+        </div>
+
+        <div className="overflow-hidden rounded-sm border border-stone-warm">
           <table className="w-full text-sm">
-            <thead className="gold-gradient text-primary-foreground">
+            <thead className="bg-espresso text-linen">
               <tr>
-                <th className="px-6 py-4 text-left font-semibold">Caratteristica</th>
-                <th className="px-6 py-4 text-center font-semibold">Ciampino</th>
-                <th className="px-6 py-4 text-center font-semibold">Fiumicino</th>
+                <th className="px-6 py-4 text-left font-semibold text-xs uppercase tracking-widest">Caratteristica</th>
+                <th className="px-6 py-4 text-center font-semibold text-xs uppercase tracking-widest">Ciampino</th>
+                <th className="px-6 py-4 text-center font-semibold text-xs uppercase tracking-widest">Fiumicino</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-border">
+            <tbody className="divide-y divide-stone-warm">
               {[
                 ["Tariffa fissa centro Roma", "€31", "€50"],
                 ["Distanza dal centro", "~15 km", "~30 km"],
@@ -112,9 +115,9 @@ function CiampinoPage() {
                 ["Compagnie principali", "Ryanair, Wizz Air", "Alitalia, tutte le major"],
                 ["Dimensione aeroporto", "Piccolo, 1 terminal", "Grande, 4 terminal"],
               ].map(([label, ciampino, fiumicino]) => (
-                <tr key={label} className="hover:bg-accent/30 transition-colors">
+                <tr key={label} className="hover:bg-accent/40 transition-colors">
                   <td className="px-6 py-3.5 font-medium">{label}</td>
-                  <td className="px-6 py-3.5 text-center">{ciampino}</td>
+                  <td className="px-6 py-3.5 text-center text-primary font-semibold">{ciampino}</td>
                   <td className="px-6 py-3.5 text-center">{fiumicino}</td>
                 </tr>
               ))}
@@ -123,8 +126,12 @@ function CiampinoPage() {
         </div>
 
         {/* Transfer options */}
-        <h2 className="font-display text-3xl font-bold mt-16 mb-4">Alternative al Taxi da Ciampino</h2>
-        <p className="text-muted-foreground mb-8">Prenota online un transfer privato o navetta condivisa per un'esperienza senza stress.</p>
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mt-20 mb-10 gap-4">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">Alternative al Taxi</h2>
+          <p className="text-muted-foreground max-w-xs text-sm leading-relaxed text-pretty">
+            Transfer privato o navetta condivisa, cancellazione gratuita.
+          </p>
+        </div>
 
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <ActivityCard emoji="🚗" title="Transfer Privato Ciampino — Roma" description="Autista privato con cartello al tuo nome. Veicolo moderno, A/C, prezzo fisso garantito." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" />
@@ -136,8 +143,14 @@ function CiampinoPage() {
         </div>
 
         {/* FAQ Section */}
-        <h2 className="font-display text-3xl font-bold mt-16 mb-8">Domande Frequenti — Taxi Ciampino Roma</h2>
-        <div className="space-y-3 sm:space-y-4">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mt-20 mb-10 gap-4">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">Domande Frequenti</h2>
+          <p className="text-muted-foreground max-w-xs text-sm leading-relaxed text-pretty">
+            Le risposte alle domande più comuni sui taxi da Ciampino.
+          </p>
+        </div>
+
+        <div className="space-y-3">
           {[
             { q: "Quanto costa un taxi da Ciampino a Roma centro?", a: "La tariffa fissa è €31 per destinazioni dentro le Mura Aureliane (centro storico). Vale per max 4 passeggeri con bagagli inclusi, senza supplementi notturni." },
             { q: "Quanto tempo ci vuole da Ciampino a Roma in taxi?", a: "Il tragitto dura circa 20-30 minuti senza traffico, fino a 40 minuti nelle ore di punta. Ciampino è più vicino al centro rispetto a Fiumicino." },
@@ -146,8 +159,8 @@ function CiampinoPage() {
             { q: "C'è il Leonardo Express da Ciampino?", a: "No, il Leonardo Express collega solo Fiumicino a Termini. Da Ciampino puoi prendere il bus navetta SIT/Terravision (€5-7) per Termini, o il taxi/transfer privato." },
             { q: "Come prenotare un taxi da Ciampino in anticipo?", a: "Puoi prenotare un transfer privato online (da €35 con cancellazione gratuita), chiamare una radio taxi (06.3570) il giorno prima, o usare l'app itTaxi." },
           ].map((faq) => (
-            <details key={faq.q} className="group rounded-xl border border-border bg-card p-4 sm:p-6">
-              <summary className="cursor-pointer font-display text-base sm:text-lg font-semibold text-card-foreground list-none flex items-center justify-between gap-3">
+            <details key={faq.q} className="group rounded-sm border border-stone-warm bg-card p-5 sm:p-6 hover:border-primary/30 transition-colors duration-500">
+              <summary className="cursor-pointer font-display text-base sm:text-lg font-semibold text-foreground list-none flex items-center justify-between gap-3">
                 <span>{faq.q}</span>
                 <svg className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
               </summary>
@@ -157,31 +170,31 @@ function CiampinoPage() {
         </div>
 
         {/* Tips */}
-        <div className="mt-16 rounded-xl section-warm p-8">
-          <h3 className="font-display text-xl font-semibold mb-4">💡 Consigli per il Taxi da Ciampino</h3>
-          <ul className="space-y-3 text-sm text-muted-foreground">
-            <li>• Chiedi sempre la <strong>tariffa fissa di €31</strong> prima di partire se la tua destinazione è nel centro storico</li>
-            <li>• I taxi <strong>bianchi ufficiali</strong> hanno il numero di licenza esposto sul veicolo — non accettare passaggi da abusivi</li>
-            <li>• Se la tua destinazione è <strong>fuori le Mura Aureliane</strong> (es. EUR, Trastevere oltre le mura), si applica il tassametro</li>
-            <li>• Per <strong>voli in partenza</strong> da Ciampino, prenota il taxi il giorno prima tramite radio taxi o app</li>
-            <li>• Il <strong>Leonardo Express</strong> non collega Ciampino — quello è solo per Fiumicino. Da Ciampino puoi prendere il bus SIT o Terravision</li>
+        <div className="mt-16 rounded-sm border border-stone-warm bg-card p-8">
+          <h3 className="font-display text-xl font-semibold mb-5">💡 Consigli per il Taxi da Ciampino</h3>
+          <ul className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+            <li>• Chiedi sempre la <strong className="text-foreground">tariffa fissa di €31</strong> prima di partire se la tua destinazione è nel centro storico</li>
+            <li>• I taxi <strong className="text-foreground">bianchi ufficiali</strong> hanno il numero di licenza esposto sul veicolo — non accettare passaggi da abusivi</li>
+            <li>• Se la tua destinazione è <strong className="text-foreground">fuori le Mura Aureliane</strong> (es. EUR, Trastevere oltre le mura), si applica il tassametro</li>
+            <li>• Per <strong className="text-foreground">voli in partenza</strong> da Ciampino, prenota il taxi il giorno prima tramite radio taxi o app</li>
+            <li>• Il <strong className="text-foreground">Leonardo Express</strong> non collega Ciampino — quello è solo per Fiumicino. Da Ciampino puoi prendere il bus SIT o Terravision</li>
           </ul>
         </div>
 
         {/* Cross links */}
-        <div className="mt-12 flex flex-wrap gap-3 justify-center">
-          <Link to="/fiumicino" className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium hover:bg-accent/50 transition-colors">
-            ✈️ Taxi Fiumicino
-          </Link>
-          <Link to="/tariffe" className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium hover:bg-accent/50 transition-colors">
-            💰 Tariffe Taxi Roma
-          </Link>
-          <Link to="/numeri" className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium hover:bg-accent/50 transition-colors">
-            📞 Numeri Taxi
-          </Link>
+        <div className="mt-14 flex flex-wrap gap-3 justify-center">
+          {[
+            { to: "/fiumicino", label: "✈️ Taxi Fiumicino" },
+            { to: "/tariffe", label: "💰 Tariffe Taxi Roma" },
+            { to: "/numeri", label: "📞 Numeri Taxi" },
+          ].map((link) => (
+            <Link key={link.to} to={link.to} className="inline-flex items-center gap-2 rounded-sm border border-stone-warm px-4 py-2.5 text-sm font-medium hover:bg-accent/50 hover:border-primary/30 transition-all">
+              {link.label}
+            </Link>
+          ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-14 text-center">
           <GetYourGuideCTA text="Tutti i Transfer da Ciampino" url="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher" />
         </div>
       </section>
