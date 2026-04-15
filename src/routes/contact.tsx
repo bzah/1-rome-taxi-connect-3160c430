@@ -25,22 +25,12 @@ function ContactPage() {
     setErrorMsg("");
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      const data = await res.json();
-      if (res.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        setStatus("error");
-        setErrorMsg(data.error || "Errore nell'invio");
-      }
-    } catch {
+      await sendContactEmail({ data: formData });
+      setStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
       setStatus("error");
-      setErrorMsg("Errore di rete. Riprova più tardi.");
+      setErrorMsg(err instanceof Error ? err.message : "Errore nell'invio. Riprova più tardi.");
     }
   };
 
