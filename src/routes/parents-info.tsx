@@ -3,10 +3,11 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/parents-info")({
   head: () => ({
     meta: [
-      { title: "Informazioni per i Genitori — TaxiFiumicino.com" },
-      { name: "description", content: "Informazioni per i genitori sull'utilizzo di TaxiFiumicino.com: sicurezza online e protezione dei minori." },
+      { title: "Informazioni per i Genitori — TaxiFiumicino.com | Sicurezza Minori" },
+      { name: "description", content: "Informazioni per i genitori sull'utilizzo di TaxiFiumicino.com: sicurezza online dei minori, contenuti del sito, link esterni e affiliati, consigli per la navigazione sicura e protezione dei dati dei bambini secondo il GDPR." },
       { property: "og:title", content: "Informazioni per i Genitori — TaxiFiumicino.com" },
-      { property: "og:description", content: "Guida per i genitori sulla sicurezza dei minori online." },
+      { property: "og:description", content: "Guida per i genitori sulla sicurezza dei minori online e sull'utilizzo di TaxiFiumicino.com." },
+      { name: "keywords", content: "genitori sicurezza online, protezione minori taxi roma, sicurezza bambini internet, informazioni genitori, navigazione sicura" },
     ],
   }),
   component: ParentsInfoPage,

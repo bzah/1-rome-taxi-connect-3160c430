@@ -3,10 +3,11 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/cookie-policy")({
   head: () => ({
     meta: [
-      { title: "Cookie Policy — TaxiFiumicino.com" },
-      { name: "description", content: "Informativa sui cookie utilizzati da TaxiFiumicino.com: tipologie, finalità e come gestirli." },
+      { title: "Cookie Policy — TaxiFiumicino.com | Gestione Cookie e Tracciamento" },
+      { name: "description", content: "Informativa sui cookie di TaxiFiumicino.com: cookie tecnici, analitici e di terze parti (Google Analytics, GetYourGuide). Come disabilitarli, gestire le preferenze e i tuoi diritti secondo il GDPR." },
       { property: "og:title", content: "Cookie Policy — TaxiFiumicino.com" },
-      { property: "og:description", content: "Scopri quali cookie utilizziamo e come gestirli." },
+      { property: "og:description", content: "Scopri quali cookie utilizziamo, perché e come gestirli nelle impostazioni del browser." },
+      { name: "keywords", content: "cookie policy taxifiumicino, cookie taxi roma, gestione cookie, GDPR cookie, informativa cookie sito taxi" },
     ],
   }),
   component: CookiePolicyPage,

@@ -3,10 +3,11 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — TaxiFiumicino.com" },
-      { name: "description", content: "Informativa sulla privacy di TaxiFiumicino.com: come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali." },
+      { title: "Privacy Policy — TaxiFiumicino.com | Protezione Dati GDPR" },
+      { name: "description", content: "Informativa sulla privacy di TaxiFiumicino.com conforme al GDPR: come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali. Cookie, analytics, diritti dell'utente e modalità di contatto per la cancellazione dei dati." },
       { property: "og:title", content: "Privacy Policy — TaxiFiumicino.com" },
-      { property: "og:description", content: "Informativa sulla privacy e protezione dei dati personali." },
+      { property: "og:description", content: "Informativa sulla privacy e protezione dei dati personali conforme al GDPR. Scopri i tuoi diritti." },
+      { name: "keywords", content: "privacy policy taxifiumicino, protezione dati personali, GDPR taxi roma, informativa privacy, cookie policy taxi roma" },
     ],
   }),
   component: PrivacyPolicyPage,

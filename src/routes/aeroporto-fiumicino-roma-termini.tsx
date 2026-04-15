@@ -8,10 +8,10 @@ export const Route = createFileRoute("/aeroporto-fiumicino-roma-termini")({
   head: () => ({
     meta: [
       { title: "Da Aeroporto Fiumicino a Roma Termini — Treno, Taxi e Bus 2026" },
-      { name: "description", content: "Come andare dall'aeroporto di Fiumicino a Roma Termini: Leonardo Express (32 min, €14), taxi tariffa fissa €50, bus navetta e transfer privati. Confronto completo." },
-      { property: "og:title", content: "Da Aeroporto Fiumicino a Roma Termini — Tutte le Opzioni" },
-      { property: "og:description", content: "Leonardo Express, taxi, bus e transfer privati dall'aeroporto Fiumicino a Roma Termini. Prezzi, orari e consigli." },
-      { name: "keywords", content: "da aeroporto fiumicino a roma termini, fiumicino roma termini, treno fiumicino termini, leonardo express, roma termini fiumicino, da fiumicino aeroporto a roma termini, orari treni roma fiumicino, treno termini fiumicino" },
+      { name: "description", content: "Come andare dall'aeroporto di Fiumicino a Roma Termini nel 2026: Leonardo Express (32 min, €14, ogni 15 min), taxi tariffa fissa €50, bus navetta Terravision e SIT da €5, transfer privati da €45. Confronto completo con orari, prezzi e consigli pratici." },
+      { property: "og:title", content: "Da Aeroporto Fiumicino a Roma Termini — Treno, Taxi, Bus e Transfer 2026" },
+      { property: "og:description", content: "Tutte le opzioni Fiumicino-Termini: Leonardo Express €14, taxi €50, bus €5, transfer privati. Orari, prezzi e consigli aggiornati." },
+      { name: "keywords", content: "da aeroporto fiumicino a roma termini, fiumicino roma termini, treno fiumicino termini, leonardo express, roma termini fiumicino, da fiumicino aeroporto a roma termini, orari treni roma fiumicino, treno termini fiumicino, leonardo express orari, leonardo express prezzo, bus fiumicino termini, terravision fiumicino" },
     ],
     scripts: [
       {
