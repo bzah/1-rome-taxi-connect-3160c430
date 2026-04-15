@@ -42,6 +42,10 @@ function CatchAllPage() {
       case "prenota": return <PrenotaPage t={t} locale={locale} />;
       case "about": return <AboutPage t={t} locale={locale} />;
       case "contact": return <ContactPage t={t} locale={locale} />;
+      case "numeri": return <NumeriPage t={t} locale={locale} />;
+      case "app-taxi-roma": return <AppTaxiPage t={t} locale={locale} />;
+      case "hotel-roma": return <HotelRomaPage t={t} locale={locale} />;
+      case "parcheggio-fiumicino": return <ParcheggioPage t={t} locale={locale} />;
     }
   }
 
