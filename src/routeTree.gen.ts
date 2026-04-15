@@ -9,21 +9,34 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
 import { Route as TaxiCiampinoRouteImport } from './routes/taxi-ciampino'
 import { Route as TariffeRouteImport } from './routes/tariffe'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PrenotaRouteImport } from './routes/prenota'
+import { Route as ParentsInfoRouteImport } from './routes/parents-info'
 import { Route as ParcheggioFiumicinoRouteImport } from './routes/parcheggio-fiumicino'
 import { Route as NumeriRouteImport } from './routes/numeri'
+import { Route as LegalNoticeRouteImport } from './routes/legal-notice'
 import { Route as HotelRomaRouteImport } from './routes/hotel-roma'
 import { Route as HotelAeroportoFiumicinoRouteImport } from './routes/hotel-aeroporto-fiumicino'
 import { Route as FiumicinoRouteImport } from './routes/fiumicino'
+import { Route as DmcaRouteImport } from './routes/dmca'
+import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ComeChiamareTaxiRomaRouteImport } from './routes/come-chiamare-taxi-roma'
 import { Route as AppTaxiRomaRouteImport } from './routes/app-taxi-roma'
 import { Route as AeroportoFiumicinoRomaTerminiRouteImport } from './routes/aeroporto-fiumicino-roma-termini'
 import { Route as AeroportoFiumicinoRomaCentroRouteImport } from './routes/aeroporto-fiumicino-roma-centro'
 import { Route as AeroportiDiRomaRouteImport } from './routes/aeroporti-di-roma'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
+  id: '/terms-of-service',
+  path: '/terms-of-service',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TaxiCiampinoRoute = TaxiCiampinoRouteImport.update({
   id: '/taxi-ciampino',
   path: '/taxi-ciampino',
@@ -34,9 +47,19 @@ const TariffeRoute = TariffeRouteImport.update({
   path: '/tariffe',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrenotaRoute = PrenotaRouteImport.update({
   id: '/prenota',
   path: '/prenota',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParentsInfoRoute = ParentsInfoRouteImport.update({
+  id: '/parents-info',
+  path: '/parents-info',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ParcheggioFiumicinoRoute = ParcheggioFiumicinoRouteImport.update({
@@ -47,6 +70,11 @@ const ParcheggioFiumicinoRoute = ParcheggioFiumicinoRouteImport.update({
 const NumeriRoute = NumeriRouteImport.update({
   id: '/numeri',
   path: '/numeri',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalNoticeRoute = LegalNoticeRouteImport.update({
+  id: '/legal-notice',
+  path: '/legal-notice',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HotelRomaRoute = HotelRomaRouteImport.update({
@@ -62,6 +90,21 @@ const HotelAeroportoFiumicinoRoute = HotelAeroportoFiumicinoRouteImport.update({
 const FiumicinoRoute = FiumicinoRouteImport.update({
   id: '/fiumicino',
   path: '/fiumicino',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DmcaRoute = DmcaRouteImport.update({
+  id: '/dmca',
+  path: '/dmca',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiePolicyRoute = CookiePolicyRouteImport.update({
+  id: '/cookie-policy',
+  path: '/cookie-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ComeChiamareTaxiRomaRoute = ComeChiamareTaxiRomaRouteImport.update({
@@ -91,6 +134,11 @@ const AeroportiDiRomaRoute = AeroportiDiRomaRouteImport.update({
   path: '/aeroporti-di-roma',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -99,123 +147,186 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/aeroporti-di-roma': typeof AeroportiDiRomaRoute
   '/aeroporto-fiumicino-roma-centro': typeof AeroportoFiumicinoRomaCentroRoute
   '/aeroporto-fiumicino-roma-termini': typeof AeroportoFiumicinoRomaTerminiRoute
   '/app-taxi-roma': typeof AppTaxiRomaRoute
   '/come-chiamare-taxi-roma': typeof ComeChiamareTaxiRomaRoute
+  '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/dmca': typeof DmcaRoute
   '/fiumicino': typeof FiumicinoRoute
   '/hotel-aeroporto-fiumicino': typeof HotelAeroportoFiumicinoRoute
   '/hotel-roma': typeof HotelRomaRoute
+  '/legal-notice': typeof LegalNoticeRoute
   '/numeri': typeof NumeriRoute
   '/parcheggio-fiumicino': typeof ParcheggioFiumicinoRoute
+  '/parents-info': typeof ParentsInfoRoute
   '/prenota': typeof PrenotaRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/tariffe': typeof TariffeRoute
   '/taxi-ciampino': typeof TaxiCiampinoRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/aeroporti-di-roma': typeof AeroportiDiRomaRoute
   '/aeroporto-fiumicino-roma-centro': typeof AeroportoFiumicinoRomaCentroRoute
   '/aeroporto-fiumicino-roma-termini': typeof AeroportoFiumicinoRomaTerminiRoute
   '/app-taxi-roma': typeof AppTaxiRomaRoute
   '/come-chiamare-taxi-roma': typeof ComeChiamareTaxiRomaRoute
+  '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/dmca': typeof DmcaRoute
   '/fiumicino': typeof FiumicinoRoute
   '/hotel-aeroporto-fiumicino': typeof HotelAeroportoFiumicinoRoute
   '/hotel-roma': typeof HotelRomaRoute
+  '/legal-notice': typeof LegalNoticeRoute
   '/numeri': typeof NumeriRoute
   '/parcheggio-fiumicino': typeof ParcheggioFiumicinoRoute
+  '/parents-info': typeof ParentsInfoRoute
   '/prenota': typeof PrenotaRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/tariffe': typeof TariffeRoute
   '/taxi-ciampino': typeof TaxiCiampinoRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/aeroporti-di-roma': typeof AeroportiDiRomaRoute
   '/aeroporto-fiumicino-roma-centro': typeof AeroportoFiumicinoRomaCentroRoute
   '/aeroporto-fiumicino-roma-termini': typeof AeroportoFiumicinoRomaTerminiRoute
   '/app-taxi-roma': typeof AppTaxiRomaRoute
   '/come-chiamare-taxi-roma': typeof ComeChiamareTaxiRomaRoute
+  '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/dmca': typeof DmcaRoute
   '/fiumicino': typeof FiumicinoRoute
   '/hotel-aeroporto-fiumicino': typeof HotelAeroportoFiumicinoRoute
   '/hotel-roma': typeof HotelRomaRoute
+  '/legal-notice': typeof LegalNoticeRoute
   '/numeri': typeof NumeriRoute
   '/parcheggio-fiumicino': typeof ParcheggioFiumicinoRoute
+  '/parents-info': typeof ParentsInfoRoute
   '/prenota': typeof PrenotaRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/tariffe': typeof TariffeRoute
   '/taxi-ciampino': typeof TaxiCiampinoRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/aeroporti-di-roma'
     | '/aeroporto-fiumicino-roma-centro'
     | '/aeroporto-fiumicino-roma-termini'
     | '/app-taxi-roma'
     | '/come-chiamare-taxi-roma'
+    | '/contact'
+    | '/cookie-policy'
+    | '/dmca'
     | '/fiumicino'
     | '/hotel-aeroporto-fiumicino'
     | '/hotel-roma'
+    | '/legal-notice'
     | '/numeri'
     | '/parcheggio-fiumicino'
+    | '/parents-info'
     | '/prenota'
+    | '/privacy-policy'
     | '/tariffe'
     | '/taxi-ciampino'
+    | '/terms-of-service'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/aeroporti-di-roma'
     | '/aeroporto-fiumicino-roma-centro'
     | '/aeroporto-fiumicino-roma-termini'
     | '/app-taxi-roma'
     | '/come-chiamare-taxi-roma'
+    | '/contact'
+    | '/cookie-policy'
+    | '/dmca'
     | '/fiumicino'
     | '/hotel-aeroporto-fiumicino'
     | '/hotel-roma'
+    | '/legal-notice'
     | '/numeri'
     | '/parcheggio-fiumicino'
+    | '/parents-info'
     | '/prenota'
+    | '/privacy-policy'
     | '/tariffe'
     | '/taxi-ciampino'
+    | '/terms-of-service'
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/aeroporti-di-roma'
     | '/aeroporto-fiumicino-roma-centro'
     | '/aeroporto-fiumicino-roma-termini'
     | '/app-taxi-roma'
     | '/come-chiamare-taxi-roma'
+    | '/contact'
+    | '/cookie-policy'
+    | '/dmca'
     | '/fiumicino'
     | '/hotel-aeroporto-fiumicino'
     | '/hotel-roma'
+    | '/legal-notice'
     | '/numeri'
     | '/parcheggio-fiumicino'
+    | '/parents-info'
     | '/prenota'
+    | '/privacy-policy'
     | '/tariffe'
     | '/taxi-ciampino'
+    | '/terms-of-service'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   AeroportiDiRomaRoute: typeof AeroportiDiRomaRoute
   AeroportoFiumicinoRomaCentroRoute: typeof AeroportoFiumicinoRomaCentroRoute
   AeroportoFiumicinoRomaTerminiRoute: typeof AeroportoFiumicinoRomaTerminiRoute
   AppTaxiRomaRoute: typeof AppTaxiRomaRoute
   ComeChiamareTaxiRomaRoute: typeof ComeChiamareTaxiRomaRoute
+  ContactRoute: typeof ContactRoute
+  CookiePolicyRoute: typeof CookiePolicyRoute
+  DmcaRoute: typeof DmcaRoute
   FiumicinoRoute: typeof FiumicinoRoute
   HotelAeroportoFiumicinoRoute: typeof HotelAeroportoFiumicinoRoute
   HotelRomaRoute: typeof HotelRomaRoute
+  LegalNoticeRoute: typeof LegalNoticeRoute
   NumeriRoute: typeof NumeriRoute
   ParcheggioFiumicinoRoute: typeof ParcheggioFiumicinoRoute
+  ParentsInfoRoute: typeof ParentsInfoRoute
   PrenotaRoute: typeof PrenotaRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   TariffeRoute: typeof TariffeRoute
   TaxiCiampinoRoute: typeof TaxiCiampinoRoute
+  TermsOfServiceRoute: typeof TermsOfServiceRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms-of-service': {
+      id: '/terms-of-service'
+      path: '/terms-of-service'
+      fullPath: '/terms-of-service'
+      preLoaderRoute: typeof TermsOfServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/taxi-ciampino': {
       id: '/taxi-ciampino'
       path: '/taxi-ciampino'
@@ -230,11 +341,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TariffeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/prenota': {
       id: '/prenota'
       path: '/prenota'
       fullPath: '/prenota'
       preLoaderRoute: typeof PrenotaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parents-info': {
+      id: '/parents-info'
+      path: '/parents-info'
+      fullPath: '/parents-info'
+      preLoaderRoute: typeof ParentsInfoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/parcheggio-fiumicino': {
@@ -249,6 +374,13 @@ declare module '@tanstack/react-router' {
       path: '/numeri'
       fullPath: '/numeri'
       preLoaderRoute: typeof NumeriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal-notice': {
+      id: '/legal-notice'
+      path: '/legal-notice'
+      fullPath: '/legal-notice'
+      preLoaderRoute: typeof LegalNoticeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/hotel-roma': {
@@ -270,6 +402,27 @@ declare module '@tanstack/react-router' {
       path: '/fiumicino'
       fullPath: '/fiumicino'
       preLoaderRoute: typeof FiumicinoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dmca': {
+      id: '/dmca'
+      path: '/dmca'
+      fullPath: '/dmca'
+      preLoaderRoute: typeof DmcaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookie-policy': {
+      id: '/cookie-policy'
+      path: '/cookie-policy'
+      fullPath: '/cookie-policy'
+      preLoaderRoute: typeof CookiePolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/come-chiamare-taxi-roma': {
@@ -307,6 +460,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AeroportiDiRomaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -319,19 +479,27 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   AeroportiDiRomaRoute: AeroportiDiRomaRoute,
   AeroportoFiumicinoRomaCentroRoute: AeroportoFiumicinoRomaCentroRoute,
   AeroportoFiumicinoRomaTerminiRoute: AeroportoFiumicinoRomaTerminiRoute,
   AppTaxiRomaRoute: AppTaxiRomaRoute,
   ComeChiamareTaxiRomaRoute: ComeChiamareTaxiRomaRoute,
+  ContactRoute: ContactRoute,
+  CookiePolicyRoute: CookiePolicyRoute,
+  DmcaRoute: DmcaRoute,
   FiumicinoRoute: FiumicinoRoute,
   HotelAeroportoFiumicinoRoute: HotelAeroportoFiumicinoRoute,
   HotelRomaRoute: HotelRomaRoute,
+  LegalNoticeRoute: LegalNoticeRoute,
   NumeriRoute: NumeriRoute,
   ParcheggioFiumicinoRoute: ParcheggioFiumicinoRoute,
+  ParentsInfoRoute: ParentsInfoRoute,
   PrenotaRoute: PrenotaRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   TariffeRoute: TariffeRoute,
   TaxiCiampinoRoute: TaxiCiampinoRoute,
+  TermsOfServiceRoute: TermsOfServiceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

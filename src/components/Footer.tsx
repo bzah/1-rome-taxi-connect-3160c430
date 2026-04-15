@@ -35,11 +35,23 @@ export function Footer() {
           </div>
           <div>
             <h3 className="font-display text-sm font-semibold mb-3 uppercase tracking-wider opacity-80">Contatti</h3>
-            <p className="text-sm opacity-70">info@taxifiumicino.com</p>
+            <p className="text-sm opacity-70 mb-2">info@taxifiumicino.com</p>
+            <ul className="space-y-2 text-sm opacity-70">
+              <li><Link to="/about" className="hover:opacity-100 transition-opacity">Chi Siamo</Link></li>
+              <li><Link to="/contact" className="hover:opacity-100 transition-opacity">Contatti</Link></li>
+            </ul>
           </div>
         </div>
-        <div className="mt-10 border-t border-background/10 pt-6 text-center text-xs opacity-50">
-          © {new Date().getFullYear()} TaxiFiumicino.com — Tutti i diritti riservati
+        <div className="mt-8 border-t border-background/10 pt-6">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs opacity-50 mb-4">
+            <Link to="/privacy-policy" className="hover:opacity-100 transition-opacity">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:opacity-100 transition-opacity">Termini di Servizio</Link>
+            <Link to="/cookie-policy" className="hover:opacity-100 transition-opacity">Cookie Policy</Link>
+            <Link to="/dmca" className="hover:opacity-100 transition-opacity">DMCA</Link>
+            <Link to="/legal-notice" className="hover:opacity-100 transition-opacity">Note Legali</Link>
+            <Link to="/parents-info" className="hover:opacity-100 transition-opacity">Info Genitori</Link>
+          </div>
+          <p className="text-center text-xs opacity-50">© {new Date().getFullYear()} TaxiFiumicino.com — Tutti i diritti riservati</p>
         </div>
       </div>
     </footer>
