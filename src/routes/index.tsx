@@ -1,12 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
+import { hreflangLinks } from "@/i18n/hreflang";
 import taxiRomaImg from "@/assets/taxi-roma.jpg";
 import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
+    links: hreflangLinks("/"),
     meta: [
       { title: "Taxi Roma Fiumicino — Aeroporto Roma Fiumicino Transfer e Tariffe 2026" },
       { name: "description", content: "Taxi e transfer dall'aeroporto Roma Fiumicino: tariffa fissa €50, numeri radio taxi, prenotazioni online. Guida completa 2026 per turisti e residenti." },

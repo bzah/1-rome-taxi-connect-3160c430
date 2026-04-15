@@ -2,10 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
+import { hreflangLinks } from "@/i18n/hreflang";
 
 export const Route = createFileRoute("/hotel-roma")({
   component: HotelRomaPage,
   head: () => ({
+    links: hreflangLinks("/hotel-roma"),
     meta: [
       { title: "Hotel Roma 2026 — Migliori Hotel Roma Centro, Lusso e Budget | TaxiFiumicino.com" },
       { name: "description", content: "I migliori hotel a Roma centro: hotel di lusso come Bulgari Hotel Roma, boutique hotel e hotel economici. Guida alle zone, prezzi e come arrivare dall'aeroporto." },
