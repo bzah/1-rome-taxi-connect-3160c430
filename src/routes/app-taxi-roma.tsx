@@ -106,13 +106,13 @@ function AppTaxiPage() {
               <div className="p-6">
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div>
-                    <h4 className="text-sm font-semibold text-green-700 mb-2">✅ Vantaggi</h4>
+                    <h4 className="text-sm font-semibold text-primary mb-2">✅ Vantaggi</h4>
                     <ul className="space-y-1.5 text-sm text-muted-foreground">
                       {app.pros.map((pro) => <li key={pro}>• {pro}</li>)}
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-red-600 mb-2">❌ Svantaggi</h4>
+                    <h4 className="text-sm font-semibold text-destructive mb-2">❌ Svantaggi</h4>
                     <ul className="space-y-1.5 text-sm text-muted-foreground">
                       {app.cons.map((con) => <li key={con}>• {con}</li>)}
                     </ul>

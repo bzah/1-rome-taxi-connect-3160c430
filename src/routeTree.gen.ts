@@ -9,12 +9,20 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TaxiCiampinoRouteImport } from './routes/taxi-ciampino'
 import { Route as TariffeRouteImport } from './routes/tariffe'
 import { Route as PrenotaRouteImport } from './routes/prenota'
 import { Route as NumeriRouteImport } from './routes/numeri'
 import { Route as FiumicinoRouteImport } from './routes/fiumicino'
+import { Route as ComeChiamareTaxiRomaRouteImport } from './routes/come-chiamare-taxi-roma'
+import { Route as AppTaxiRomaRouteImport } from './routes/app-taxi-roma'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TaxiCiampinoRoute = TaxiCiampinoRouteImport.update({
+  id: '/taxi-ciampino',
+  path: '/taxi-ciampino',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TariffeRoute = TariffeRouteImport.update({
   id: '/tariffe',
   path: '/tariffe',
@@ -35,6 +43,16 @@ const FiumicinoRoute = FiumicinoRouteImport.update({
   path: '/fiumicino',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ComeChiamareTaxiRomaRoute = ComeChiamareTaxiRomaRouteImport.update({
+  id: '/come-chiamare-taxi-roma',
+  path: '/come-chiamare-taxi-roma',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppTaxiRomaRoute = AppTaxiRomaRouteImport.update({
+  id: '/app-taxi-roma',
+  path: '/app-taxi-roma',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,44 +61,88 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/app-taxi-roma': typeof AppTaxiRomaRoute
+  '/come-chiamare-taxi-roma': typeof ComeChiamareTaxiRomaRoute
   '/fiumicino': typeof FiumicinoRoute
   '/numeri': typeof NumeriRoute
   '/prenota': typeof PrenotaRoute
   '/tariffe': typeof TariffeRoute
+  '/taxi-ciampino': typeof TaxiCiampinoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/app-taxi-roma': typeof AppTaxiRomaRoute
+  '/come-chiamare-taxi-roma': typeof ComeChiamareTaxiRomaRoute
   '/fiumicino': typeof FiumicinoRoute
   '/numeri': typeof NumeriRoute
   '/prenota': typeof PrenotaRoute
   '/tariffe': typeof TariffeRoute
+  '/taxi-ciampino': typeof TaxiCiampinoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/app-taxi-roma': typeof AppTaxiRomaRoute
+  '/come-chiamare-taxi-roma': typeof ComeChiamareTaxiRomaRoute
   '/fiumicino': typeof FiumicinoRoute
   '/numeri': typeof NumeriRoute
   '/prenota': typeof PrenotaRoute
   '/tariffe': typeof TariffeRoute
+  '/taxi-ciampino': typeof TaxiCiampinoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/fiumicino' | '/numeri' | '/prenota' | '/tariffe'
+  fullPaths:
+    | '/'
+    | '/app-taxi-roma'
+    | '/come-chiamare-taxi-roma'
+    | '/fiumicino'
+    | '/numeri'
+    | '/prenota'
+    | '/tariffe'
+    | '/taxi-ciampino'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/fiumicino' | '/numeri' | '/prenota' | '/tariffe'
-  id: '__root__' | '/' | '/fiumicino' | '/numeri' | '/prenota' | '/tariffe'
+  to:
+    | '/'
+    | '/app-taxi-roma'
+    | '/come-chiamare-taxi-roma'
+    | '/fiumicino'
+    | '/numeri'
+    | '/prenota'
+    | '/tariffe'
+    | '/taxi-ciampino'
+  id:
+    | '__root__'
+    | '/'
+    | '/app-taxi-roma'
+    | '/come-chiamare-taxi-roma'
+    | '/fiumicino'
+    | '/numeri'
+    | '/prenota'
+    | '/tariffe'
+    | '/taxi-ciampino'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AppTaxiRomaRoute: typeof AppTaxiRomaRoute
+  ComeChiamareTaxiRomaRoute: typeof ComeChiamareTaxiRomaRoute
   FiumicinoRoute: typeof FiumicinoRoute
   NumeriRoute: typeof NumeriRoute
   PrenotaRoute: typeof PrenotaRoute
   TariffeRoute: typeof TariffeRoute
+  TaxiCiampinoRoute: typeof TaxiCiampinoRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/taxi-ciampino': {
+      id: '/taxi-ciampino'
+      path: '/taxi-ciampino'
+      fullPath: '/taxi-ciampino'
+      preLoaderRoute: typeof TaxiCiampinoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tariffe': {
       id: '/tariffe'
       path: '/tariffe'
@@ -109,6 +171,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FiumicinoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/come-chiamare-taxi-roma': {
+      id: '/come-chiamare-taxi-roma'
+      path: '/come-chiamare-taxi-roma'
+      fullPath: '/come-chiamare-taxi-roma'
+      preLoaderRoute: typeof ComeChiamareTaxiRomaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/app-taxi-roma': {
+      id: '/app-taxi-roma'
+      path: '/app-taxi-roma'
+      fullPath: '/app-taxi-roma'
+      preLoaderRoute: typeof AppTaxiRomaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -121,10 +197,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AppTaxiRomaRoute: AppTaxiRomaRoute,
+  ComeChiamareTaxiRomaRoute: ComeChiamareTaxiRomaRoute,
   FiumicinoRoute: FiumicinoRoute,
   NumeriRoute: NumeriRoute,
   PrenotaRoute: PrenotaRoute,
   TariffeRoute: TariffeRoute,
+  TaxiCiampinoRoute: TaxiCiampinoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
