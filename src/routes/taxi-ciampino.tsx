@@ -124,21 +124,13 @@ function CiampinoPage() {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">Alternative al Taxi da Ciampino</h2>
         <p className="text-muted-foreground mb-8">Prenota online un transfer privato o navetta condivisa per un'esperienza senza stress.</p>
 
-        <div className="grid gap-6 sm:grid-cols-2">
-          <ActivityCard
-            emoji="🚗"
-            title="Transfer Privato Ciampino — Roma"
-            description="Autista privato con cartello al tuo nome. Veicolo moderno, aria condizionata, prezzo fisso garantito."
-            gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/"
-            price="€35"
-          />
-          <ActivityCard
-            emoji="🚐"
-            title="Navetta Bus Ciampino — Termini"
-            description="Bus navetta economico dall'aeroporto di Ciampino alla stazione Termini. Partenze frequenti."
-            gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-bus-transfer-t456/"
-            price="€5"
-          />
+        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ActivityCard emoji="🚗" title="Transfer Privato Ciampino — Roma" description="Autista privato con cartello al tuo nome. Veicolo moderno, A/C, prezzo fisso garantito." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" />
+          <ActivityCard emoji="🚐" title="Navetta Bus Ciampino — Termini" description="Bus navetta economico dall'aeroporto di Ciampino alla stazione Termini." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-bus-transfer-t456/" price="€5" />
+          <ActivityCard emoji="👨‍👩‍👧‍👦" title="Transfer Famiglia (Minivan)" description="Minivan per famiglie con bambini. Seggiolini disponibili su richiesta." gygUrl="https://www.getyourguide.com/rome-l33/rome-private-transfer-from-to-fiumicino-airport-t676074/" price="€55" />
+          <ActivityCard emoji="🏛️" title="Tour Colosseo — Salta la Fila" description="Visita guidata del Colosseo, Foro Romano e Palatino. Accesso prioritario." gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-colosseum-roman-forum-palatine-hill-t67792/" price="€35" />
+          <ActivityCard emoji="⛪" title="Musei Vaticani e Sistina" description="Accesso prioritario ai Musei Vaticani e alla Cappella Sistina. Guida esperta." gygUrl="https://www.getyourguide.com/rome-l33/vatican-museums-sistine-chapel-skip-the-line-ticket-t44089/" price="€30" />
+          <ActivityCard emoji="🌅" title="Tour Roma di Notte" description="Ammira i monumenti illuminati di Roma in un tour serale indimenticabile." gygUrl="https://www.getyourguide.com/rome-l33/rome-by-night-walking-tour-t392/" price="€25" />
         </div>
 
         {/* FAQ Section */}
