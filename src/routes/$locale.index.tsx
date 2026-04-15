@@ -54,22 +54,22 @@ function LocaleIndex() {
         <h2 className="font-display text-2xl sm:text-3xl font-bold text-center mb-3 sm:mb-4">{p.infoTitle}</h2>
         <p className="text-center text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base">{p.infoSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <Link to={`/${locale}/tariffe`} className="group rounded-xl border border-border bg-card overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
+          <Link to={`/${locale}/tariffe`} className="group rounded-sm border border-stone-warm bg-card overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
             <img src={taxiRomaImg} alt={p.cardTariffe.title} className="h-36 sm:h-48 w-full object-cover" loading="lazy" width={600} height={300} />
             <div className="p-4 sm:p-6">
               <h3 className="font-display text-lg sm:text-xl font-semibold group-hover:text-primary transition-colors">{p.cardTariffe.title}</h3>
               <p className="mt-1.5 sm:mt-2 text-sm text-muted-foreground">{p.cardTariffe.desc}</p>
             </div>
           </Link>
-          <Link to={`/${locale}/fiumicino`} className="group rounded-xl border border-border bg-card overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
+          <Link to={`/${locale}/fiumicino`} className="group rounded-sm border border-stone-warm bg-card overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
             <img src={fiumicinoImg} alt={p.cardFiumicino.title} className="h-36 sm:h-48 w-full object-cover" loading="lazy" width={600} height={300} />
             <div className="p-4 sm:p-6">
               <h3 className="font-display text-lg sm:text-xl font-semibold group-hover:text-primary transition-colors">{p.cardFiumicino.title}</h3>
               <p className="mt-1.5 sm:mt-2 text-sm text-muted-foreground">{p.cardFiumicino.desc}</p>
             </div>
           </Link>
-          <Link to={`/${locale}/numeri`} className="group rounded-xl border border-border bg-card overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
-            <div className="h-36 sm:h-48 w-full gold-gradient flex items-center justify-center"><span className="text-5xl sm:text-7xl">📞</span></div>
+          <Link to={`/${locale}/numeri`} className="group rounded-sm border border-stone-warm bg-card overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
+            <div className="h-36 sm:h-48 w-full bg-espresso text-linen flex items-center justify-center"><span className="text-5xl sm:text-7xl">📞</span></div>
             <div className="p-4 sm:p-6">
               <h3 className="font-display text-lg sm:text-xl font-semibold group-hover:text-primary transition-colors">{p.cardNumeri.title}</h3>
               <p className="mt-1.5 sm:mt-2 text-sm text-muted-foreground">{p.cardNumeri.desc}</p>
@@ -109,7 +109,7 @@ function LocaleIndex() {
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">{p.faqTitle}</h2>
           <div className="space-y-3 sm:space-y-6">
             {p.faqs.map((faq: any) => (
-              <details key={faq.q} className="group rounded-xl border border-border bg-card p-4 sm:p-6">
+              <details key={faq.q} className="group rounded-sm border border-stone-warm bg-card p-4 sm:p-6">
                 <summary className="cursor-pointer font-display text-base sm:text-lg font-semibold text-card-foreground list-none flex items-center justify-between gap-3">
                   <span>{faq.q}</span>
                   <svg className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
