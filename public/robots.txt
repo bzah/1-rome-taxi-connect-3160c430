@@ -2,4 +2,17 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
+# Sitemaps
 Sitemap: https://taxifiumicino.com/sitemap.xml
+Sitemap: https://taxifiumicino.com/sitemap-pages.xml
+Sitemap: https://taxifiumicino.com/sitemap-en.xml
+Sitemap: https://taxifiumicino.com/sitemap-es.xml
+Sitemap: https://taxifiumicino.com/sitemap-fr.xml
+Sitemap: https://taxifiumicino.com/sitemap-ru.xml
+
+# Crawl-delay
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Bingbot
+Crawl-delay: 2
