@@ -273,6 +273,28 @@ export function Header() {
               </div>
             )}
 
+            {/* Language switcher - Mobile */}
+            <div className="pt-4 mt-4 border-t border-border">
+              <p className="px-4 pb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">🌐 Language</p>
+              <div className="flex flex-wrap gap-2 px-4">
+                {(["it", ...foreignLocales] as Locale[]).map((loc) => (
+                  <a
+                    key={loc}
+                    href={getLocalizedPath(loc)}
+                    className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm transition-colors ${
+                      loc === currentLocale
+                        ? "bg-accent text-accent-foreground font-semibold ring-1 ring-primary/30"
+                        : "text-muted-foreground hover:text-foreground active:bg-accent/50 border border-border"
+                    }`}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <span>{localeFlags[loc]}</span>
+                    {localeNames[loc]}
+                  </a>
+                ))}
+              </div>
+            </div>
+
             {/* Quick CTA in mobile menu */}
             <div className="pt-4 mt-4 border-t border-border">
               <a
