@@ -38,8 +38,21 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
   const [mobileInfoOpen, setMobileInfoOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const location = useLocation();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const langRef = useRef<HTMLDivElement>(null);
+
+  // Detect current locale from URL
+  const pathParts = location.pathname.split("/").filter(Boolean);
+  const currentLocale: Locale = (foreignLocales as readonly string[]).includes(pathParts[0]) ? (pathParts[0] as Locale) : "it";
+  const currentSlug = currentLocale === "it" ? location.pathname : "/" + pathParts.slice(1).join("/");
+
+  function getLocalizedPath(targetLocale: Locale) {
+    const slug = currentSlug === "/" ? "" : currentSlug;
+    if (targetLocale === "it") return slug || "/";
+    return `/${targetLocale}${slug}`;
+  }
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -51,6 +64,9 @@ export function Header() {
     function handleClickOutside(e: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setInfoOpen(false);
+      }
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -141,6 +157,39 @@ export function Header() {
               </div>
             )}
           </div>
+
+          {/* Language switcher - Desktop */}
+          <div className="relative" ref={langRef}>
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className="rounded-md px-2.5 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground hover:bg-accent/50 flex items-center gap-1.5"
+              aria-label="Language"
+            >
+              <span className="text-base">{localeFlags[currentLocale]}</span>
+              <svg className={`h-3.5 w-3.5 transition-transform ${langOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {langOpen && (
+              <div className="absolute right-0 top-full mt-2 w-44 rounded-xl border border-border bg-background shadow-xl py-1.5 z-50">
+                {(["it", ...foreignLocales] as Locale[]).map((loc) => (
+                  <a
+                    key={loc}
+                    href={getLocalizedPath(loc)}
+                    className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
+                      loc === currentLocale
+                        ? "text-foreground bg-accent/60 font-semibold"
+                        : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                    }`}
+                    onClick={() => setLangOpen(false)}
+                  >
+                    <span className="text-base">{localeFlags[loc]}</span>
+                    {localeNames[loc]}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
         </nav>
 
         {/* Mobile menu toggle */}
@@ -223,6 +272,28 @@ export function Header() {
                 ))}
               </div>
             )}
+
+            {/* Language switcher - Mobile */}
+            <div className="pt-4 mt-4 border-t border-border">
+              <p className="px-4 pb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">🌐 Language</p>
+              <div className="flex flex-wrap gap-2 px-4">
+                {(["it", ...foreignLocales] as Locale[]).map((loc) => (
+                  <a
+                    key={loc}
+                    href={getLocalizedPath(loc)}
+                    className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm transition-colors ${
+                      loc === currentLocale
+                        ? "bg-accent text-accent-foreground font-semibold ring-1 ring-primary/30"
+                        : "text-muted-foreground hover:text-foreground active:bg-accent/50 border border-border"
+                    }`}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <span>{localeFlags[loc]}</span>
+                    {localeNames[loc]}
+                  </a>
+                ))}
+              </div>
+            </div>
 
             {/* Quick CTA in mobile menu */}
             <div className="pt-4 mt-4 border-t border-border">
