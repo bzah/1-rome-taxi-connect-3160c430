@@ -7,7 +7,7 @@ import { sendContactEmail } from "@/utils/contact.functions";
 import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
 import taxiRomaImg from "@/assets/taxi-roma.jpg";
 
-const fullyTranslatedPages = ["fiumicino", "tariffe", "taxi-ciampino", "prenota", "about", "contact", "numeri", "app-taxi-roma", "hotel-roma", "parcheggio-fiumicino"];
+const fullyTranslatedPages = ["fiumicino", "tariffe", "taxi-ciampino", "prenota", "about", "contact", "numeri", "app-taxi-roma", "hotel-roma", "parcheggio-fiumicino", "aeroporti-di-roma", "hotel-aeroporto-fiumicino", "come-chiamare-taxi-roma"];
 
 export const Route = createFileRoute("/$locale/$")({
   head: ({ params }) => {
@@ -46,6 +46,9 @@ function CatchAllPage() {
       case "app-taxi-roma": return <AppTaxiPage t={t} locale={locale} />;
       case "hotel-roma": return <HotelRomaPage t={t} locale={locale} />;
       case "parcheggio-fiumicino": return <ParcheggioPage t={t} locale={locale} />;
+      case "aeroporti-di-roma": return <AeroportiPage t={t} locale={locale} />;
+      case "hotel-aeroporto-fiumicino": return <HotelAeroportoPage t={t} locale={locale} />;
+      case "come-chiamare-taxi-roma": return <ComeChiamarePage t={t} locale={locale} />;
     }
   }
 
