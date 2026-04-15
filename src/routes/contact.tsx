@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { sendContactEmail } from "@/utils/contact.functions";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
