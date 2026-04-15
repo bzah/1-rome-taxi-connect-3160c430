@@ -38,8 +38,21 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
   const [mobileInfoOpen, setMobileInfoOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const location = useLocation();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const langRef = useRef<HTMLDivElement>(null);
+
+  // Detect current locale from URL
+  const pathParts = location.pathname.split("/").filter(Boolean);
+  const currentLocale: Locale = (foreignLocales as readonly string[]).includes(pathParts[0]) ? (pathParts[0] as Locale) : "it";
+  const currentSlug = currentLocale === "it" ? location.pathname : "/" + pathParts.slice(1).join("/");
+
+  function getLocalizedPath(targetLocale: Locale) {
+    const slug = currentSlug === "/" ? "" : currentSlug;
+    if (targetLocale === "it") return slug || "/";
+    return `/${targetLocale}${slug}`;
+  }
 
   // Close mobile menu on route change
   useEffect(() => {
