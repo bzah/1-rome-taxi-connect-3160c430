@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TariffeRouteImport } from './routes/tariffe'
+import { Route as PrenotaRouteImport } from './routes/prenota'
+import { Route as NumeriRouteImport } from './routes/numeri'
+import { Route as FiumicinoRouteImport } from './routes/fiumicino'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TariffeRoute = TariffeRouteImport.update({
+  id: '/tariffe',
+  path: '/tariffe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrenotaRoute = PrenotaRouteImport.update({
+  id: '/prenota',
+  path: '/prenota',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NumeriRoute = NumeriRouteImport.update({
+  id: '/numeri',
+  path: '/numeri',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FiumicinoRoute = FiumicinoRouteImport.update({
+  id: '/fiumicino',
+  path: '/fiumicino',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,72 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/fiumicino': typeof FiumicinoRoute
+  '/numeri': typeof NumeriRoute
+  '/prenota': typeof PrenotaRoute
+  '/tariffe': typeof TariffeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/fiumicino': typeof FiumicinoRoute
+  '/numeri': typeof NumeriRoute
+  '/prenota': typeof PrenotaRoute
+  '/tariffe': typeof TariffeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/fiumicino': typeof FiumicinoRoute
+  '/numeri': typeof NumeriRoute
+  '/prenota': typeof PrenotaRoute
+  '/tariffe': typeof TariffeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/fiumicino' | '/numeri' | '/prenota' | '/tariffe'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/fiumicino' | '/numeri' | '/prenota' | '/tariffe'
+  id: '__root__' | '/' | '/fiumicino' | '/numeri' | '/prenota' | '/tariffe'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FiumicinoRoute: typeof FiumicinoRoute
+  NumeriRoute: typeof NumeriRoute
+  PrenotaRoute: typeof PrenotaRoute
+  TariffeRoute: typeof TariffeRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tariffe': {
+      id: '/tariffe'
+      path: '/tariffe'
+      fullPath: '/tariffe'
+      preLoaderRoute: typeof TariffeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prenota': {
+      id: '/prenota'
+      path: '/prenota'
+      fullPath: '/prenota'
+      preLoaderRoute: typeof PrenotaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/numeri': {
+      id: '/numeri'
+      path: '/numeri'
+      fullPath: '/numeri'
+      preLoaderRoute: typeof NumeriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fiumicino': {
+      id: '/fiumicino'
+      path: '/fiumicino'
+      fullPath: '/fiumicino'
+      preLoaderRoute: typeof FiumicinoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +121,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FiumicinoRoute: FiumicinoRoute,
+  NumeriRoute: NumeriRoute,
+  PrenotaRoute: PrenotaRoute,
+  TariffeRoute: TariffeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
