@@ -567,3 +567,218 @@ function ParcheggioPage({ t, locale }: { t: any; locale: string }) {
     </>
   );
 }
+
+// ────── AEROPORTI DI ROMA PAGE ──────
+function AeroportiPage({ t, locale }: { t: any; locale: string }) {
+  const p = t.pages["aeroporti-di-roma"];
+  const GYG = "https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher";
+  return (
+    <>
+      <HeroSection title={p.hero.title} subtitle={p.hero.subtitle} description={p.hero.description} />
+      <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+        <h2 className="font-display text-3xl font-bold mb-4">{p.comparisonTitle}</h2>
+        <p className="text-muted-foreground mb-8">{p.comparisonSubtitle}</p>
+        <div className="overflow-hidden rounded-xl border border-border">
+          <table className="w-full text-sm">
+            <thead className="gold-gradient text-primary-foreground">
+              <tr>{p.comparisonHeaders.map((h: string) => <th key={h} className="px-6 py-4 text-left font-semibold">{h}</th>)}</tr>
+            </thead>
+            <tbody className="divide-y divide-border">
+              {p.comparisonRows.map((row: string[]) => (
+                <tr key={row[0]} className="hover:bg-accent/30">
+                  {row.map((cell: string, i: number) => <td key={i} className={`px-6 py-3.5 ${i === 0 ? "font-medium" : ""}`}>{cell}</td>)}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.fiumicinoTitle}</h2>
+        <p className="text-muted-foreground mb-8">{p.fiumicinoText}</p>
+        <div className="grid gap-6 sm:grid-cols-3">
+          {p.fiumicinoCards.map((c: any) => (
+            <div key={c.title} className="rounded-xl border border-border bg-card p-6">
+              <div className="text-3xl mb-3">{c.emoji}</div>
+              <h3 className="font-display text-lg font-semibold">{c.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{c.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.ciampinoTitle}</h2>
+        <p className="text-muted-foreground mb-8">{p.ciampinoText}</p>
+        <div className="grid gap-6 sm:grid-cols-3">
+          {p.ciampinoCards.map((c: any) => (
+            <div key={c.title} className="rounded-xl border border-border bg-card p-6">
+              <div className="text-3xl mb-3">{c.emoji}</div>
+              <h3 className="font-display text-lg font-semibold">{c.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{c.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.tipsTitle}</h2>
+        <div className="grid gap-6 sm:grid-cols-3">
+          {p.tips.map((tip: any) => (
+            <div key={tip.title} className="rounded-xl border border-border bg-card p-6">
+              <div className="text-3xl mb-3">{tip.emoji}</div>
+              <h3 className="font-display text-lg font-semibold">{tip.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{tip.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.transferTitle}</h2>
+        <p className="text-muted-foreground mb-8">{p.transferSubtitle}</p>
+        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" />
+          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" />
+          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" />
+        </div>
+
+        {p.faqs && (
+          <div className="mt-16">
+            <h2 className="font-display text-3xl font-bold mb-8">{p.faqTitle}</h2>
+            <div className="space-y-4">
+              {p.faqs.map((faq: any) => (
+                <details key={faq.q} className="rounded-xl border border-border bg-card group">
+                  <summary className="px-6 py-4 font-semibold cursor-pointer hover:bg-accent/30">{faq.q}</summary>
+                  <p className="px-6 pb-4 text-sm text-muted-foreground">{faq.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        )}
+        <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} url={GYG} /></div>
+      </section>
+    </>
+  );
+}
+
+// ────── HOTEL AEROPORTO FIUMICINO PAGE ──────
+function HotelAeroportoPage({ t, locale }: { t: any; locale: string }) {
+  const p = t.pages["hotel-aeroporto-fiumicino"];
+  return (
+    <>
+      <HeroSection title={p.hero.title} subtitle={p.hero.subtitle} description={p.hero.description} />
+      <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+        <h2 className="font-display text-3xl font-bold mb-4">{p.hotelsTitle}</h2>
+        <p className="text-muted-foreground mb-8">{p.hotelsSubtitle}</p>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {p.hotels.map((hotel: any, i: number) => (
+            <div key={hotel.name} className={`rounded-2xl border ${i === 0 ? "border-2 border-primary/30 ring-2 ring-primary/10" : "border-border"} bg-card p-6 shadow-sm`}>
+              <div className="flex items-center justify-between">
+                <span className={`rounded-full ${i === 0 ? "bg-primary text-primary-foreground" : "bg-accent text-accent-foreground"} px-3 py-1 text-xs font-bold`}>{hotel.badge}</span>
+                <span className="text-sm font-medium text-primary">{hotel.rating}</span>
+              </div>
+              <h3 className="mt-4 font-display text-xl font-bold">{hotel.name}</h3>
+              <p className="text-sm text-primary font-medium">{hotel.stars} • {hotel.price}</p>
+              <p className="mt-3 text-muted-foreground text-sm leading-relaxed">{hotel.desc}</p>
+              <ul className="mt-3 space-y-1 text-xs text-muted-foreground">
+                {hotel.features.map((f: string) => <li key={f}>✅ {f}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.comparisonTitle}</h2>
+        <div className="overflow-hidden rounded-xl border border-border mt-8">
+          <table className="w-full text-sm">
+            <thead className="gold-gradient text-primary-foreground">
+              <tr>{p.comparisonHeaders.map((h: string) => <th key={h} className="px-4 py-4 text-left font-semibold">{h}</th>)}</tr>
+            </thead>
+            <tbody className="divide-y divide-border">
+              {p.comparisonRows.map((row: string[]) => (
+                <tr key={row[0]} className="hover:bg-accent/30">
+                  {row.map((cell: string, i: number) => <td key={i} className={`px-4 py-3.5 ${i === 0 ? "font-medium" : ""}`}>{cell}</td>)}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.transferTitle}</h2>
+        <p className="text-muted-foreground mb-8">{p.transferSubtitle}</p>
+        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer to your hotel." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" />
+          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" />
+          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" />
+        </div>
+
+        {p.faqs && (
+          <div className="mt-16">
+            <h2 className="font-display text-3xl font-bold mb-8">{p.faqTitle}</h2>
+            <div className="space-y-4">
+              {p.faqs.map((faq: any) => (
+                <details key={faq.q} className="rounded-xl border border-border bg-card group">
+                  <summary className="px-6 py-4 font-semibold cursor-pointer hover:bg-accent/30">{faq.q}</summary>
+                  <p className="px-6 pb-4 text-sm text-muted-foreground">{faq.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        )}
+        <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
+      </section>
+    </>
+  );
+}
+
+// ────── COME CHIAMARE TAXI ROMA PAGE ──────
+function ComeChiamarePage({ t, locale }: { t: any; locale: string }) {
+  const p = t.pages["come-chiamare-taxi-roma"];
+  return (
+    <>
+      <HeroSection title={p.hero.title} subtitle={p.hero.subtitle} description={p.hero.description} />
+      <section className="mx-auto max-w-4xl px-4 py-20 sm:px-6">
+        <h2 className="font-display text-3xl font-bold mb-8">{p.methodsTitle}</h2>
+        <div className="space-y-8">
+          {p.methods.map((method: any, i: number) => (
+            <div key={i} className="rounded-xl border border-border bg-card p-8">
+              <div className="flex items-start gap-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full gold-gradient text-lg font-bold text-primary-foreground">{i + 1}</div>
+                <div>
+                  <h3 className="font-display text-xl font-semibold">{method.title}</h3>
+                  <p className="mt-2 text-muted-foreground leading-relaxed">{method.desc}</p>
+                  {method.phones && (
+                    <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                      {method.phones.map((t: any) => (
+                        <a key={t.phone} href={`tel:${t.phone.replace(/\s/g, "")}`} className="flex items-center gap-3 rounded-lg border border-border p-3 transition-colors hover:bg-accent/50">
+                          <span className="text-lg">📱</span>
+                          <div>
+                            <div className="text-sm font-semibold">{t.name}</div>
+                            <div className="text-sm text-primary font-medium">{t.phone}</div>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                  {method.tip && (
+                    <div className="mt-4 rounded-lg bg-accent/50 p-4 text-sm text-muted-foreground">
+                      <strong>💡</strong> {method.tip}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 rounded-xl section-warm p-8">
+          <h3 className="font-display text-xl font-semibold mb-4">{p.costTitle}</h3>
+          <p className="text-sm text-muted-foreground leading-relaxed mb-4">{p.costText}</p>
+          <p className="text-sm text-muted-foreground leading-relaxed">{p.costFixed}</p>
+        </div>
+
+        <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.transferTitle}</h2>
+        <p className="text-muted-foreground mb-8">{p.transferSubtitle}</p>
+        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" />
+          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" />
+          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" />
+        </div>
+        <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
+      </section>
+    </>
+  );
+}
