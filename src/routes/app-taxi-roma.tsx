@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
-import { GetYourGuideCTA } from "@/components/GetYourGuideWidget";
+import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 
 export const Route = createFileRoute("/app-taxi-roma")({
   component: AppTaxiPage,
@@ -156,9 +156,21 @@ function AppTaxiPage() {
           </div>
         </div>
 
+        {/* Affiliate Section */}
+        <h2 className="font-display text-3xl font-bold mt-16 mb-4">Prenota un Transfer — Più Comodo di Qualsiasi App</h2>
+        <p className="text-muted-foreground mb-8">Un autista ti aspetta con cartello al tuo nome. Prezzo fisso, cancellazione gratuita, niente attese.</p>
+        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ActivityCard emoji="🚗" title="Transfer Privato Fiumicino" description="Dall'aeroporto Fiumicino al tuo hotel. Autista professionale, veicolo con A/C, prezzo fisso." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" />
+          <ActivityCard emoji="🚐" title="Navetta Condivisa Fiumicino" description="Navetta economica dall'aeroporto alla stazione Termini. Affidabile e puntuale." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" />
+          <ActivityCard emoji="🚕" title="Transfer Ciampino — Roma" description="Transfer privato per i voli Ryanair e Wizz Air. Dall'aeroporto di Ciampino al centro." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" />
+          <ActivityCard emoji="🏛️" title="Tour Colosseo Salta la Fila" description="Visita guidata Colosseo, Foro Romano e Palatino. Accesso prioritario senza code." gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-colosseum-roman-forum-palatine-hill-t67792/" price="€35" />
+          <ActivityCard emoji="🌅" title="Tour Roma di Notte" description="Ammira i monumenti illuminati di Roma in un tour serale indimenticabile." gygUrl="https://www.getyourguide.com/rome-l33/rome-by-night-walking-tour-t392/" price="€25" />
+          <ActivityCard emoji="👨‍👩‍👧‍👦" title="Transfer per Famiglie" description="Minivan per famiglie con seggiolini auto. Dall'aeroporto al tuo alloggio in totale comfort." gygUrl="https://www.getyourguide.com/rome-l33/rome-private-transfer-from-to-fiumicino-airport-t676074/" price="€55" />
+        </div>
+
         <div className="mt-12 text-center">
           <p className="text-muted-foreground mb-4">Preferisci prenotare online un transfer garantito?</p>
-          <GetYourGuideCTA text="Prenota Transfer Online" />
+          <GetYourGuideCTA text="Vedi Tutti i Transfer e Tour" />
         </div>
       </section>
     </>

@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
-import { GetYourGuideCTA } from "@/components/GetYourGuideWidget";
+import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 
 export const Route = createFileRoute("/come-chiamare-taxi-roma")({
   component: ComeChiamarePage,
@@ -140,9 +140,18 @@ function ComeChiamarePage() {
           </p>
         </div>
 
+        {/* Affiliate Section */}
+        <h2 className="font-display text-3xl font-bold mt-16 mb-4">Alternativa: Prenota un Transfer Privato</h2>
+        <p className="text-muted-foreground mb-8">Non vuoi chiamare? Prenota online un autista che ti aspetta con cartello. Prezzo fisso e cancellazione gratuita.</p>
+        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ActivityCard emoji="🚗" title="Transfer Privato Fiumicino" description="Dall'aeroporto direttamente al tuo hotel in centro Roma. Autista professionale con cartello." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" />
+          <ActivityCard emoji="🚕" title="Transfer Ciampino — Roma" description="Transfer privato dall'aeroporto di Ciampino. Perfetto per voli Ryanair e low-cost." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" />
+          <ActivityCard emoji="🚐" title="Navetta Condivisa Termini" description="Bus navetta dall'aeroporto Fiumicino alla stazione Termini. L'opzione più economica." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" />
+        </div>
+
         <div className="mt-12 text-center">
           <p className="text-muted-foreground mb-4">Preferisci prenotare un transfer privato con autista?</p>
-          <GetYourGuideCTA text="Prenota Transfer Privato" url="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher" />
+          <GetYourGuideCTA text="Vedi Tutti i Transfer" url="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher" />
         </div>
       </section>
     </>
