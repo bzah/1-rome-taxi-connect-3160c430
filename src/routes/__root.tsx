@@ -48,6 +48,15 @@ export const Route = createRootRoute({
       { rel: "canonical", href: "https://taxifiumicino.com" },
     ],
   }),
+  scripts: () => [
+    {
+      src: "https://www.googletagmanager.com/gtag/js?id=G-531005990",
+      async: true,
+    },
+    {
+      children: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-531005990');`,
+    },
+  ],
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
