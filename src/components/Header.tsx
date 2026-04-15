@@ -1,5 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
+import logoImg from "@/assets/logo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -20,10 +21,7 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl">🚕</span>
-          <span className="font-display text-xl font-bold tracking-tight text-foreground">
-            Taxi<span className="text-primary">Fiumicino</span>.com
-          </span>
+          <img src={logoImg} alt="TaxiFiumicino.com" width={180} height={90} className="h-10 w-auto" />
         </Link>
 
         {/* Desktop nav */}
