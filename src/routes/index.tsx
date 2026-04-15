@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 import taxiRomaImg from "@/assets/taxi-roma.jpg";
@@ -7,6 +6,47 @@ import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Taxi Roma Fiumicino — Aeroporto Roma Fiumicino Transfer e Tariffe 2026" },
+      { name: "description", content: "Taxi e transfer dall'aeroporto Roma Fiumicino: tariffa fissa €50, numeri radio taxi, prenotazioni online. Guida completa 2026 per turisti e residenti." },
+      { property: "og:title", content: "Taxi Roma — Guida Completa ai Taxi a Roma e Fiumicino" },
+      { property: "og:description", content: "Tariffe, numeri, prenotazioni taxi Roma. Trasferimenti aeroporto Fiumicino. La guida più completa." },
+      { property: "og:type", content: "website" },
+      { name: "keywords", content: "taxi roma, aeroporto roma fiumicino, taxi roma fiumicino, aeroporto fiumicino, numero taxi roma, tariffe taxi roma, transfer aeroporto fiumicino, radio taxi roma" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "TaxiFiumicino.com — Guida Taxi Roma",
+          "description": "Guida completa ai taxi a Roma: tariffe ufficiali, numeri radio taxi, trasferimenti aeroporto Fiumicino e prenotazioni online.",
+          "url": "https://taxifiumicino.com",
+          "areaServed": { "@type": "City", "name": "Roma", "sameAs": "https://it.wikipedia.org/wiki/Roma" },
+          "address": { "@type": "PostalAddress", "addressLocality": "Roma", "addressRegion": "Lazio", "addressCountry": "IT" },
+          "geo": { "@type": "GeoCoordinates", "latitude": 41.9028, "longitude": 12.4964 },
+          "priceRange": "€€",
+          "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" }
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Come prenotare un taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "Puoi prenotare un taxi a Roma chiamando una radio taxi (06.3570, 06.4994, 06.6645), usando un'app come itTaxi o Free Now, oppure prenotando un transfer privato online." } },
+            { "@type": "Question", "name": "Quanto costa un taxi da Fiumicino a Roma centro?", "acceptedAnswer": { "@type": "Answer", "text": "La tariffa fissa per un taxi da Fiumicino al centro di Roma (dentro le Mura Aureliane) è di €50. Questa tariffa è valida per un massimo di 4 passeggeri con bagagli inclusi." } },
+            { "@type": "Question", "name": "Qual è il numero di telefono per chiamare un taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "I principali numeri sono: Radio Taxi 3570 (06.3570), Samarcanda (06.5551), La Capitale (06.4994), Roma Taxi (06.6645). Disponibili 24 ore su 24." } },
+            { "@type": "Question", "name": "Come chiamare un taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "Puoi chiamare un taxi a Roma: 1) Per telefono tramite radio taxi, 2) Con l'app itTaxi o Free Now, 3) Da una postazione taxi ufficiale, 4) Fermandone uno per strada se ha la luce accesa." } },
+            { "@type": "Question", "name": "Quanto costa un taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "La tariffa base è €3 di giorno (€6.50 di notte/festivi). Il costo al km varia da €1.10 a €1.60. Una corsa media in centro costa €8-15. Fiumicino: tariffa fissa €50, Ciampino: €31." } }
+          ]
+        }),
+      },
+    ],
+  }),
 });
 
 function Index() {
