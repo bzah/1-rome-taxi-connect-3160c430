@@ -2,10 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
+import { hreflangLinks } from "@/i18n/hreflang";
 
 export const Route = createFileRoute("/parcheggio-fiumicino")({
   component: ParcheggioFiumicinoPage,
   head: () => ({
+    links: hreflangLinks("/parcheggio-fiumicino"),
     meta: [
       { title: "Parcheggio Fiumicino 2026 — Tariffe, Mappa e Confronto Parcheggi | TaxiFiumicino.com" },
       { name: "description", content: "Parcheggio Fiumicino aeroporto: confronto tariffe parcheggi ufficiali, low cost e convenzionati. Prezzi da €5/giorno, mappa terminal e consigli per risparmiare." },

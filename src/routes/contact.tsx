@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { sendContactEmail } from "@/utils/contact.functions";
+import { hreflangLinks } from "@/i18n/hreflang";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
+    links: hreflangLinks("/contact"),
     meta: [
       { title: "Contatti — TaxiFiumicino.com | Scrivici per Info Taxi Roma" },
       { name: "description", content: "Contatta TaxiFiumicino.com per domande su taxi Roma, transfer aeroporto Fiumicino e Ciampino, tariffe, prenotazioni o collaborazioni. Rispondiamo entro 24 ore via email a tutte le richieste di informazioni." },
