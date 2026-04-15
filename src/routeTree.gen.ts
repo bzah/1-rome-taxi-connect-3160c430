@@ -31,6 +31,7 @@ import { Route as AeroportoFiumicinoRomaCentroRouteImport } from './routes/aerop
 import { Route as AeroportiDiRomaRouteImport } from './routes/aeroporti-di-roma'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiContactRouteImport } from './routes/api/contact'
 
 const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
   id: '/terms-of-service',
@@ -144,6 +145,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiContactRoute = ApiContactRouteImport.update({
+  id: '/api/contact',
+  path: '/api/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -168,6 +174,7 @@ export interface FileRoutesByFullPath {
   '/tariffe': typeof TariffeRoute
   '/taxi-ciampino': typeof TaxiCiampinoRoute
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/api/contact': typeof ApiContactRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -192,6 +199,7 @@ export interface FileRoutesByTo {
   '/tariffe': typeof TariffeRoute
   '/taxi-ciampino': typeof TaxiCiampinoRoute
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/api/contact': typeof ApiContactRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -217,6 +225,7 @@ export interface FileRoutesById {
   '/tariffe': typeof TariffeRoute
   '/taxi-ciampino': typeof TaxiCiampinoRoute
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/api/contact': typeof ApiContactRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -243,6 +252,7 @@ export interface FileRouteTypes {
     | '/tariffe'
     | '/taxi-ciampino'
     | '/terms-of-service'
+    | '/api/contact'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -267,6 +277,7 @@ export interface FileRouteTypes {
     | '/tariffe'
     | '/taxi-ciampino'
     | '/terms-of-service'
+    | '/api/contact'
   id:
     | '__root__'
     | '/'
@@ -291,6 +302,7 @@ export interface FileRouteTypes {
     | '/tariffe'
     | '/taxi-ciampino'
     | '/terms-of-service'
+    | '/api/contact'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -316,6 +328,7 @@ export interface RootRouteChildren {
   TariffeRoute: typeof TariffeRoute
   TaxiCiampinoRoute: typeof TaxiCiampinoRoute
   TermsOfServiceRoute: typeof TermsOfServiceRoute
+  ApiContactRoute: typeof ApiContactRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -474,6 +487,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/contact': {
+      id: '/api/contact'
+      path: '/api/contact'
+      fullPath: '/api/contact'
+      preLoaderRoute: typeof ApiContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -500,6 +520,7 @@ const rootRouteChildren: RootRouteChildren = {
   TariffeRoute: TariffeRoute,
   TaxiCiampinoRoute: TaxiCiampinoRoute,
   TermsOfServiceRoute: TermsOfServiceRoute,
+  ApiContactRoute: ApiContactRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
