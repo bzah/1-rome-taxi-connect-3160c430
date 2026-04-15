@@ -5,6 +5,7 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/tariffe", label: "Tariffe" },
   { to: "/fiumicino", label: "Fiumicino" },
+  { to: "/taxi-ciampino", label: "Ciampino" },
   { to: "/numeri", label: "Numeri Taxi" },
   { to: "/prenota", label: "Prenota" },
 ] as const;

@@ -19,6 +19,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm opacity-70">
               <li><Link to="/tariffe" className="hover:opacity-100 transition-opacity">Tariffe Taxi Roma</Link></li>
               <li><Link to="/fiumicino" className="hover:opacity-100 transition-opacity">Taxi Roma Fiumicino</Link></li>
+              <li><Link to="/taxi-ciampino" className="hover:opacity-100 transition-opacity">Taxi Roma Ciampino</Link></li>
               <li><Link to="/numeri" className="hover:opacity-100 transition-opacity">Numeri Taxi Roma</Link></li>
               <li><Link to="/prenota" className="hover:opacity-100 transition-opacity">Prenota un Taxi</Link></li>
             </ul>
@@ -26,10 +27,10 @@ export function Footer() {
           <div>
             <h3 className="font-display text-sm font-semibold mb-3 uppercase tracking-wider opacity-80">Informazioni</h3>
             <ul className="space-y-2 text-sm opacity-70">
-              <li>Taxi Roma — Guida Completa</li>
-              <li>Tariffe Fisse Aeroporto</li>
+              <li><Link to="/come-chiamare-taxi-roma" className="hover:opacity-100 transition-opacity">Come Chiamare un Taxi</Link></li>
+              <li><Link to="/app-taxi-roma" className="hover:opacity-100 transition-opacity">App Taxi Roma</Link></li>
               <li>Radio Taxi Roma</li>
-              <li>App Taxi Roma</li>
+              <li>Tariffe Fisse Aeroporto</li>
             </ul>
           </div>
           <div>
