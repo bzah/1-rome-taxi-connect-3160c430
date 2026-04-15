@@ -20,46 +20,11 @@ export const Route = createFileRoute("/fiumicino")({
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Quanto costa un taxi dall'aeroporto di Roma Fiumicino al centro?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "La tariffa fissa per un taxi dall'aeroporto di Roma Fiumicino al centro di Roma (dentro le Mura Aureliane) è di €50, valida per max 4 passeggeri con bagagli inclusi."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Dove trovare i taxi all'aeroporto di Roma Fiumicino?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "I taxi ufficiali si trovano all'uscita degli Arrivi ai Terminal 1 e 3 dell'aeroporto di Roma Fiumicino. Segui i cartelli 'Taxi' e mettiti in fila alla postazione ufficiale."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quanto tempo ci vuole dall'aeroporto Fiumicino a Roma centro?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Il tragitto in taxi dall'aeroporto di Roma Fiumicino al centro città dura circa 30-50 minuti. Nelle ore di punta può arrivare a 60-75 minuti."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quanti terminal ha l'aeroporto di Roma Fiumicino?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "L'aeroporto di Roma Fiumicino ha 4 terminal: T1 (voli nazionali e Schengen), T2 (temporaneamente chiuso), T3 (voli internazionali, il più grande) e T5 (voli USA e Israele con controlli extra)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Come arrivare dall'aeroporto di Fiumicino a Roma Termini?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Dall'aeroporto di Roma Fiumicino a Roma Termini puoi prendere: il Leonardo Express (treno diretto, 32 min, €14), un taxi a tariffa fissa (€50), un transfer privato, o il bus navetta (€5-7, circa 60 min)."
-              }
-            }
+            { "@type": "Question", "name": "Quanto costa un taxi dall'aeroporto di Roma Fiumicino al centro?", "acceptedAnswer": { "@type": "Answer", "text": "La tariffa fissa per un taxi dall'aeroporto di Roma Fiumicino al centro di Roma (dentro le Mura Aureliane) è di €50, valida per max 4 passeggeri con bagagli inclusi." } },
+            { "@type": "Question", "name": "Dove trovare i taxi all'aeroporto di Roma Fiumicino?", "acceptedAnswer": { "@type": "Answer", "text": "I taxi ufficiali si trovano all'uscita degli Arrivi ai Terminal 1 e 3 dell'aeroporto di Roma Fiumicino. Segui i cartelli 'Taxi' e mettiti in fila alla postazione ufficiale." } },
+            { "@type": "Question", "name": "Quanto tempo ci vuole dall'aeroporto Fiumicino a Roma centro?", "acceptedAnswer": { "@type": "Answer", "text": "Il tragitto in taxi dall'aeroporto di Roma Fiumicino al centro città dura circa 30-50 minuti. Nelle ore di punta può arrivare a 60-75 minuti." } },
+            { "@type": "Question", "name": "Quanti terminal ha l'aeroporto di Roma Fiumicino?", "acceptedAnswer": { "@type": "Answer", "text": "L'aeroporto di Roma Fiumicino ha 4 terminal: T1 (voli nazionali e Schengen), T2 (temporaneamente chiuso), T3 (voli internazionali, il più grande) e T5 (voli USA e Israele con controlli extra)." } },
+            { "@type": "Question", "name": "Come arrivare dall'aeroporto di Fiumicino a Roma Termini?", "acceptedAnswer": { "@type": "Answer", "text": "Dall'aeroporto di Roma Fiumicino a Roma Termini puoi prendere: il Leonardo Express (treno diretto, 32 min, €14), un taxi a tariffa fissa (€50), un transfer privato, o il bus navetta (€5-7, circa 60 min)." } }
           ]
         }),
       },
@@ -72,19 +37,8 @@ export const Route = createFileRoute("/fiumicino")({
           "alternateName": "FCO",
           "iataCode": "FCO",
           "url": "https://www.adr.it/fiumicino",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Via dell'Aeroporto di Fiumicino, 320",
-            "addressLocality": "Fiumicino",
-            "addressRegion": "Lazio",
-            "postalCode": "00054",
-            "addressCountry": "IT"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 41.8003,
-            "longitude": 12.2389
-          }
+          "address": { "@type": "PostalAddress", "streetAddress": "Via dell'Aeroporto di Fiumicino, 320", "addressLocality": "Fiumicino", "addressRegion": "Lazio", "postalCode": "00054", "addressCountry": "IT" },
+          "geo": { "@type": "GeoCoordinates", "latitude": 41.8003, "longitude": 12.2389 }
         }),
       },
     ],
@@ -103,108 +57,96 @@ function FiumicinoPage() {
         image={fiumicinoImg}
       />
 
-      <section className="mx-auto max-w-4xl px-4 py-20 sm:px-6">
-        <h2 className="font-display text-3xl font-bold mb-8">Aeroporto di Roma Fiumicino — Informazioni Generali</h2>
-
-        <div className="prose prose-sm max-w-none text-foreground space-y-6">
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            L'<strong>aeroporto di Roma Fiumicino</strong> (codice IATA: FCO), intitolato a Leonardo da Vinci, è il principale scalo aeroportuale d'Italia e il più grande del Lazio. Situato a circa 30 km a sud-ovest del centro di Roma, l'<strong>aeroporto Roma Fiumicino</strong> gestisce oltre 40 milioni di passeggeri all'anno, collegando la Capitale con destinazioni in tutto il mondo.
+      <section className="mx-auto max-w-4xl px-5 py-16 sm:py-24 sm:px-8">
+        {/* Intro */}
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mb-10 gap-4">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">Informazioni<br className="hidden sm:block" /> Generali</h2>
+          <p className="text-muted-foreground max-w-xs text-sm leading-relaxed text-pretty">
+            Il più grande aeroporto d'Italia, a 30 km dal centro di Roma.
           </p>
-
-          {/* Terminal info */}
-          <h3 className="font-display text-2xl font-bold mt-12 mb-6">I Terminal dell'Aeroporto Roma Fiumicino</h3>
-          <div className="grid gap-6 sm:grid-cols-2">
-            <div className="rounded-xl border border-border bg-card p-6">
-              <div className="text-3xl mb-3">🛫</div>
-              <h4 className="font-display text-lg font-semibold">Terminal 1</h4>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Voli nazionali e Schengen. Compagnie: Alitalia (voli domestici), easyJet, Vueling, e altre low-cost europee. Collegato direttamente alla stazione ferroviaria.
-              </p>
-            </div>
-            <div className="rounded-xl border border-border bg-card p-6">
-              <div className="text-3xl mb-3">🌍</div>
-              <h4 className="font-display text-lg font-semibold">Terminal 3</h4>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Il terminal principale per voli internazionali. Ospita la maggior parte delle compagnie aeree tradizionali. Area duty-free, ristoranti, e servizi premium.
-              </p>
-            </div>
-            <div className="rounded-xl border border-border bg-card p-6">
-              <div className="text-3xl mb-3">🇺🇸</div>
-              <h4 className="font-display text-lg font-semibold">Terminal 5</h4>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Dedicato ai voli per USA e Israele con controlli di sicurezza aggiuntivi. Check-in e imbarco separati per queste destinazioni.
-              </p>
-            </div>
-            <div className="rounded-xl border border-border bg-card p-6">
-              <div className="text-3xl mb-3">🚂</div>
-              <h4 className="font-display text-lg font-semibold">Stazione Ferroviaria</h4>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Situata tra il Terminal 1 e il Terminal 3. Da qui partono il Leonardo Express per Termini e i treni regionali per le stazioni di Roma.
-              </p>
-            </div>
-          </div>
         </div>
 
-        {/* Taxi section - key SEO content */}
-        <h2 className="font-display text-3xl font-bold mt-16 mb-8">Taxi dall'Aeroporto Roma Fiumicino</h2>
-
-        <div className="grid gap-6 sm:grid-cols-2">
-          <div className="rounded-xl border border-border bg-card p-6">
-            <div className="text-3xl mb-3">🚕</div>
-            <h3 className="font-display text-lg font-semibold">Dove Trovare i Taxi</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              I taxi ufficiali dell'<strong>aeroporto Roma Fiumicino</strong> si trovano all'uscita degli Arrivi, ai Terminal 1 e 3. Segui i cartelli "Taxi" e mettiti in fila alla postazione ufficiale. Non accettare mai passaggi da abusivi.
-            </p>
-          </div>
-          <div className="rounded-xl border border-border bg-card p-6">
-            <div className="text-3xl mb-3">⏱️</div>
-            <h3 className="font-display text-lg font-semibold">Tempi di Percorrenza</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Il tragitto <strong>aeroporto Fiumicino — Roma centro</strong> dura circa 30-50 minuti. Nelle ore di punta (7-10, 17-20) può arrivare fino a 60-75 minuti via autostrada Roma-Fiumicino.
-            </p>
-          </div>
-          <div className="rounded-xl border border-border bg-card p-6">
-            <div className="text-3xl mb-3">💶</div>
-            <h3 className="font-display text-lg font-semibold">Tariffa Fissa €50</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              La tariffa fissa di <strong>€50</strong> dal <strong>aeroporto di Roma Fiumicino</strong> è valida per destinazioni dentro le Mura Aureliane, fino a 4 passeggeri, bagagli inclusi. Comunica al tassista che vuoi la tariffa fissa prima di partire.
-            </p>
-          </div>
-          <div className="rounded-xl border border-border bg-card p-6">
-            <div className="text-3xl mb-3">💳</div>
-            <h3 className="font-display text-lg font-semibold">Pagamento</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              I taxi di Roma accettano contanti e carte di credito/debito. Per legge, il POS deve essere funzionante. Puoi anche pagare con app contactless come Apple Pay.
-            </p>
-          </div>
+        <div className="text-muted-foreground space-y-5 text-base leading-relaxed mb-16">
+          <p>
+            L'<strong className="text-foreground">aeroporto di Roma Fiumicino</strong> (codice IATA: FCO), intitolato a Leonardo da Vinci, è il principale scalo aeroportuale d'Italia e il più grande del Lazio. Situato a circa 30 km a sud-ovest del centro di Roma, gestisce oltre 40 milioni di passeggeri all'anno.
+          </p>
         </div>
 
-        {/* How to get to Rome */}
-        <h2 className="font-display text-3xl font-bold mt-16 mb-4">Come Arrivare dall'Aeroporto di Fiumicino a Roma</h2>
-        <p className="text-muted-foreground mb-8">Tutte le opzioni di trasporto dall'<strong>aeroporto Roma Fiumicino</strong> al centro città.</p>
+        {/* Terminal info */}
+        <h3 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight mb-8">I Terminal</h3>
+        <div className="grid gap-5 sm:grid-cols-2">
+          {[
+            { icon: "🛫", name: "Terminal 1", desc: "Voli nazionali e Schengen. Compagnie: Alitalia (domestici), easyJet, Vueling e altre low-cost europee." },
+            { icon: "🌍", name: "Terminal 3", desc: "Il terminal principale per voli internazionali. Compagnie tradizionali, duty-free, ristoranti e servizi premium." },
+            { icon: "🇺🇸", name: "Terminal 5", desc: "Dedicato ai voli per USA e Israele con controlli di sicurezza aggiuntivi. Check-in e imbarco separati." },
+            { icon: "🚂", name: "Stazione Ferroviaria", desc: "Tra Terminal 1 e 3. Da qui partono il Leonardo Express per Termini e i treni regionali." },
+          ].map((t, i) => (
+            <div key={t.name} className="rounded-sm border border-stone-warm bg-card p-7 hover:border-primary/30 transition-colors duration-500">
+              <div className="flex items-start gap-4">
+                <span className="text-2xl">{t.icon}</span>
+                <div>
+                  <span className="text-xs text-primary/60 font-display tracking-widest">{String(i + 1).padStart(2, '0')}.</span>
+                  <h4 className="font-display text-lg font-semibold mt-0.5">{t.name}</h4>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{t.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
 
-        <div className="overflow-hidden rounded-xl border border-border">
+        {/* Taxi section */}
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mt-20 mb-10 gap-4">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">Taxi dall'Aeroporto<br className="hidden sm:block" /> Fiumicino</h2>
+          <p className="text-muted-foreground max-w-xs text-sm leading-relaxed text-pretty">
+            Tariffa fissa €50 per il centro di Roma.
+          </p>
+        </div>
+
+        <div className="grid gap-5 sm:grid-cols-2">
+          {[
+            { icon: "🚕", title: "Dove Trovare i Taxi", desc: "All'uscita degli Arrivi, Terminal 1 e 3. Segui i cartelli 'Taxi' e mettiti in fila alla postazione ufficiale. Non accettare mai passaggi da abusivi." },
+            { icon: "⏱️", title: "Tempi di Percorrenza", desc: "Fiumicino — Roma centro: circa 30-50 minuti. Nelle ore di punta (7-10, 17-20) può arrivare a 60-75 minuti." },
+            { icon: "💶", title: "Tariffa Fissa €50", desc: "Valida per destinazioni dentro le Mura Aureliane, fino a 4 passeggeri, bagagli inclusi. Comunica la tariffa fissa prima di partire." },
+            { icon: "💳", title: "Pagamento", desc: "I taxi accettano contanti e carte di credito/debito. Per legge, il POS deve essere funzionante. Anche Apple Pay." },
+          ].map((item) => (
+            <div key={item.title} className="rounded-sm border border-stone-warm bg-card p-7 hover:border-primary/30 transition-colors duration-500">
+              <div className="text-2xl mb-4">{item.icon}</div>
+              <h3 className="font-display text-lg font-semibold">{item.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Transport comparison table */}
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mt-20 mb-10 gap-4">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">Come Arrivare<br className="hidden sm:block" /> a Roma</h2>
+          <p className="text-muted-foreground max-w-xs text-sm leading-relaxed text-pretty">
+            Tutte le opzioni di trasporto dall'aeroporto al centro città.
+          </p>
+        </div>
+
+        <div className="overflow-hidden rounded-sm border border-stone-warm">
           <table className="w-full text-sm">
-            <thead className="gold-gradient text-primary-foreground">
+            <thead className="bg-espresso text-linen">
               <tr>
-                <th className="px-6 py-4 text-left font-semibold">Mezzo</th>
-                <th className="px-6 py-4 text-center font-semibold">Prezzo</th>
-                <th className="px-6 py-4 text-center font-semibold">Durata</th>
-                <th className="px-6 py-4 text-center font-semibold hidden sm:table-cell">Destinazione</th>
+                <th className="px-6 py-4 text-left font-semibold text-xs uppercase tracking-widest">Mezzo</th>
+                <th className="px-6 py-4 text-center font-semibold text-xs uppercase tracking-widest">Prezzo</th>
+                <th className="px-6 py-4 text-center font-semibold text-xs uppercase tracking-widest">Durata</th>
+                <th className="px-6 py-4 text-center font-semibold text-xs uppercase tracking-widest hidden sm:table-cell">Destinazione</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-border">
+            <tbody className="divide-y divide-stone-warm">
               {[
-                ["🚕 Taxi (tariffa fissa)", "€50", "30-50 min", "Centro Roma (Mura Aureliane)"],
+                ["🚕 Taxi (tariffa fissa)", "€50", "30-50 min", "Centro Roma"],
                 ["🚗 Transfer privato", "Da €45", "30-50 min", "Qualsiasi indirizzo"],
                 ["🚄 Leonardo Express", "€14", "32 min", "Roma Termini"],
-                ["🚆 Treno regionale FL1", "€8", "45-60 min", "Trastevere, Ostiense, Tiburtina"],
+                ["🚆 Treno regionale FL1", "€8", "45-60 min", "Trastevere, Ostiense"],
                 ["🚐 Bus navetta", "€5-7", "50-75 min", "Roma Termini"],
                 ["🚐 Navetta condivisa", "Da €7", "45-60 min", "Roma Termini"],
               ].map(([mezzo, prezzo, durata, dest]) => (
-                <tr key={mezzo} className="hover:bg-accent/30 transition-colors">
+                <tr key={mezzo} className="hover:bg-accent/40 transition-colors">
                   <td className="px-6 py-3.5 font-medium">{mezzo}</td>
-                  <td className="px-6 py-3.5 text-center">{prezzo}</td>
+                  <td className="px-6 py-3.5 text-center text-primary font-semibold">{prezzo}</td>
                   <td className="px-6 py-3.5 text-center">{durata}</td>
                   <td className="px-6 py-3.5 text-center hidden sm:table-cell">{dest}</td>
                 </tr>
@@ -213,96 +155,91 @@ function FiumicinoPage() {
           </table>
         </div>
 
-        {/* Transfer options */}
-        <h2 className="font-display text-3xl font-bold mt-16 mb-4">Transfer Aeroporto Roma Fiumicino — Prenota Online</h2>
-        <p className="text-muted-foreground mb-8">Prenota online un transfer privato o condiviso dall'<strong>aeroporto di Roma Fiumicino</strong> per un'esperienza senza stress.</p>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard
-            emoji="🚗"
-            title="Transfer Privato Fiumicino — Roma"
-            description="Autista privato con cartello al tuo nome all'aeroporto di Roma Fiumicino. Veicolo moderno con aria condizionata. Cancellazione gratuita fino a 24h prima."
-            gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/"
-            price="€45"
-          />
-          <ActivityCard
-            emoji="🚐"
-            title="Navetta Condivisa Fiumicino — Termini"
-            description="Navetta economica dall'aeroporto di Fiumicino alla stazione Termini. Partenze frequenti, prezzo imbattibile per budget travelers."
-            gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/"
-            price="€7"
-          />
-          <ActivityCard
-            emoji="🚐"
-            title="Transfer Privato per Gruppi"
-            description="Minivan per famiglie o gruppi fino a 8 persone. Dall'aeroporto Fiumicino al tuo hotel a Roma. Seggiolini disponibili su richiesta."
-            gygUrl="https://www.getyourguide.com/rome-l33/rome-private-transfer-from-to-fiumicino-airport-t676074/"
-            price="€55"
-          />
+        {/* Transfer booking */}
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mt-20 mb-10 gap-4">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">Prenota Online</h2>
+          <p className="text-muted-foreground max-w-xs text-sm leading-relaxed text-pretty">
+            Transfer privato o condiviso, cancellazione gratuita.
+          </p>
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ActivityCard emoji="🚗" title="Transfer Privato Fiumicino — Roma" description="Autista privato con cartello al tuo nome. Veicolo moderno con A/C. Cancellazione gratuita." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" />
+          <ActivityCard emoji="🚐" title="Navetta Condivisa Fiumicino — Termini" description="Navetta economica, partenze frequenti, prezzo imbattibile." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" />
+          <ActivityCard emoji="🚐" title="Transfer Privato per Gruppi" description="Minivan per famiglie o gruppi fino a 8 persone. Seggiolini disponibili." gygUrl="https://www.getyourguide.com/rome-l33/rome-private-transfer-from-to-fiumicino-airport-t676074/" price="€55" />
+        </div>
+
+        <div className="mt-14 text-center">
           <GetYourGuideCTA text="Tutti i Transfer dall'Aeroporto Fiumicino" url="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher" />
         </div>
 
-        {/* Leonardo Express section */}
-        <div className="mt-16 rounded-xl section-warm p-8">
-          <h3 className="font-display text-xl font-semibold mb-4">🚄 Leonardo Express — Treno Aeroporto Fiumicino Roma Termini</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-            Il <strong>Leonardo Express</strong> è il treno diretto che collega l'<strong>aeroporto di Roma Fiumicino</strong> alla stazione Roma Termini in soli 32 minuti, senza fermate intermedie. Parte ogni 15 minuti dalle 6:23 alle 23:23.
-          </p>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>• <strong>Biglietto:</strong> €14 (acquistabile online, in biglietteria o alle macchinette)</li>
-            <li>• <strong>Orari:</strong> Dalle 6:23 alle 23:23, ogni 15 minuti</li>
-            <li>• <strong>Durata:</strong> 32 minuti diretti senza fermate</li>
-            <li>• <strong>Stazione a Fiumicino:</strong> Tra Terminal 1 e Terminal 3, raggiungibile a piedi</li>
-          </ul>
-        </div>
+        {/* Leonardo Express & Parking */}
+        <div className="mt-20 space-y-6">
+          <div className="rounded-sm border border-stone-warm bg-card p-8">
+            <h3 className="font-display text-xl font-semibold mb-5">🚄 Leonardo Express</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+              Treno diretto Fiumicino — Roma Termini in 32 minuti, senza fermate. Ogni 15 minuti dalle 6:23 alle 23:23.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {[
+                ["Biglietto", "€14"],
+                ["Frequenza", "Ogni 15 min"],
+                ["Durata", "32 min"],
+                ["Orari", "6:23 — 23:23"],
+              ].map(([label, value]) => (
+                <div key={label} className="text-center">
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider mb-1">{label}</div>
+                  <div className="font-semibold text-primary">{value}</div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-        {/* Parcheggio section */}
-        <div className="mt-8 rounded-xl section-warm p-8">
-          <h3 className="font-display text-xl font-semibold mb-4">🅿️ Parcheggio Aeroporto Roma Fiumicino</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-            L'<strong>aeroporto di Roma Fiumicino</strong> offre diverse opzioni di parcheggio: dal parcheggio a lunga sosta (Lunga Sosta, da €9/giorno) ai parcheggi coperti vicino ai terminal (da €24/giorno). Prenota online per risparmiare fino al 40%.
-          </p>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>• <strong>Lunga Sosta:</strong> Da €9/giorno — navetta gratuita per i terminal</li>
-            <li>• <strong>Parcheggio Multipiano:</strong> Da €24/giorno — a pochi passi dai terminal</li>
-            <li>• <strong>Parcheggio Executive:</strong> Da €35/giorno — il più vicino alle partenze</li>
-            <li>• <strong>Consiglio:</strong> Prenota online su adr.it per tariffe scontate</li>
-          </ul>
+          <div className="rounded-sm border border-stone-warm bg-card p-8">
+            <h3 className="font-display text-xl font-semibold mb-5">🅿️ Parcheggio Aeroporto</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+              Diverse opzioni dal parcheggio economico alla lunga sosta. Prenota online su adr.it per risparmiare fino al 40%.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {[
+                ["Lunga Sosta", "Da €9/giorno"],
+                ["Multipiano", "Da €24/giorno"],
+                ["Executive", "Da €35/giorno"],
+              ].map(([label, value]) => (
+                <div key={label} className="text-center">
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider mb-1">{label}</div>
+                  <div className="font-semibold text-primary">{value}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Deep SEO content */}
-        <div className="mt-16 rounded-xl border border-border bg-card p-8">
-          <h3 className="font-display text-xl font-semibold mb-4">Informazioni Utili sull'Aeroporto Roma Fiumicino</h3>
+        <div className="mt-16 rounded-sm border border-stone-warm bg-card p-8">
+          <h3 className="font-display text-xl font-semibold mb-5">Informazioni Utili</h3>
           <div className="text-sm text-muted-foreground leading-relaxed space-y-4">
             <p>
-              L'<strong>aeroporto Roma Fiumicino Leonardo da Vinci</strong> (FCO) è il più importante aeroporto italiano e tra i più trafficati d'Europa. Inaugurato nel 1961, l'aeroporto è stato più volte premiato come miglior aeroporto europeo per qualità dei servizi.
+              L'<strong className="text-foreground">aeroporto Roma Fiumicino Leonardo da Vinci</strong> (FCO) è il più importante aeroporto italiano e tra i più trafficati d'Europa. Inaugurato nel 1961, è stato più volte premiato come miglior aeroporto europeo.
             </p>
             <p>
-              L'<strong>aeroporto di Roma Fiumicino</strong> si trova nel comune di Fiumicino, a circa 30 km dal centro di Roma. È collegato alla capitale tramite autostrada (Roma-Fiumicino), ferrovia (Leonardo Express e treni regionali FL1), autobus e taxi. La tariffa fissa del taxi dall'aeroporto al centro storico di Roma è di €50.
-            </p>
-            <p>
-              Per destinazioni fuori le Mura Aureliane come EUR, zona Tiburtina o periferia, il taxi dall'<strong>aeroporto Fiumicino</strong> funziona con tassametro, con costi che variano tra €55 e €80 a seconda della distanza e del traffico.
+              Per destinazioni fuori le Mura Aureliane come EUR, zona Tiburtina o periferia, il taxi funziona con tassametro, con costi tra €55 e €80 a seconda della distanza e del traffico.
             </p>
           </div>
         </div>
 
         {/* Cross links */}
-        <div className="mt-12 flex flex-wrap gap-3 justify-center">
-          <Link to="/aeroporto-fiumicino-roma-termini" className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium hover:bg-accent/50 transition-colors">
-            🚄 Fiumicino — Roma Termini
-          </Link>
-          <Link to="/aeroporto-fiumicino-roma-centro" className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium hover:bg-accent/50 transition-colors">
-            🏛️ Fiumicino — Roma Centro
-          </Link>
-          <Link to="/taxi-ciampino" className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium hover:bg-accent/50 transition-colors">
-            ✈️ Taxi Ciampino
-          </Link>
-          <Link to="/tariffe" className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium hover:bg-accent/50 transition-colors">
-            💰 Tariffe Taxi Roma
-          </Link>
+        <div className="mt-14 flex flex-wrap gap-3 justify-center">
+          {[
+            { to: "/aeroporto-fiumicino-roma-termini", label: "🚄 Fiumicino — Roma Termini" },
+            { to: "/aeroporto-fiumicino-roma-centro", label: "🏛️ Fiumicino — Roma Centro" },
+            { to: "/taxi-ciampino", label: "✈️ Taxi Ciampino" },
+            { to: "/tariffe", label: "💰 Tariffe Taxi Roma" },
+          ].map((link) => (
+            <Link key={link.to} to={link.to} className="inline-flex items-center gap-2 rounded-sm border border-stone-warm px-4 py-2.5 text-sm font-medium hover:bg-accent/50 hover:border-primary/30 transition-all">
+              {link.label}
+            </Link>
+          ))}
         </div>
       </section>
     </>
