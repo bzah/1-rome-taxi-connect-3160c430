@@ -28,79 +28,42 @@ function PrenotaPage() {
         ctaHref="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher"
       />
 
-      <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6">
-        <h2 className="font-display text-3xl font-bold text-center mb-4">Transfer e Taxi Prenotabili Online</h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Prenota il tuo trasferimento con cancellazione gratuita. Autista con cartello al tuo nome, veicolo moderno, prezzo garantito.
-        </p>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard
-            emoji="✈️"
-            title="Transfer Privato Fiumicino — Roma"
-            description="Autista privato dall'aeroporto di Fiumicino al tuo hotel a Roma. Meet & greet incluso."
-            gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/"
-            price="€45"
-          />
-          <ActivityCard
-            emoji="🚐"
-            title="Navetta Condivisa Fiumicino"
-            description="Shuttle bus dall'aeroporto di Fiumicino alla stazione Termini. La soluzione più economica."
-            gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/"
-            price="€7"
-          />
-          <ActivityCard
-            emoji="🏛️"
-            title="Transfer Privato Ciampino — Roma"
-            description="Trasferimento dall'aeroporto di Ciampino al centro di Roma con autista."
-            gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/"
-            price="€35"
-          />
-          <ActivityCard
-            emoji="🚂"
-            title="Transfer Roma — Napoli"
-            description="Trasferimento privato da Roma a Napoli o viceversa. Comodo e diretto."
-            gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-rome-naples-t226/"
-            price="€180"
-          />
-          <ActivityCard
-            emoji="⛵"
-            title="Transfer Roma — Civitavecchia"
-            description="Trasferimento al porto crociere di Civitavecchia. Perfetto per le crociere."
-            gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-civitavecchia-t123/"
-            price="€95"
-          />
-          <ActivityCard
-            emoji="🏖️"
-            title="Transfer Roma — Tivoli"
-            description="Escursione a Villa d'Este e Villa Adriana con trasporto privato incluso."
-            gygUrl="https://www.getyourguide.com/rome-l33/tivoli-tour-t456/"
-            price="€75"
-          />
+      <section className="mx-auto max-w-4xl px-5 py-16 sm:py-24 sm:px-8">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mb-10 gap-4">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">Transfer e Taxi<br className="hidden sm:block" /> Prenotabili Online</h2>
+          <p className="text-muted-foreground max-w-xs text-sm leading-relaxed text-pretty">
+            Cancellazione gratuita, autista con cartello, prezzo garantito.
+          </p>
         </div>
 
-        <div className="mt-16 rounded-xl section-warm p-8">
-          <h3 className="font-display text-xl font-semibold mb-6">Come Prenotare un Taxi a Roma</h3>
-          <div className="grid gap-6 sm:grid-cols-3">
-            <div className="text-center">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full gold-gradient text-xl font-bold text-primary-foreground">1</div>
-              <h4 className="font-semibold mb-2">Scegli il Transfer</h4>
-              <p className="text-sm text-muted-foreground">Seleziona la tratta che ti serve: aeroporto, stazione, o destinazione turistica.</p>
-            </div>
-            <div className="text-center">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full gold-gradient text-xl font-bold text-primary-foreground">2</div>
-              <h4 className="font-semibold mb-2">Prenota Online</h4>
-              <p className="text-sm text-muted-foreground">Inserisci data, ora e dettagli del volo. Pagamento sicuro, cancellazione gratuita.</p>
-            </div>
-            <div className="text-center">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full gold-gradient text-xl font-bold text-primary-foreground">3</div>
-              <h4 className="font-semibold mb-2">Viaggio Garantito</h4>
-              <p className="text-sm text-muted-foreground">L'autista ti aspetta con cartello al tuo nome. Nessuna sorpresa sul prezzo.</p>
-            </div>
+        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ActivityCard emoji="✈️" title="Transfer Privato Fiumicino — Roma" description="Autista privato dall'aeroporto di Fiumicino al tuo hotel a Roma. Meet & greet incluso." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" />
+          <ActivityCard emoji="🚐" title="Navetta Condivisa Fiumicino" description="Shuttle bus dall'aeroporto di Fiumicino alla stazione Termini. La soluzione più economica." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" />
+          <ActivityCard emoji="🏛️" title="Transfer Privato Ciampino — Roma" description="Trasferimento dall'aeroporto di Ciampino al centro di Roma con autista." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" />
+          <ActivityCard emoji="🚂" title="Transfer Roma — Napoli" description="Trasferimento privato da Roma a Napoli o viceversa. Comodo e diretto." gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-rome-naples-t226/" price="€180" />
+          <ActivityCard emoji="⛵" title="Transfer Roma — Civitavecchia" description="Trasferimento al porto crociere di Civitavecchia. Perfetto per le crociere." gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-civitavecchia-t123/" price="€95" />
+          <ActivityCard emoji="🏖️" title="Transfer Roma — Tivoli" description="Escursione a Villa d'Este e Villa Adriana con trasporto privato incluso." gygUrl="https://www.getyourguide.com/rome-l33/tivoli-tour-t456/" price="€75" />
+        </div>
+
+        {/* How to book */}
+        <div className="mt-20 rounded-sm border border-stone-warm bg-card p-8 sm:p-10">
+          <h3 className="font-display text-2xl font-semibold mb-8 tracking-tight">Come Prenotare un Taxi a Roma</h3>
+          <div className="grid gap-8 sm:grid-cols-3">
+            {[
+              { step: "01", title: "Scegli il Transfer", desc: "Seleziona la tratta che ti serve: aeroporto, stazione, o destinazione turistica." },
+              { step: "02", title: "Prenota Online", desc: "Inserisci data, ora e dettagli del volo. Pagamento sicuro, cancellazione gratuita." },
+              { step: "03", title: "Viaggio Garantito", desc: "L'autista ti aspetta con cartello al tuo nome. Nessuna sorpresa sul prezzo." },
+            ].map((item) => (
+              <div key={item.step} className="text-center">
+                <span className="inline-block font-display text-4xl font-semibold text-primary/30 tracking-tight mb-3">{item.step}</span>
+                <h4 className="font-display text-lg font-semibold mb-2">{item.title}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-14 text-center">
           <GetYourGuideCTA text="Vedi Tutti i Transfer a Roma" url="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher" />
         </div>
       </section>
