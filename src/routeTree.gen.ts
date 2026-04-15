@@ -16,6 +16,8 @@ import { Route as NumeriRouteImport } from './routes/numeri'
 import { Route as FiumicinoRouteImport } from './routes/fiumicino'
 import { Route as ComeChiamareTaxiRomaRouteImport } from './routes/come-chiamare-taxi-roma'
 import { Route as AppTaxiRomaRouteImport } from './routes/app-taxi-roma'
+import { Route as AeroportoFiumicinoRomaTerminiRouteImport } from './routes/aeroporto-fiumicino-roma-termini'
+import { Route as AeroportoFiumicinoRomaCentroRouteImport } from './routes/aeroporto-fiumicino-roma-centro'
 import { Route as IndexRouteImport } from './routes/index'
 
 const TaxiCiampinoRoute = TaxiCiampinoRouteImport.update({
@@ -53,6 +55,18 @@ const AppTaxiRomaRoute = AppTaxiRomaRouteImport.update({
   path: '/app-taxi-roma',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AeroportoFiumicinoRomaTerminiRoute =
+  AeroportoFiumicinoRomaTerminiRouteImport.update({
+    id: '/aeroporto-fiumicino-roma-termini',
+    path: '/aeroporto-fiumicino-roma-termini',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AeroportoFiumicinoRomaCentroRoute =
+  AeroportoFiumicinoRomaCentroRouteImport.update({
+    id: '/aeroporto-fiumicino-roma-centro',
+    path: '/aeroporto-fiumicino-roma-centro',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -61,6 +75,8 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aeroporto-fiumicino-roma-centro': typeof AeroportoFiumicinoRomaCentroRoute
+  '/aeroporto-fiumicino-roma-termini': typeof AeroportoFiumicinoRomaTerminiRoute
   '/app-taxi-roma': typeof AppTaxiRomaRoute
   '/come-chiamare-taxi-roma': typeof ComeChiamareTaxiRomaRoute
   '/fiumicino': typeof FiumicinoRoute
@@ -71,6 +87,8 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aeroporto-fiumicino-roma-centro': typeof AeroportoFiumicinoRomaCentroRoute
+  '/aeroporto-fiumicino-roma-termini': typeof AeroportoFiumicinoRomaTerminiRoute
   '/app-taxi-roma': typeof AppTaxiRomaRoute
   '/come-chiamare-taxi-roma': typeof ComeChiamareTaxiRomaRoute
   '/fiumicino': typeof FiumicinoRoute
@@ -82,6 +100,8 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aeroporto-fiumicino-roma-centro': typeof AeroportoFiumicinoRomaCentroRoute
+  '/aeroporto-fiumicino-roma-termini': typeof AeroportoFiumicinoRomaTerminiRoute
   '/app-taxi-roma': typeof AppTaxiRomaRoute
   '/come-chiamare-taxi-roma': typeof ComeChiamareTaxiRomaRoute
   '/fiumicino': typeof FiumicinoRoute
@@ -94,6 +114,8 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/aeroporto-fiumicino-roma-centro'
+    | '/aeroporto-fiumicino-roma-termini'
     | '/app-taxi-roma'
     | '/come-chiamare-taxi-roma'
     | '/fiumicino'
@@ -104,6 +126,8 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/aeroporto-fiumicino-roma-centro'
+    | '/aeroporto-fiumicino-roma-termini'
     | '/app-taxi-roma'
     | '/come-chiamare-taxi-roma'
     | '/fiumicino'
@@ -114,6 +138,8 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/aeroporto-fiumicino-roma-centro'
+    | '/aeroporto-fiumicino-roma-termini'
     | '/app-taxi-roma'
     | '/come-chiamare-taxi-roma'
     | '/fiumicino'
@@ -125,6 +151,8 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AeroportoFiumicinoRomaCentroRoute: typeof AeroportoFiumicinoRomaCentroRoute
+  AeroportoFiumicinoRomaTerminiRoute: typeof AeroportoFiumicinoRomaTerminiRoute
   AppTaxiRomaRoute: typeof AppTaxiRomaRoute
   ComeChiamareTaxiRomaRoute: typeof ComeChiamareTaxiRomaRoute
   FiumicinoRoute: typeof FiumicinoRoute
@@ -185,6 +213,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppTaxiRomaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aeroporto-fiumicino-roma-termini': {
+      id: '/aeroporto-fiumicino-roma-termini'
+      path: '/aeroporto-fiumicino-roma-termini'
+      fullPath: '/aeroporto-fiumicino-roma-termini'
+      preLoaderRoute: typeof AeroportoFiumicinoRomaTerminiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aeroporto-fiumicino-roma-centro': {
+      id: '/aeroporto-fiumicino-roma-centro'
+      path: '/aeroporto-fiumicino-roma-centro'
+      fullPath: '/aeroporto-fiumicino-roma-centro'
+      preLoaderRoute: typeof AeroportoFiumicinoRomaCentroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -197,6 +239,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AeroportoFiumicinoRomaCentroRoute: AeroportoFiumicinoRomaCentroRoute,
+  AeroportoFiumicinoRomaTerminiRoute: AeroportoFiumicinoRomaTerminiRoute,
   AppTaxiRomaRoute: AppTaxiRomaRoute,
   ComeChiamareTaxiRomaRoute: ComeChiamareTaxiRomaRoute,
   FiumicinoRoute: FiumicinoRoute,
