@@ -6,9 +6,11 @@ interface ActivityCardProps {
   gygUrl: string;
   emoji: string;
   price?: string;
+  pricePrefix?: string;
+  bookLabel?: string;
 }
 
-export function ActivityCard({ title, description, gygUrl, emoji, price }: ActivityCardProps) {
+export function ActivityCard({ title, description, gygUrl, emoji, price, pricePrefix = "Da", bookLabel = "Prenota ora" }: ActivityCardProps) {
   const affiliateUrl = gygUrl.includes("partner_id")
     ? gygUrl
     : `${gygUrl}${gygUrl.includes("?") ? "&" : "?"}partner_id=${PARTNER_ID}&utm_medium=online_publisher`;
@@ -28,10 +30,10 @@ export function ActivityCard({ title, description, gygUrl, emoji, price }: Activ
         <p className="mt-1.5 sm:mt-2 text-sm text-muted-foreground leading-relaxed line-clamp-3 sm:line-clamp-none">{description}</p>
         <div className="mt-2.5 sm:mt-4 flex items-center gap-3">
           {price && (
-            <span className="text-sm font-semibold text-primary">Da {price}</span>
+            <span className="text-sm font-semibold text-primary">{pricePrefix} {price}</span>
           )}
           <span className="inline-flex items-center gap-1 text-sm font-medium text-primary">
-            Prenota ora
+            {bookLabel}
             <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
