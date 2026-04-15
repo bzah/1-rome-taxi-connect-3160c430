@@ -141,6 +141,27 @@ function CiampinoPage() {
           />
         </div>
 
+        {/* FAQ Section */}
+        <h2 className="font-display text-3xl font-bold mt-16 mb-8">Domande Frequenti — Taxi Ciampino Roma</h2>
+        <div className="space-y-3 sm:space-y-4">
+          {[
+            { q: "Quanto costa un taxi da Ciampino a Roma centro?", a: "La tariffa fissa è €31 per destinazioni dentro le Mura Aureliane (centro storico). Vale per max 4 passeggeri con bagagli inclusi, senza supplementi notturni." },
+            { q: "Quanto tempo ci vuole da Ciampino a Roma in taxi?", a: "Il tragitto dura circa 20-30 minuti senza traffico, fino a 40 minuti nelle ore di punta. Ciampino è più vicino al centro rispetto a Fiumicino." },
+            { q: "Dove trovo i taxi all'aeroporto di Ciampino?", a: "All'uscita degli Arrivi, segui i cartelli 'Taxi'. La postazione ufficiale è subito fuori dal terminal. Usa solo taxi bianchi con licenza esposta." },
+            { q: "Ciampino o Fiumicino: quale taxi costa meno?", a: "Ciampino costa €31 (tariffa fissa) vs €50 di Fiumicino. Ciampino è anche più vicino (15 km vs 30 km) e il viaggio è più breve (20-40 min vs 30-50 min)." },
+            { q: "C'è il Leonardo Express da Ciampino?", a: "No, il Leonardo Express collega solo Fiumicino a Termini. Da Ciampino puoi prendere il bus navetta SIT/Terravision (€5-7) per Termini, o il taxi/transfer privato." },
+            { q: "Come prenotare un taxi da Ciampino in anticipo?", a: "Puoi prenotare un transfer privato online (da €35 con cancellazione gratuita), chiamare una radio taxi (06.3570) il giorno prima, o usare l'app itTaxi." },
+          ].map((faq) => (
+            <details key={faq.q} className="group rounded-xl border border-border bg-card p-4 sm:p-6">
+              <summary className="cursor-pointer font-display text-base sm:text-lg font-semibold text-card-foreground list-none flex items-center justify-between gap-3">
+                <span>{faq.q}</span>
+                <svg className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <p className="mt-3 sm:mt-4 text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+            </details>
+          ))}
+        </div>
+
         {/* Tips */}
         <div className="mt-16 rounded-xl section-warm p-8">
           <h3 className="font-display text-xl font-semibold mb-4">💡 Consigli per il Taxi da Ciampino</h3>
