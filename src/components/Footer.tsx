@@ -19,6 +19,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm opacity-70">
               <li><Link to="/tariffe" className="hover:opacity-100 transition-opacity">Tariffe Taxi Roma</Link></li>
               <li><Link to="/fiumicino" className="hover:opacity-100 transition-opacity">Taxi Roma Fiumicino</Link></li>
+              <li><Link to="/taxi-ciampino" className="hover:opacity-100 transition-opacity">Taxi Roma Ciampino</Link></li>
               <li><Link to="/numeri" className="hover:opacity-100 transition-opacity">Numeri Taxi Roma</Link></li>
               <li><Link to="/prenota" className="hover:opacity-100 transition-opacity">Prenota un Taxi</Link></li>
             </ul>
