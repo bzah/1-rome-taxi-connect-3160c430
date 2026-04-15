@@ -30,6 +30,22 @@ export const Route = createFileRoute("/tariffe")({
           }
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Quanto costa un taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "La tariffa base diurna è €3,00 (€6,50 di notte). Il costo al km varia da €1,10 (urbana) a €1,60 (notturna). La tariffa minima per corsa è €7,00. Una corsa media in centro costa €8-15." } },
+            { "@type": "Question", "name": "Qual è la tariffa fissa taxi Fiumicino — Roma centro?", "acceptedAnswer": { "@type": "Answer", "text": "La tariffa fissa per un taxi dall'aeroporto di Fiumicino al centro di Roma (dentro le Mura Aureliane) è di €50, valida per max 4 passeggeri con bagagli inclusi." } },
+            { "@type": "Question", "name": "Quanto costa il taxi da Ciampino a Roma centro?", "acceptedAnswer": { "@type": "Answer", "text": "La tariffa fissa dal aeroporto di Ciampino al centro di Roma è di €31, valida per destinazioni dentro le Mura Aureliane, max 4 passeggeri con bagagli." } },
+            { "@type": "Question", "name": "Ci sono supplementi per bagagli sul taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "Sì, c'è un supplemento di €1,00 per ogni bagaglio di dimensioni superiori a 35×25×50 cm. Per il 5° e 6° passeggero il supplemento è di €1,00 ciascuno." } },
+            { "@type": "Question", "name": "Quali sono le tariffe notturne del taxi a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "La presa in carico notturna (22:00-06:00) è €6,50 e il costo al km è €1,60 (Tariffa 3). La tariffa festiva ha una presa in carico di €4,50." } },
+            { "@type": "Question", "name": "I taxi a Roma accettano carte di credito?", "acceptedAnswer": { "@type": "Answer", "text": "Sì, per legge tutti i taxi a Roma sono obbligati ad avere il POS funzionante e ad accettare pagamenti con carte di credito e debito, oltre ai contanti." } },
+            { "@type": "Question", "name": "La tariffa fissa vale anche di notte?", "acceptedAnswer": { "@type": "Answer", "text": "Sì, le tariffe fisse aeroportuali (€50 Fiumicino, €31 Ciampino) sono valide 24 ore su 24, senza supplemento notturno. Si applicano sempre indipendentemente dall'orario." } }
+          ]
+        }),
+      },
     ],
   }),
 });
@@ -103,6 +119,28 @@ function TariffePage() {
             <li>• I taxi bianchi ufficiali hanno il <strong>numero di licenza</strong> esposto e accettano pagamenti con carta</li>
             <li>• In caso di problemi, annota il numero di licenza e contatta il <strong>Comune di Roma</strong></li>
           </ul>
+        </div>
+
+        {/* FAQ Section */}
+        <h2 className="font-display text-3xl font-bold mt-16 mb-8">Domande Frequenti — Tariffe Taxi Roma</h2>
+        <div className="space-y-3 sm:space-y-4">
+          {[
+            { q: "Quanto costa un taxi a Roma?", a: "La tariffa base diurna è €3,00 (€6,50 di notte). Il costo al km varia da €1,10 (urbana) a €1,60 (notturna). La tariffa minima per corsa è €7,00. Una corsa media in centro costa €8-15." },
+            { q: "Qual è la tariffa fissa taxi Fiumicino — Roma centro?", a: "La tariffa fissa per un taxi dall'aeroporto di Fiumicino al centro di Roma (dentro le Mura Aureliane) è di €50, valida per max 4 passeggeri con bagagli inclusi." },
+            { q: "Quanto costa il taxi da Ciampino a Roma centro?", a: "La tariffa fissa dall'aeroporto di Ciampino al centro di Roma è di €31, valida per destinazioni dentro le Mura Aureliane, max 4 passeggeri con bagagli." },
+            { q: "Ci sono supplementi per bagagli sul taxi a Roma?", a: "Sì, c'è un supplemento di €1,00 per ogni bagaglio di dimensioni superiori a 35×25×50 cm. Per il 5° e 6° passeggero il supplemento è di €1,00 ciascuno." },
+            { q: "Quali sono le tariffe notturne del taxi a Roma?", a: "La presa in carico notturna (22:00-06:00) è €6,50 e il costo al km è €1,60 (Tariffa 3). La tariffa festiva ha una presa in carico di €4,50." },
+            { q: "I taxi a Roma accettano carte di credito?", a: "Sì, per legge tutti i taxi a Roma sono obbligati ad avere il POS funzionante e ad accettare pagamenti con carte di credito e debito, oltre ai contanti." },
+            { q: "La tariffa fissa vale anche di notte?", a: "Sì, le tariffe fisse aeroportuali (€50 Fiumicino, €31 Ciampino) sono valide 24 ore su 24, senza supplemento notturno. Si applicano sempre indipendentemente dall'orario." },
+          ].map((faq) => (
+            <details key={faq.q} className="group rounded-xl border border-border bg-card p-4 sm:p-6">
+              <summary className="cursor-pointer font-display text-base sm:text-lg font-semibold text-card-foreground list-none flex items-center justify-between gap-3">
+                <span>{faq.q}</span>
+                <svg className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <p className="mt-3 sm:mt-4 text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+            </details>
+          ))}
         </div>
 
         <div className="mt-12 text-center">

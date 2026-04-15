@@ -20,30 +20,12 @@ export const Route = createFileRoute("/aeroporto-fiumicino-roma-centro")({
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Come arrivare dall'aeroporto di Fiumicino a Roma centro?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Dall'aeroporto di Fiumicino a Roma centro puoi prendere: taxi a tariffa fissa €50 (30-50 min), Leonardo Express per Termini (€14, 32 min), treno regionale FL1 per Trastevere/Ostiense (€8, 45 min), bus navetta (€5-7) o transfer privato (da €45)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Qual è il modo più veloce per arrivare a Roma centro da Fiumicino?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Il modo più veloce è il Leonardo Express (32 minuti fino a Roma Termini) o il taxi/transfer privato (30-50 minuti porta a porta, senza attese)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quanto costa andare da Fiumicino a Roma centro in taxi?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Il taxi dall'aeroporto di Fiumicino a Roma centro (dentro le Mura Aureliane) ha una tariffa fissa di €50, valida per max 4 passeggeri con bagagli inclusi."
-              }
-            }
+            { "@type": "Question", "name": "Come arrivare dall'aeroporto di Fiumicino a Roma centro?", "acceptedAnswer": { "@type": "Answer", "text": "Dall'aeroporto di Fiumicino a Roma centro puoi prendere: taxi a tariffa fissa €50 (30-50 min), Leonardo Express per Termini (€14, 32 min), treno regionale FL1 per Trastevere/Ostiense (€8, 45 min), bus navetta (€5-7) o transfer privato (da €45)." } },
+            { "@type": "Question", "name": "Qual è il modo più veloce per arrivare a Roma centro da Fiumicino?", "acceptedAnswer": { "@type": "Answer", "text": "Il modo più veloce è il Leonardo Express (32 minuti fino a Roma Termini) o il taxi/transfer privato (30-50 minuti porta a porta, senza attese)." } },
+            { "@type": "Question", "name": "Quanto costa andare da Fiumicino a Roma centro in taxi?", "acceptedAnswer": { "@type": "Answer", "text": "Il taxi dall'aeroporto di Fiumicino a Roma centro (dentro le Mura Aureliane) ha una tariffa fissa di €50, valida per max 4 passeggeri con bagagli inclusi." } },
+            { "@type": "Question", "name": "Qual è il modo più economico per andare da Fiumicino a Roma?", "acceptedAnswer": { "@type": "Answer", "text": "Il bus navetta (SIT, Terravision) è il più economico a €5-7. Il treno regionale FL1 costa €8. In 3-4 persone il taxi (€12.50 a testa) è competitivo col Leonardo Express (€14)." } },
+            { "@type": "Question", "name": "Come arrivo a Roma da Fiumicino di notte?", "acceptedAnswer": { "@type": "Answer", "text": "Dopo le 23:23 il Leonardo Express non opera. Le opzioni notturne sono il taxi (tariffa fissa €50, 24/7), transfer privato prenotato, o bus notturno (limitato)." } },
+            { "@type": "Question", "name": "Cosa include la tariffa fissa del taxi di €50?", "acceptedAnswer": { "@type": "Answer", "text": "Include il viaggio porta a porta, fino a 4 passeggeri, tutti i bagagli, nessun supplemento notturno o festivo. Vale per destinazioni dentro le Mura Aureliane." } }
           ]
         }),
       },
@@ -173,6 +155,27 @@ function FiumicinoCentroPage() {
 
         <div className="mt-12 text-center">
           <GetYourGuideCTA text="Tutti i Transfer Fiumicino — Roma" url="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher" />
+        </div>
+
+        {/* FAQ Section */}
+        <h2 className="font-display text-3xl font-bold mt-16 mb-8">Domande Frequenti — Fiumicino a Roma Centro</h2>
+        <div className="space-y-3 sm:space-y-4">
+          {[
+            { q: "Come arrivare dall'aeroporto di Fiumicino a Roma centro?", a: "Hai 4 opzioni: taxi a tariffa fissa €50 (30-50 min), Leonardo Express per Termini (€14, 32 min), treno regionale FL1 per Trastevere/Ostiense (€8, 45 min), bus navetta (€5-7, 50-75 min) o transfer privato (da €45)." },
+            { q: "Qual è il modo più economico per andare da Fiumicino a Roma?", a: "Il bus navetta (SIT, Terravision) è il più economico a €5-7, seguito dal treno regionale FL1 a €8. In 3-4 persone, il taxi (€50 diviso 4 = €12.50 a testa) è competitivo con il Leonardo Express (€14 a testa)." },
+            { q: "Quanto costa un taxi da Fiumicino al Colosseo?", a: "Il Colosseo è dentro le Mura Aureliane, quindi si applica la tariffa fissa di €50. La stessa tariffa vale per Piazza di Spagna, Pantheon, Trastevere centro, Vaticano e tutte le zone dentro le Mura." },
+            { q: "Quanto tempo ci vuole da Fiumicino a Roma centro in taxi?", a: "Il tragitto in taxi dura circa 30-50 minuti. Nelle ore di punta (7-10 e 17-20) può arrivare a 60-75 minuti a causa del traffico sulla Roma-Fiumicino." },
+            { q: "Come arrivo a Roma da Fiumicino di notte?", a: "Dopo le 23:23 il Leonardo Express non opera. Le opzioni notturne sono il taxi (tariffa fissa €50, disponibile 24/7), un transfer privato prenotato, o il bus notturno (limitato)." },
+            { q: "Cosa include la tariffa fissa del taxi di €50?", a: "Include il viaggio porta a porta dall'aeroporto al centro Roma (dentro le Mura Aureliane), fino a 4 passeggeri, tutti i bagagli, e nessun supplemento notturno o festivo." },
+          ].map((faq) => (
+            <details key={faq.q} className="group rounded-xl border border-border bg-card p-4 sm:p-6">
+              <summary className="cursor-pointer font-display text-base sm:text-lg font-semibold text-card-foreground list-none flex items-center justify-between gap-3">
+                <span>{faq.q}</span>
+                <svg className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <p className="mt-3 sm:mt-4 text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+            </details>
+          ))}
         </div>
 
         {/* Tips */}

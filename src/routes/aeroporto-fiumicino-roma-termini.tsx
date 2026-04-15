@@ -179,6 +179,27 @@ function FiumicinoTerminiPage() {
           <GetYourGuideCTA text="Tutti i Transfer Fiumicino — Termini" url="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher" />
         </div>
 
+        {/* FAQ Section */}
+        <h2 className="font-display text-3xl font-bold mt-16 mb-8">Domande Frequenti — Fiumicino a Roma Termini</h2>
+        <div className="space-y-3 sm:space-y-4">
+          {[
+            { q: "Come andare dall'aeroporto di Fiumicino a Roma Termini?", a: "Puoi prendere il Leonardo Express (treno diretto, 32 min, €14), taxi a tariffa fissa (€50, 30-50 min), bus navetta Terravision/SIT (€5-7, 50-75 min) o un transfer privato (da €45)." },
+            { q: "Quanto costa il Leonardo Express da Fiumicino a Termini?", a: "Il biglietto costa €14 a tratta. Si acquista online, in biglietteria o alle macchinette in aeroporto. Non serve prenotazione: sali sul primo treno disponibile." },
+            { q: "Ogni quanto parte il Leonardo Express?", a: "Il Leonardo Express parte ogni 15 minuti, dalle 6:23 alle 23:23, dalla stazione ferroviaria dell'aeroporto (tra Terminal 1 e 3)." },
+            { q: "Quanto costa un taxi da Fiumicino a Roma Termini?", a: "La tariffa fissa è €50 perché Termini è dentro le Mura Aureliane. Vale per max 4 passeggeri con bagagli, senza supplementi notturni." },
+            { q: "Qual è il modo più economico per arrivare a Termini da Fiumicino?", a: "Il bus navetta (Terravision, SIT) a €5-7 è il più economico. In 4 persone, il taxi (€12.50 a testa) costa meno del Leonardo Express (€14 a testa)." },
+            { q: "Posso prendere il treno da Fiumicino a Termini di notte?", a: "No, l'ultimo Leonardo Express parte alle 23:23. Di notte le opzioni sono taxi (€50, disponibile 24/7) o transfer privato prenotato in anticipo." },
+          ].map((faq) => (
+            <details key={faq.q} className="group rounded-xl border border-border bg-card p-4 sm:p-6">
+              <summary className="cursor-pointer font-display text-base sm:text-lg font-semibold text-card-foreground list-none flex items-center justify-between gap-3">
+                <span>{faq.q}</span>
+                <svg className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <p className="mt-3 sm:mt-4 text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+            </details>
+          ))}
+        </div>
+
         {/* Cross links */}
         <div className="mt-12 flex flex-wrap gap-3 justify-center">
           <Link to="/fiumicino" className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium hover:bg-accent/50 transition-colors">
