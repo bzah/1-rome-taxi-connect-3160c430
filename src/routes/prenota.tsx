@@ -7,10 +7,10 @@ export const Route = createFileRoute("/prenota")({
   head: () => ({
     meta: [
       { title: "Prenota Taxi Roma — Come Prenotare un Taxi Online | TaxiFiumicino.com" },
-      { name: "description", content: "Come prenotare un taxi a Roma: per telefono, via app, o transfer privato online. Prenotazione facile con cancellazione gratuita." },
-      { property: "og:title", content: "Prenota Taxi Roma — Prenotazione Online Transfer e Taxi" },
-      { property: "og:description", content: "Prenota il tuo taxi a Roma online. Transfer aeroporto, tour e trasferimenti privati." },
-      { name: "keywords", content: "prenotare taxi roma, come prenotare un taxi a roma, prenotazione taxi roma, taxi prenotazione roma, come chiamare taxi a roma" },
+      { name: "description", content: "Come prenotare un taxi a Roma online: transfer privato aeroporto Fiumicino e Ciampino, navetta condivisa, trasferimenti per Napoli e Civitavecchia. Prenotazione facile con cancellazione gratuita, autista con cartello e prezzi garantiti." },
+      { property: "og:title", content: "Prenota Taxi Roma — Transfer Aeroporto e Prenotazione Online" },
+      { property: "og:description", content: "Prenota taxi e transfer a Roma online: aeroporto Fiumicino, Ciampino, Napoli, Civitavecchia. Cancellazione gratuita e prezzi fissi." },
+      { name: "keywords", content: "prenotare taxi roma, come prenotare un taxi a roma, prenotazione taxi roma, taxi prenotazione roma, come chiamare taxi a roma, transfer privato roma, prenotazione transfer fiumicino, navetta aeroporto roma, taxi online roma prenotazione" },
     ],
   }),
 });

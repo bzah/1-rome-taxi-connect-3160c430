@@ -5,10 +5,11 @@ import { sendContactEmail } from "@/utils/contact.functions";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contatti — TaxiFiumicino.com" },
-      { name: "description", content: "Contatta TaxiFiumicino.com per domande, suggerimenti o collaborazioni sui servizi taxi a Roma e Fiumicino." },
-      { property: "og:title", content: "Contatti — TaxiFiumicino.com" },
-      { property: "og:description", content: "Contattaci per informazioni sui taxi a Roma e trasferimenti aeroportuali." },
+      { title: "Contatti — TaxiFiumicino.com | Scrivici per Info Taxi Roma" },
+      { name: "description", content: "Contatta TaxiFiumicino.com per domande su taxi Roma, transfer aeroporto Fiumicino e Ciampino, tariffe, prenotazioni o collaborazioni. Rispondiamo entro 24 ore via email a tutte le richieste di informazioni." },
+      { property: "og:title", content: "Contatti — TaxiFiumicino.com | Info Taxi Roma e Fiumicino" },
+      { property: "og:description", content: "Hai domande su taxi Roma, transfer aeroporto o tariffe? Contattaci via email. Rispondiamo entro 24 ore." },
+      { name: "keywords", content: "contatti taxifiumicino, contattare taxi roma, informazioni taxi fiumicino, email taxi roma, assistenza transfer roma" },
     ],
   }),
   component: ContactPage,

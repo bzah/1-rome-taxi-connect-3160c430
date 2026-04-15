@@ -3,10 +3,11 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Chi Siamo — TaxiFiumicino.com" },
-      { name: "description", content: "Scopri chi siamo: la missione di TaxiFiumicino.com è aiutarti a trovare il miglior trasporto taxi a Roma e dall'aeroporto di Fiumicino." },
-      { property: "og:title", content: "Chi Siamo — TaxiFiumicino.com" },
-      { property: "og:description", content: "Scopri chi siamo e la nostra missione per il trasporto taxi a Roma." },
+      { title: "Chi Siamo — TaxiFiumicino.com | Guida Taxi Roma e Fiumicino" },
+      { name: "description", content: "Scopri chi siamo: TaxiFiumicino.com è il portale italiano di riferimento per taxi a Roma, transfer aeroporto Fiumicino e Ciampino, tariffe ufficiali, numeri radio taxi e prenotazioni online. La nostra missione è aiutare turisti e residenti." },
+      { property: "og:title", content: "Chi Siamo — TaxiFiumicino.com | Guida Taxi Roma" },
+      { property: "og:description", content: "TaxiFiumicino.com: portale informativo su taxi Roma, transfer aeroporto Fiumicino, tariffe e prenotazioni. Scopri la nostra missione." },
+      { name: "keywords", content: "chi siamo taxifiumicino, taxi roma guida, informazioni taxi roma, portale taxi fiumicino, servizio taxi roma aeroporto" },
     ],
   }),
   component: AboutPage,
