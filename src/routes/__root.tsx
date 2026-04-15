@@ -1,4 +1,4 @@
-import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute, HeadContent } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -25,6 +25,19 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRoute({
+  head: () => ({
+    meta: [
+      { charSet: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { title: "TaxiFiumicino.com — Taxi Roma, Tariffe e Transfer Aeroporto" },
+      { name: "description", content: "Guida completa ai taxi a Roma: tariffe, numeri, trasferimenti aeroporto Fiumicino. Prenota il tuo transfer online." },
+      { name: "author", content: "TaxiFiumicino.com" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "geo.region", content: "IT-RM" },
+      { name: "geo.placename", content: "Roma" },
+    ],
+  }),
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
@@ -32,6 +45,7 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <>
+      <HeadContent />
       <Header />
       <main className="pt-0">
         <Outlet />
