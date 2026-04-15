@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TaxiCiampinoRouteImport } from './routes/taxi-ciampino'
 import { Route as TariffeRouteImport } from './routes/tariffe'
 import { Route as PrenotaRouteImport } from './routes/prenota'
+import { Route as ParcheggioFiumicinoRouteImport } from './routes/parcheggio-fiumicino'
 import { Route as NumeriRouteImport } from './routes/numeri'
 import { Route as FiumicinoRouteImport } from './routes/fiumicino'
 import { Route as ComeChiamareTaxiRomaRouteImport } from './routes/come-chiamare-taxi-roma'
@@ -33,6 +34,11 @@ const TariffeRoute = TariffeRouteImport.update({
 const PrenotaRoute = PrenotaRouteImport.update({
   id: '/prenota',
   path: '/prenota',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParcheggioFiumicinoRoute = ParcheggioFiumicinoRouteImport.update({
+  id: '/parcheggio-fiumicino',
+  path: '/parcheggio-fiumicino',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NumeriRoute = NumeriRouteImport.update({
@@ -81,6 +87,7 @@ export interface FileRoutesByFullPath {
   '/come-chiamare-taxi-roma': typeof ComeChiamareTaxiRomaRoute
   '/fiumicino': typeof FiumicinoRoute
   '/numeri': typeof NumeriRoute
+  '/parcheggio-fiumicino': typeof ParcheggioFiumicinoRoute
   '/prenota': typeof PrenotaRoute
   '/tariffe': typeof TariffeRoute
   '/taxi-ciampino': typeof TaxiCiampinoRoute
@@ -93,6 +100,7 @@ export interface FileRoutesByTo {
   '/come-chiamare-taxi-roma': typeof ComeChiamareTaxiRomaRoute
   '/fiumicino': typeof FiumicinoRoute
   '/numeri': typeof NumeriRoute
+  '/parcheggio-fiumicino': typeof ParcheggioFiumicinoRoute
   '/prenota': typeof PrenotaRoute
   '/tariffe': typeof TariffeRoute
   '/taxi-ciampino': typeof TaxiCiampinoRoute
@@ -106,6 +114,7 @@ export interface FileRoutesById {
   '/come-chiamare-taxi-roma': typeof ComeChiamareTaxiRomaRoute
   '/fiumicino': typeof FiumicinoRoute
   '/numeri': typeof NumeriRoute
+  '/parcheggio-fiumicino': typeof ParcheggioFiumicinoRoute
   '/prenota': typeof PrenotaRoute
   '/tariffe': typeof TariffeRoute
   '/taxi-ciampino': typeof TaxiCiampinoRoute
@@ -120,6 +129,7 @@ export interface FileRouteTypes {
     | '/come-chiamare-taxi-roma'
     | '/fiumicino'
     | '/numeri'
+    | '/parcheggio-fiumicino'
     | '/prenota'
     | '/tariffe'
     | '/taxi-ciampino'
@@ -132,6 +142,7 @@ export interface FileRouteTypes {
     | '/come-chiamare-taxi-roma'
     | '/fiumicino'
     | '/numeri'
+    | '/parcheggio-fiumicino'
     | '/prenota'
     | '/tariffe'
     | '/taxi-ciampino'
@@ -144,6 +155,7 @@ export interface FileRouteTypes {
     | '/come-chiamare-taxi-roma'
     | '/fiumicino'
     | '/numeri'
+    | '/parcheggio-fiumicino'
     | '/prenota'
     | '/tariffe'
     | '/taxi-ciampino'
@@ -157,6 +169,7 @@ export interface RootRouteChildren {
   ComeChiamareTaxiRomaRoute: typeof ComeChiamareTaxiRomaRoute
   FiumicinoRoute: typeof FiumicinoRoute
   NumeriRoute: typeof NumeriRoute
+  ParcheggioFiumicinoRoute: typeof ParcheggioFiumicinoRoute
   PrenotaRoute: typeof PrenotaRoute
   TariffeRoute: typeof TariffeRoute
   TaxiCiampinoRoute: typeof TaxiCiampinoRoute
@@ -183,6 +196,13 @@ declare module '@tanstack/react-router' {
       path: '/prenota'
       fullPath: '/prenota'
       preLoaderRoute: typeof PrenotaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parcheggio-fiumicino': {
+      id: '/parcheggio-fiumicino'
+      path: '/parcheggio-fiumicino'
+      fullPath: '/parcheggio-fiumicino'
+      preLoaderRoute: typeof ParcheggioFiumicinoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/numeri': {
@@ -245,6 +265,7 @@ const rootRouteChildren: RootRouteChildren = {
   ComeChiamareTaxiRomaRoute: ComeChiamareTaxiRomaRoute,
   FiumicinoRoute: FiumicinoRoute,
   NumeriRoute: NumeriRoute,
+  ParcheggioFiumicinoRoute: ParcheggioFiumicinoRoute,
   PrenotaRoute: PrenotaRoute,
   TariffeRoute: TariffeRoute,
   TaxiCiampinoRoute: TaxiCiampinoRoute,
