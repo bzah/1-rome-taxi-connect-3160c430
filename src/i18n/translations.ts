@@ -31,7 +31,7 @@ export interface Translations {
     nav: { home: string; airport: string; airports: string; fares: string; book: string; info: string };
     dropdown: { transfers: string; shuttle: string; parking: string; hotelRoma: string; hotelAirport: string; numbers: string; appTaxi: string; activities: string; tours: string };
     footer: { about: string; contact: string; privacy: string; terms: string; cookies: string; dmca: string; legal: string; parents: string };
-    cta: { bookTransfer: string; viewAll: string; bookNow: string };
+    cta: { bookTransfer: string; viewAll: string; bookNow: string; pricePrefix: string };
     notTranslated: { title: string; description: string; viewInItalian: string; backHome: string };
   };
   pages: Record<string, PageTranslation>;
@@ -42,7 +42,7 @@ const en: Translations = {
     nav: { home: "Home", airport: "Fiumicino Airport", airports: "Rome Airports", fares: "Fares", book: "Book", info: "Info" },
     dropdown: { transfers: "Private Transfers", shuttle: "Shuttle Guide", parking: "Parking Guide", hotelRoma: "Hotels Rome", hotelAirport: "Airport Hotels", numbers: "Taxi Numbers", appTaxi: "Taxi Apps", activities: "Things to Do in Rome", tours: "Activities in Rome" },
     footer: { about: "About Us", contact: "Contact", privacy: "Privacy Policy", terms: "Terms of Service", cookies: "Cookie Policy", dmca: "DMCA", legal: "Legal Notice", parents: "Parents Info" },
-    cta: { bookTransfer: "Book a Transfer", viewAll: "View All Transfers", bookNow: "Book Now" },
+    cta: { bookTransfer: "Book a Transfer", viewAll: "View All Transfers", bookNow: "Book Now", pricePrefix: "From" },
     notTranslated: { title: "Page Not Yet Translated", description: "This page is currently available in Italian only.", viewInItalian: "View in Italian", backHome: "Back to Home" },
   },
   pages: {
@@ -452,7 +452,7 @@ const es: Translations = {
     nav: { home: "Inicio", airport: "Aeropuerto Fiumicino", airports: "Aeropuertos Roma", fares: "Tarifas", book: "Reservar", info: "Info" },
     dropdown: { transfers: "Transfers Privados", shuttle: "Guía Shuttle", parking: "Guía Parking", hotelRoma: "Hoteles Roma", hotelAirport: "Hoteles Aeropuerto", numbers: "Números Taxi", appTaxi: "Apps Taxi", activities: "Qué hacer en Roma", tours: "Actividades en Roma" },
     footer: { about: "Sobre Nosotros", contact: "Contacto", privacy: "Privacidad", terms: "Términos", cookies: "Cookies", dmca: "DMCA", legal: "Aviso Legal", parents: "Info Padres" },
-    cta: { bookTransfer: "Reservar Transfer", viewAll: "Ver Todos", bookNow: "Reservar Ahora" },
+    cta: { bookTransfer: "Reservar Transfer", viewAll: "Ver Todos", bookNow: "Reservar Ahora", pricePrefix: "Desde" },
     notTranslated: { title: "Página Aún No Traducida", description: "Esta página está disponible solo en italiano por el momento.", viewInItalian: "Ver en Italiano", backHome: "Volver al Inicio" },
   },
   pages: {
@@ -811,7 +811,7 @@ const fr: Translations = {
     nav: { home: "Accueil", airport: "Aéroport Fiumicino", airports: "Aéroports Rome", fares: "Tarifs", book: "Réserver", info: "Info" },
     dropdown: { transfers: "Transferts Privés", shuttle: "Guide Navette", parking: "Guide Parking", hotelRoma: "Hôtels Rome", hotelAirport: "Hôtels Aéroport", numbers: "Numéros Taxi", appTaxi: "Apps Taxi", activities: "À Faire à Rome", tours: "Activités à Rome" },
     footer: { about: "À Propos", contact: "Contact", privacy: "Confidentialité", terms: "Conditions", cookies: "Cookies", dmca: "DMCA", legal: "Mentions Légales", parents: "Info Parents" },
-    cta: { bookTransfer: "Réserver un Transfert", viewAll: "Voir Tout", bookNow: "Réserver" },
+    cta: { bookTransfer: "Réserver un Transfert", viewAll: "Voir Tout", bookNow: "Réserver", pricePrefix: "Dès" },
     notTranslated: { title: "Page Pas Encore Traduite", description: "Cette page est disponible uniquement en italien pour le moment.", viewInItalian: "Voir en Italien", backHome: "Retour à l'Accueil" },
   },
   pages: {
@@ -1170,7 +1170,7 @@ const ru: Translations = {
     nav: { home: "Главная", airport: "Аэропорт Фьюмичино", airports: "Аэропорты Рима", fares: "Тарифы", book: "Бронирование", info: "Инфо" },
     dropdown: { transfers: "Частный трансфер", shuttle: "Шаттл", parking: "Парковка", hotelRoma: "Отели Рим", hotelAirport: "Отели аэропорт", numbers: "Номера такси", appTaxi: "Приложения такси", activities: "Что делать в Риме", tours: "Экскурсии в Риме" },
     footer: { about: "О нас", contact: "Контакты", privacy: "Конфиденциальность", terms: "Условия", cookies: "Cookies", dmca: "DMCA", legal: "Правовая информация", parents: "Для родителей" },
-    cta: { bookTransfer: "Забронировать трансфер", viewAll: "Смотреть все", bookNow: "Забронировать" },
+    cta: { bookTransfer: "Забронировать трансфер", viewAll: "Смотреть все", bookNow: "Забронировать", pricePrefix: "От" },
     notTranslated: { title: "Страница ещё не переведена", description: "Эта страница пока доступна только на итальянском.", viewInItalian: "Смотреть на итальянском", backHome: "На главную" },
   },
   pages: {
