@@ -116,46 +116,46 @@ function Index() {
       />
 
       {/* Info cards */}
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-        <h2 className="font-display text-3xl font-bold text-center mb-4">Informazioni Taxi Roma</h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+      <section className="mx-auto max-w-7xl px-5 py-12 sm:py-20 sm:px-6">
+        <h2 className="font-display text-2xl sm:text-3xl font-bold text-center mb-3 sm:mb-4">Informazioni Taxi Roma</h2>
+        <p className="text-center text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base">
           Roma ha un servizio taxi regolamentato dal Comune. Ecco le informazioni essenziali per spostarsi in taxi nella Capitale.
         </p>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <Link to="/tariffe" className="group rounded-xl border border-border bg-card overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
-            <img src={taxiRomaImg} alt="Taxi nelle strade di Roma" className="h-48 w-full object-cover" loading="lazy" width={600} height={300} />
-            <div className="p-6">
-              <h3 className="font-display text-xl font-semibold group-hover:text-primary transition-colors">Tariffe Taxi Roma</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Tariffe ufficiali, supplementi e tariffe fisse per le tratte più comuni a Roma.</p>
+        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Link to="/tariffe" className="group rounded-xl border border-border bg-card overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1 active:scale-[0.98]">
+            <img src={taxiRomaImg} alt="Taxi nelle strade di Roma" className="h-36 sm:h-48 w-full object-cover" loading="lazy" width={600} height={300} />
+            <div className="p-4 sm:p-6">
+              <h3 className="font-display text-lg sm:text-xl font-semibold group-hover:text-primary transition-colors">Tariffe Taxi Roma</h3>
+              <p className="mt-1.5 sm:mt-2 text-sm text-muted-foreground">Tariffe ufficiali, supplementi e tariffe fisse per le tratte più comuni a Roma.</p>
             </div>
           </Link>
 
-          <Link to="/fiumicino" className="group rounded-xl border border-border bg-card overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
-            <img src={fiumicinoImg} alt="Aeroporto di Fiumicino" className="h-48 w-full object-cover" loading="lazy" width={600} height={300} />
-            <div className="p-6">
-              <h3 className="font-display text-xl font-semibold group-hover:text-primary transition-colors">Taxi Roma Fiumicino</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Trasferimenti aeroporto: tariffa fissa, tempi di percorrenza e consigli utili.</p>
+          <Link to="/fiumicino" className="group rounded-xl border border-border bg-card overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1 active:scale-[0.98]">
+            <img src={fiumicinoImg} alt="Aeroporto di Fiumicino" className="h-36 sm:h-48 w-full object-cover" loading="lazy" width={600} height={300} />
+            <div className="p-4 sm:p-6">
+              <h3 className="font-display text-lg sm:text-xl font-semibold group-hover:text-primary transition-colors">Taxi Roma Fiumicino</h3>
+              <p className="mt-1.5 sm:mt-2 text-sm text-muted-foreground">Trasferimenti aeroporto: tariffa fissa, tempi di percorrenza e consigli utili.</p>
             </div>
           </Link>
 
-          <Link to="/numeri" className="group rounded-xl border border-border bg-card overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
-            <div className="h-48 w-full gold-gradient flex items-center justify-center">
-              <span className="text-7xl">📞</span>
+          <Link to="/numeri" className="group rounded-xl border border-border bg-card overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1 active:scale-[0.98]">
+            <div className="h-36 sm:h-48 w-full gold-gradient flex items-center justify-center">
+              <span className="text-5xl sm:text-7xl">📞</span>
             </div>
-            <div className="p-6">
-              <h3 className="font-display text-xl font-semibold group-hover:text-primary transition-colors">Numeri Taxi Roma</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Tutti i numeri delle radio taxi di Roma per chiamare un taxi rapidamente.</p>
+            <div className="p-4 sm:p-6">
+              <h3 className="font-display text-lg sm:text-xl font-semibold group-hover:text-primary transition-colors">Numeri Taxi Roma</h3>
+              <p className="mt-1.5 sm:mt-2 text-sm text-muted-foreground">Tutti i numeri delle radio taxi di Roma per chiamare un taxi rapidamente.</p>
             </div>
           </Link>
         </div>
       </section>
 
       {/* Why use taxi section */}
-      <section className="section-warm py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold text-center mb-12">Perché Prendere un Taxi a Roma?</h2>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="section-warm py-12 sm:py-20">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Perché Prendere un Taxi a Roma?</h2>
+          <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
             {[
               { emoji: "⚡", title: "Veloce e Comodo", desc: "Raggiungi qualsiasi punto di Roma senza stress, con aria condizionata e bagagli inclusi." },
               { emoji: "💰", title: "Tariffe Regolamentate", desc: "I taxi romani hanno tariffe fissate dal Comune. Nessuna sorpresa sul prezzo finale." },
@@ -163,9 +163,9 @@ function Index() {
               { emoji: "🌙", title: "Disponibili 24/7", desc: "I taxi a Roma operano giorno e notte, festivi inclusi. Sempre a disposizione." },
             ].map((item) => (
               <div key={item.title} className="text-center">
-                <div className="text-4xl mb-4">{item.emoji}</div>
-                <h3 className="font-display text-lg font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.desc}</p>
+                <div className="text-3xl sm:text-4xl mb-2 sm:mb-4">{item.emoji}</div>
+                <h3 className="font-display text-base sm:text-lg font-semibold mb-1.5 sm:mb-2">{item.title}</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -173,13 +173,13 @@ function Index() {
       </section>
 
       {/* GetYourGuide Activities */}
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-        <h2 className="font-display text-3xl font-bold text-center mb-4">Transfer e Tour Consigliati</h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+      <section className="mx-auto max-w-7xl px-5 py-12 sm:py-20 sm:px-6">
+        <h2 className="font-display text-2xl sm:text-3xl font-bold text-center mb-3 sm:mb-4">Transfer e Tour Consigliati</h2>
+        <p className="text-center text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base">
           Prenota i migliori trasferimenti e tour a Roma con cancellazione gratuita.
         </p>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-3 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <ActivityCard
             emoji="✈️"
             title="Transfer Aeroporto Fiumicino"
@@ -224,16 +224,16 @@ function Index() {
           />
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-8 sm:mt-12 text-center">
           <GetYourGuideCTA />
         </div>
       </section>
 
       {/* FAQ SEO Section */}
-      <section className="section-warm py-20">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold text-center mb-12">Domande Frequenti — Taxi Roma</h2>
-          <div className="space-y-6">
+      <section className="section-warm py-12 sm:py-20">
+        <div className="mx-auto max-w-3xl px-5 sm:px-6">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Domande Frequenti — Taxi Roma</h2>
+          <div className="space-y-3 sm:space-y-6">
             {[
               { q: "Come prenotare un taxi a Roma?", a: "Puoi prenotare un taxi a Roma chiamando una radio taxi (06.3570, 06.4994, 06.6645), usando un'app come itTaxi o Free Now, oppure prenotando un transfer privato online." },
               { q: "Quanto costa un taxi da Fiumicino a Roma centro?", a: "La tariffa fissa per un taxi da Fiumicino al centro di Roma (dentro le Mura Aureliane) è di €50. Questa tariffa è valida per un massimo di 4 passeggeri con bagagli inclusi." },
@@ -241,14 +241,14 @@ function Index() {
               { q: "Come chiamare un taxi a Roma?", a: "Puoi chiamare un taxi a Roma: 1) Per telefono tramite radio taxi, 2) Con l'app itTaxi o Free Now, 3) Da una postazione taxi ufficiale, 4) Fermandone uno per strada se ha la luce accesa." },
               { q: "Quanto costa un taxi a Roma?", a: "La tariffa base è €3 di giorno (€6.50 di notte/festivi). Il costo al km varia da €1.10 a €1.60. Una corsa media in centro costa €8-15. Fiumicino: tariffa fissa €50, Ciampino: €31." },
             ].map((faq) => (
-              <details key={faq.q} className="group rounded-xl border border-border bg-card p-6">
-                <summary className="cursor-pointer font-display text-lg font-semibold text-card-foreground list-none flex items-center justify-between">
-                  {faq.q}
-                  <svg className="h-5 w-5 text-muted-foreground transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <details key={faq.q} className="group rounded-xl border border-border bg-card p-4 sm:p-6">
+                <summary className="cursor-pointer font-display text-base sm:text-lg font-semibold text-card-foreground list-none flex items-center justify-between gap-3">
+                  <span>{faq.q}</span>
+                  <svg className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
-                <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+                <p className="mt-3 sm:mt-4 text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
               </details>
             ))}
           </div>

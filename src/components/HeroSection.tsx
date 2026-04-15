@@ -23,7 +23,7 @@ export function HeroSection({
   image,
 }: HeroSectionProps) {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[70vh] sm:min-h-[85vh] flex items-center justify-center overflow-hidden">
       <img
         src={image || heroImage}
         alt={title}
@@ -33,12 +33,12 @@ export function HeroSection({
       />
       <div className="hero-overlay absolute inset-0" />
 
-      <div className="relative z-10 mx-auto max-w-4xl px-4 text-center text-background pt-20">
+      <div className="relative z-10 mx-auto max-w-4xl px-5 sm:px-6 text-center text-background pt-16 sm:pt-20 pb-8">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-4 text-sm font-medium uppercase tracking-[0.2em] opacity-80"
+          className="mb-3 sm:mb-4 text-xs sm:text-sm font-medium uppercase tracking-[0.15em] sm:tracking-[0.2em] opacity-80"
         >
           {subtitle}
         </motion.p>
@@ -46,7 +46,7 @@ export function HeroSection({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-display text-5xl font-bold leading-tight sm:text-6xl md:text-7xl"
+          className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
         >
           {title}
         </motion.h1>
@@ -54,7 +54,7 @@ export function HeroSection({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed opacity-85 sm:text-xl"
+          className="mx-auto mt-4 sm:mt-6 max-w-2xl text-sm sm:text-lg leading-relaxed opacity-85"
         >
           {description}
         </motion.p>
@@ -63,12 +63,12 @@ export function HeroSection({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-10 flex flex-wrap items-center justify-center gap-4"
+            className="mt-6 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
           >
             {ctaText && ctaHref && (
               <a
                 href={ctaHref}
-                className="inline-flex items-center gap-2 rounded-lg gold-gradient px-8 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg transition-all hover:shadow-xl hover:scale-[1.02]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg gold-gradient px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-semibold text-primary-foreground shadow-lg transition-all hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
               >
                 {ctaText}
               </a>
@@ -76,7 +76,7 @@ export function HeroSection({
             {secondaryCtaText && secondaryCtaHref && (
               <a
                 href={secondaryCtaHref}
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-background/30 px-8 py-3.5 text-sm font-semibold text-background backdrop-blur-sm transition-all hover:bg-background/10"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg border-2 border-background/30 px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-semibold text-background backdrop-blur-sm transition-all hover:bg-background/10 active:scale-[0.98]"
               >
                 {secondaryCtaText}
               </a>
