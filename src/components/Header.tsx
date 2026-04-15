@@ -1,6 +1,7 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useState, useRef, useEffect } from "react";
 import logoImg from "@/assets/logo.png";
+import { foreignLocales, localeFlags, localeNames, type Locale } from "@/i18n/config";
 
 const navLinks = [
   { to: "/", label: "Home" },
