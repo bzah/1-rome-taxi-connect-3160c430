@@ -8,12 +8,12 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Taxi Roma — Guida Completa ai Taxi a Roma e Fiumicino | TaxiFiumicino.com" },
-      { name: "description", content: "Tutto sui taxi a Roma: tariffe, numeri, trasferimenti aeroporto Fiumicino, prenotazioni. Guida aggiornata 2026 per turisti e residenti." },
+      { title: "Taxi Roma Fiumicino — Aeroporto Roma Fiumicino Transfer e Tariffe 2026" },
+      { name: "description", content: "Taxi e transfer dall'aeroporto Roma Fiumicino: tariffa fissa €50, numeri radio taxi, prenotazioni online. Guida completa 2026 per turisti e residenti." },
       { property: "og:title", content: "Taxi Roma — Guida Completa ai Taxi a Roma e Fiumicino" },
       { property: "og:description", content: "Tariffe, numeri, prenotazioni taxi Roma. Trasferimenti aeroporto Fiumicino. La guida più completa." },
       { property: "og:type", content: "website" },
-      { name: "keywords", content: "taxi roma, numero taxi roma, taxi roma fiumicino, tariffe taxi roma, radio taxi roma, prenotare taxi roma, app taxi roma" },
+      { name: "keywords", content: "taxi roma, aeroporto roma fiumicino, taxi roma fiumicino, aeroporto fiumicino, numero taxi roma, tariffe taxi roma, transfer aeroporto fiumicino, radio taxi roma" },
     ],
     scripts: [
       {

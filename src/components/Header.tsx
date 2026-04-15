@@ -3,8 +3,8 @@ import { useState } from "react";
 
 const navLinks = [
   { to: "/", label: "Home" },
+  { to: "/fiumicino", label: "Aeroporto Fiumicino" },
   { to: "/tariffe", label: "Tariffe" },
-  { to: "/fiumicino", label: "Fiumicino" },
   { to: "/taxi-ciampino", label: "Ciampino" },
   { to: "/numeri", label: "Numeri Taxi" },
   { to: "/prenota", label: "Prenota" },
