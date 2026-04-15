@@ -31,7 +31,7 @@ export interface Translations {
     nav: { home: string; airport: string; airports: string; fares: string; book: string; info: string };
     dropdown: { transfers: string; shuttle: string; parking: string; hotelRoma: string; hotelAirport: string; numbers: string; appTaxi: string; activities: string; tours: string };
     footer: { about: string; contact: string; privacy: string; terms: string; cookies: string; dmca: string; legal: string; parents: string };
-    cta: { bookTransfer: string; viewAll: string; bookNow: string };
+    cta: { bookTransfer: string; viewAll: string; bookNow: string; pricePrefix: string };
     notTranslated: { title: string; description: string; viewInItalian: string; backHome: string };
   };
   pages: Record<string, PageTranslation>;
