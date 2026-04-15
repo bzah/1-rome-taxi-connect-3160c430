@@ -4,8 +4,10 @@ import { useState } from "react";
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/fiumicino", label: "Aeroporto Fiumicino" },
+  { to: "/aeroporti-di-roma", label: "Aeroporti Roma" },
   { to: "/tariffe", label: "Tariffe" },
-  { to: "/taxi-ciampino", label: "Ciampino" },
+  { to: "/hotel-roma", label: "Hotel Roma" },
+  { to: "/hotel-aeroporto-fiumicino", label: "Hotel Aeroporto" },
   { to: "/numeri", label: "Numeri Taxi" },
   { to: "/prenota", label: "Prenota" },
 ] as const;
