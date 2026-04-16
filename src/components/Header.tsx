@@ -214,26 +214,30 @@ export function Header() {
       {menuOpen && (
         <div className="fixed inset-x-0 top-[53px] bottom-0 z-40 bg-background overflow-y-auto lg:hidden">
           <div className="px-5 py-6 space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`block rounded-lg px-4 py-3 text-base font-medium transition-colors ${
-                  isActive(link.to)
-                    ? "text-primary bg-accent"
-                    : "text-muted-foreground hover:text-foreground active:bg-accent/50"
-                }`}
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const href = pageHref(link.slug);
+              const active = location.pathname === href;
+              return (
+                <a
+                  key={link.slug}
+                  href={href}
+                  className={`block rounded-lg px-4 py-3 text-base font-medium transition-colors ${
+                    active
+                      ? "text-primary bg-accent"
+                      : "text-muted-foreground hover:text-foreground active:bg-accent/50"
+                  }`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
 
             <button
               onClick={() => setMobileInfoOpen(!mobileInfoOpen)}
               className="flex w-full items-center justify-between rounded-lg px-4 py-3 text-base font-medium text-muted-foreground hover:text-foreground active:bg-accent/50 transition-colors"
             >
-              Info
+              {navL.info}
               <svg className={`h-5 w-5 transition-transform ${mobileInfoOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
@@ -241,15 +245,15 @@ export function Header() {
             {mobileInfoOpen && (
               <div className="ml-2 border-l-2 border-primary/20 pl-3 space-y-0.5">
                 {infoDropdownItems.map((item) => (
-                  <Link
-                    key={item.to}
-                    to={item.to}
+                  <a
+                    key={item.slug}
+                    href={pageHref(item.slug)}
                     className="flex items-center gap-3 rounded-lg px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground active:bg-accent/50 transition-colors"
                     onClick={() => setMenuOpen(false)}
                   >
                     <span className="text-lg">{item.icon}</span>
                     {item.label}
-                  </Link>
+                  </a>
                 ))}
                 <div className="my-2 border-t border-stone-warm" />
                 {gygLinks.map((item) => (
