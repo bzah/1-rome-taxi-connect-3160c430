@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 import { getTranslations } from "@/i18n";
+import { canonicalLink, hreflangLinks } from "@/i18n/hreflang";
 import {
   GYG_COLOSSEUM_TOUR,
   GYG_COLOSSEUM_ARENA,
@@ -33,6 +34,10 @@ export const Route = createFileRoute("/$locale/")({
     const p = t?.pages?.index;
     if (!p) return {};
     return {
+      links: [
+        canonicalLink("/", params.locale as any),
+        ...hreflangLinks("/"),
+      ],
       meta: [
         { title: p.meta.title },
         { name: "description", content: p.meta.description },

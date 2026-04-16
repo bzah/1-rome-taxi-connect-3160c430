@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
-import { hreflangLinks } from "@/i18n/hreflang";
+import { i18nLinks } from "@/i18n/hreflang";
 import {
   GYG_COLOSSEUM_TOUR,
   GYG_VATICAN_TOUR,
@@ -12,7 +12,7 @@ import {
 export const Route = createFileRoute("/come-chiamare-taxi-roma")({
   component: ComeChiamarePage,
   head: () => ({
-    links: hreflangLinks("/come-chiamare-taxi-roma"),
+    links: i18nLinks("/come-chiamare-taxi-roma", "it"),
     meta: [
       { title: "Come Chiamare un Taxi a Roma — Guida Completa 2026 | TaxiFiumicino.com" },
       { name: "description", content: "Come chiamare un taxi a Roma nel 2026: 4 metodi spiegati passo passo — telefono (06.3570), app itTaxi e Free Now, postazioni taxi e fermata per strada. Numeri, tempi di attesa e consigli per turisti." },

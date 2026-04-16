@@ -2,12 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
-import { hreflangLinks } from "@/i18n/hreflang";
+import { i18nLinks } from "@/i18n/hreflang";
 
 export const Route = createFileRoute("/aeroporti-di-roma")({
   component: AeroportiDiRomaPage,
   head: () => ({
-    links: hreflangLinks("/aeroporti-di-roma"),
+    links: i18nLinks("/aeroporti-di-roma", "it"),
     meta: [
       { title: "Aeroporti di Roma 2026 — Fiumicino e Ciampino: Guida Completa | TaxiFiumicino.com" },
       { name: "description", content: "Guida completa agli aeroporti di Roma: Fiumicino (Leonardo da Vinci) e Ciampino. Transfer, taxi, hotel, terminal, come arrivare e consigli di viaggio 2026." },

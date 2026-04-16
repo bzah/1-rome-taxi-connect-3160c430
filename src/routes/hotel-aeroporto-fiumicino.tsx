@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
-import { hreflangLinks } from "@/i18n/hreflang";
+import { i18nLinks } from "@/i18n/hreflang";
 import {
   GYG_COLOSSEUM_TOUR,
   GYG_VATICAN_TOUR,
@@ -14,7 +14,7 @@ import {
 export const Route = createFileRoute("/hotel-aeroporto-fiumicino")({
   component: HotelAeroportoFiumicinoPage,
   head: () => ({
-    links: hreflangLinks("/hotel-aeroporto-fiumicino"),
+    links: i18nLinks("/hotel-aeroporto-fiumicino", "it"),
     meta: [
       { title: "Hotel Fiumicino 2026 — Hotels Near Fiumicino Rome, Migliori Hotel Aeroporto | TaxiFiumicino.com" },
       { name: "description", content: "Hotels near Fiumicino Rome: i migliori hotel Fiumicino vicino all'aeroporto con navetta gratuita, prezzi da €60/notte. Hotel Fiumicino per voli mattutini e arrivi tardivi." },

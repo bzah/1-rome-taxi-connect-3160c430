@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
-import { hreflangLinks } from "@/i18n/hreflang";
+import { i18nLinks } from "@/i18n/hreflang";
 
 export const Route = createFileRoute("/numeri")({
   component: NumeriPage,
   head: () => ({
-    links: hreflangLinks("/numeri"),
+    links: i18nLinks("/numeri", "it"),
     meta: [
       { title: "Numero Taxi Roma — Tutti i Numeri per Chiamare un Taxi | TaxiFiumicino.com" },
       { name: "description", content: "Tutti i numeri di telefono taxi Roma aggiornati 2026: Radio Taxi 3570 (06.3570), Samarcanda (06.5551), La Capitale (06.4994), Roma Taxi (06.6645). Come chiamare un taxi a Roma, app itTaxi e alternative per prenotare." },

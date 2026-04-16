@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { i18nLinks } from "@/i18n/hreflang";
 
 export const Route = createFileRoute("/parents-info")({
   head: () => ({
+    links: i18nLinks("/parents-info", "it"),
     meta: [
       { title: "Informazioni per i Genitori — TaxiFiumicino.com | Sicurezza Minori" },
       { name: "description", content: "Informazioni per i genitori sull'utilizzo di TaxiFiumicino.com: sicurezza online dei minori, contenuti del sito, link esterni e affiliati, consigli per la navigazione sicura e protezione dei dati dei bambini secondo il GDPR." },

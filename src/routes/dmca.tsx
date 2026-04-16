@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { i18nLinks } from "@/i18n/hreflang";
 
 export const Route = createFileRoute("/dmca")({
   head: () => ({
+    links: i18nLinks("/dmca", "it"),
     meta: [
       { title: "DMCA — TaxiFiumicino.com | Segnalazione Violazioni Copyright" },
       { name: "description", content: "Procedura DMCA per la segnalazione di violazioni del copyright su TaxiFiumicino.com. Come inviare un reclamo per contenuti protetti da diritto d'autore, tempi di risposta e procedura di contro-notifica." },

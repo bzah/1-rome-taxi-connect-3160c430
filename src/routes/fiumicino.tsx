@@ -1,13 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
-import { hreflangLinks } from "@/i18n/hreflang";
+import { i18nLinks } from "@/i18n/hreflang";
 import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
 
 export const Route = createFileRoute("/fiumicino")({
   component: FiumicinoPage,
   head: () => ({
-    links: hreflangLinks("/fiumicino"),
+    links: i18nLinks("/fiumicino", "it"),
     meta: [
       { title: "Aeroporto Roma Fiumicino — Taxi, Transfer e Guida Completa 2026 | TaxiFiumicino.com" },
       { name: "description", content: "Aeroporto Roma Fiumicino (Leonardo da Vinci): taxi tariffa fissa €50, transfer privati, come arrivare a Roma centro, Terminal, parcheggio e informazioni utili." },
