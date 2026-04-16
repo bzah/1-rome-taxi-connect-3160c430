@@ -34,9 +34,8 @@ const UI: Record<Locale, { bookNow: string; from: string; bestSeller: string; mu
 };
 
 /* ─── Category builders per locale ─── */
-type CatKey = "attractions" | "tours" | "food" | "activities" | "nightlife" | "transfers" | "panoramic";
 
-function buildCategory(locale: Locale, key: CatKey): DiscoverCategory {
+export function buildCategory(locale: Locale, key: CatKey): DiscoverCategory {
   const ui = UI[locale];
   const T: Record<CatKey, Record<Locale, { title: string; subtitle: string; alt: string; items: DiscoverItem[] }>> = {
     attractions: {
