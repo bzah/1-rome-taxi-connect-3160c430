@@ -3,6 +3,15 @@ import { getTranslations } from "@/i18n";
 import { canonicalLink, hreflangLinks } from "@/i18n/hreflang";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
+import { LocalizedRomeDiscoverGrid } from "@/components/LocalizedDiscoverSection";
+
+const DISCOVER_TITLES: Record<string, { title: string; subtitle: string }> = {
+  en: { title: "Discover Rome", subtitle: "Top attractions, tours and authentic experiences. Book online with free cancellation." },
+  fr: { title: "Découvrir Rome", subtitle: "Attractions, visites et expériences authentiques. Réservez en ligne avec annulation gratuite." },
+  es: { title: "Descubre Roma", subtitle: "Atracciones, tours y experiencias auténticas. Reserva online con cancelación gratuita." },
+  ru: { title: "Откройте Рим", subtitle: "Достопримечательности, туры и аутентичные впечатления. Бронируйте онлайн с бесплатной отменой." },
+  it: { title: "Scopri Roma", subtitle: "Attrazioni, tour ed esperienze autentiche. Prenota online con cancellazione gratuita." },
+};
 import { useState } from "react";
 import { sendContactEmail } from "@/utils/contact.functions";
 import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
