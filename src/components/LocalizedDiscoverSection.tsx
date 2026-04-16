@@ -12,10 +12,11 @@ import panoramicImg from "@/assets/rome-panoramic-sunset.jpg";
 import transferImg from "@/assets/rome-private-transfer.jpg";
 import activitiesImg from "@/assets/rome-activities-pasta.jpg";
 
-type Locale = "en" | "fr" | "es" | "ru" | "it";
+export type Locale = "en" | "fr" | "es" | "ru" | "it";
 
-interface DiscoverItem { title: string; desc: string; url: string; price?: string; badge?: string }
-interface DiscoverCategory { title: string; subtitle: string; image: string; alt: string; items: DiscoverItem[] }
+export interface DiscoverItem { title: string; desc: string; url: string; price?: string; badge?: string }
+export interface DiscoverCategory { title: string; subtitle: string; image: string; alt: string; items: DiscoverItem[] }
+export type CatKey = "attractions" | "tours" | "food" | "activities" | "nightlife" | "transfers" | "panoramic";
 
 function gyg(path: string): string {
   const base = `https://www.getyourguide.com${path}`;
