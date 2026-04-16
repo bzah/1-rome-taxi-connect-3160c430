@@ -29,6 +29,39 @@ export function Header() {
   const currentLocale: Locale = (foreignLocales as readonly string[]).includes(pathParts[0]) ? (pathParts[0] as Locale) : "it";
   const currentSlug = currentLocale === "it" ? location.pathname : "/" + pathParts.slice(1).join("/");
 
+  /* Locale-aware labels */
+  const t = currentLocale === "it" ? null : getTranslations(currentLocale);
+  const navL = t?.common.nav ?? IT_NAV;
+  const dropL = t?.common.dropdown ?? IT_DROPDOWN;
+  const ctaBook = t?.common.cta.bookTransfer ?? IT_CTA_BOOK;
+  const langHeading = LANG_HEADING[currentLocale];
+
+  const navLinks = [
+    { slug: "/", label: navL.home },
+    { slug: "/fiumicino", label: navL.airport },
+    { slug: "/aeroporti-di-roma", label: navL.airports },
+    { slug: "/tariffe", label: navL.fares },
+    { slug: "/prenota", label: navL.book },
+  ];
+
+  const infoDropdownItems = [
+    { slug: "/aeroporto-fiumicino-roma-termini", label: dropL.transfers, icon: "🚐" },
+    { slug: "/aeroporto-fiumicino-roma-centro", label: dropL.shuttle, icon: "🚌" },
+    { slug: "/parcheggio-fiumicino", label: dropL.parking, icon: "🅿️" },
+    { slug: "/hotel-roma", label: dropL.hotelRoma, icon: "🏨" },
+    { slug: "/hotel-aeroporto-fiumicino", label: dropL.hotelAirport, icon: "✈️" },
+    { slug: "/numeri", label: dropL.numbers, icon: "📞" },
+    { slug: "/app-taxi-roma", label: dropL.appTaxi, icon: "📱" },
+  ];
+
+  const gygLinks = [
+    { href: "https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher", label: dropL.activities, icon: "🏛️" },
+    { href: "https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher", label: dropL.tours, icon: "🎭" },
+  ];
+
+  /** Resolve an internal page slug to the right URL for the current locale */
+  const pageHref = (slug: string) => localizedPath(slug, currentLocale);
+
   function getLocalizedPath(targetLocale: Locale) {
     const slug = currentSlug === "/" ? "" : currentSlug;
     if (targetLocale === "it") return slug || "/";
