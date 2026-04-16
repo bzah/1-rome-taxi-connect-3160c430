@@ -201,53 +201,53 @@ function AeroportiDiRomaPage() {
 
             <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <ActivityCard
-                title="Transfer Privato Fiumicino → Roma"
-                description="Autista dedicato, auto di lusso, servizio porta a porta. Ideale per famiglie e gruppi fino a 8 persone."
-                price="€45"
-                emoji="🚗"
-                gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-fiumicino-airport-to-rome-t189750/"
-              />
-              <ActivityCard
-                title="Transfer Privato Ciampino → Roma"
-                description="Transfer privato dall'aeroporto di Ciampino al centro di Roma. Auto confortevole con autista professionista."
+                title="Tour Colosseo, Foro e Palatino"
+                description="Visita guidata salta-fila al Colosseo, Foro Romano e Palatino. 2.5 ore, piccolo gruppo."
                 price="€35"
-                emoji="🚐"
-                gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-ciampino-airport-to-rome-t234567/"
-              />
-              <ActivityCard
-                title="Shuttle Condiviso Fiumicino"
-                description="La soluzione più economica per raggiungere Roma dall'aeroporto. Navetta condivisa con altri viaggiatori."
-                price="€12"
-                emoji="🚌"
-                gygUrl="https://www.getyourguide.com/rome-l33/shuttle-fiumicino-airport-to-rome-t67890/"
-              />
-              <ActivityCard
-                title="Tour Roma dal Aeroporto"
-                description="Atterri a Roma? Inizia il tuo viaggio con un tour guidato dal aeroporto, con sosta al Colosseo e Vaticano."
-                price="€89"
                 emoji="🏛️"
-                gygUrl="https://www.getyourguide.com/rome-l33/rome-airport-layover-tour-t345678/"
+                gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/"
               />
               <ActivityCard
-                title="Transfer VIP con Mercedes"
-                description="Servizio VIP con Mercedes Classe E o Classe V. Autista in attesa con cartello. Massimo comfort."
-                price="€65"
-                emoji="✨"
-                gygUrl="https://www.getyourguide.com/rome-l33/vip-transfer-fiumicino-rome-t456789/"
+                title="Tour Musei Vaticani e Sistina"
+                description="Tour guidato salta-fila ai Musei Vaticani, Cappella Sistina e Basilica di San Pietro."
+                price="€30"
+                emoji="🏟️"
+                gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/"
               />
               <ActivityCard
-                title="Roma Card + Transfer"
-                description="Combinazione transfer aeroporto + Roma City Card con trasporti pubblici e ingressi ai musei inclusi."
-                price="€55"
+                title="Biglietto Vaticano — Salta la Fila"
+                description="Ingresso prioritario ai Musei Vaticani e alla Cappella Sistina. Accesso tutto il giorno."
+                price="€25"
                 emoji="🎫"
-                gygUrl="https://www.getyourguide.com/rome-l33/rome-card-airport-transfer-t567890/"
+                gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-vatican-museums-sistine-chapel-ticket-t62214/"
+              />
+              <ActivityCard
+                title="Colosseo Sotterraneo e Roma Antica"
+                description="Esplora i sotterranei segreti del Colosseo con guida esperta. 3 ore."
+                price="€40"
+                emoji="⚔️"
+                gygUrl="https://www.getyourguide.com/rome-l33/colosseum-underground-and-ancient-rome-tour-t134577/"
+              />
+              <ActivityCard
+                title="Corso Pasta e Tiramisù"
+                description="Impara a cucinare pasta e tiramisù in un ristorante locale vicino al Vaticano."
+                price="€55"
+                emoji="🍝"
+                gygUrl="https://www.getyourguide.com/rome-l33/pasta-tiramisu-making-class-in-locally-loved-restaurant--t453961/"
+              />
+              <ActivityCard
+                title="Gita Pompei e Costiera Amalfitana"
+                description="Escursione da Roma a Pompei, Costiera Amalfitana e Sorrento. Giornata intera."
+                price="€120"
+                emoji="🌋"
+                gygUrl="https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/"
               />
             </div>
 
             <div className="mt-10 text-center">
               <GetYourGuideCTA
-                text="Scopri tutti i transfer per Roma"
-                url="https://www.getyourguide.com/rome-l33/?q=airport+transfer&partner_id=0IQTGX8&utm_medium=online_publisher"
+                text="Scopri tutti i tour a Roma"
+                url="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher"
               />
             </div>
           </div>

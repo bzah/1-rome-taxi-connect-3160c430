@@ -339,21 +339,21 @@ function ParcheggioFiumicinoPage() {
                 description="Autista privato con auto di lusso, servizio porta a porta dall'aeroporto al tuo hotel a Roma."
                 price="€45"
                 emoji="🚗"
-                gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-fiumicino-airport-to-rome-t189750/"
+                gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/"
               />
               <ActivityCard
                 title="Shuttle Condiviso Fiumicino"
                 description="Shuttle condiviso economico dall'aeroporto di Fiumicino al centro di Roma. Servizio con orari flessibili."
                 price="€12"
                 emoji="🚌"
-                gygUrl="https://www.getyourguide.com/rome-l33/shuttle-fiumicino-airport-to-rome-t67890/"
+                gygUrl="https://www.getyourguide.com/rome-l33/rome-big-bus-hop-on-hop-off-open-top-sightseeing-tour-t66064/"
               />
               <ActivityCard
                 title="Transfer Privato Roma → Fiumicino"
                 description="Servizio transfer dal tuo hotel a Roma direttamente all'aeroporto di Fiumicino. Puntuale e affidabile."
                 price="€45"
                 emoji="✈️"
-                gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-rome-to-fiumicino-airport-t234567/"
+                gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/"
               />
             </div>
 

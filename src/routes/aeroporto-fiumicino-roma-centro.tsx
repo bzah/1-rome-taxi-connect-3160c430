@@ -42,8 +42,8 @@ function FiumicinoCentroPage() {
         title="Da Fiumicino a Roma Centro"
         subtitle="Tutte le Opzioni"
         description="Guida completa su come raggiungere il centro di Roma dall'aeroporto di Fiumicino: taxi, treno, bus e transfer privati con prezzi e tempi aggiornati."
-        ctaText="Prenota Transfer Privato"
-        ctaHref="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/?partner_id=0IQTGX8&utm_medium=online_publisher"
+        ctaText="Scopri Tour e Attività a Roma"
+        ctaHref="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher"
         image={fiumicinoImg}
       />
 
@@ -133,30 +133,30 @@ function FiumicinoCentroPage() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <ActivityCard
-            emoji="🚗"
-            title="Transfer Privato al tuo Hotel"
-            description="Dall'aeroporto di Fiumicino direttamente al tuo hotel in centro Roma. Autista professionale, veicolo con A/C, cancellazione gratuita."
-            gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/"
-            price="€45"
+            emoji="🏛️"
+            title="Tour Colosseo, Foro e Palatino"
+            description="Visita guidata salta-fila al Colosseo, Foro Romano e Palatino. 2.5 ore, piccolo gruppo."
+            gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/"
+            price="€35"
           />
           <ActivityCard
-            emoji="🚐"
-            title="Navetta Condivisa"
-            description="Navetta economica dall'aeroporto Fiumicino alla stazione Termini, nel cuore di Roma centro."
-            gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/"
-            price="€7"
+            emoji="🏟️"
+            title="Tour Musei Vaticani e Sistina"
+            description="Tour guidato salta-fila ai Musei Vaticani, Cappella Sistina e Basilica di San Pietro."
+            gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/"
+            price="€30"
           />
           <ActivityCard
-            emoji="👨‍👩‍👧‍👦"
-            title="Transfer per Famiglie"
-            description="Minivan per famiglie con bambini. Seggiolini auto disponibili su richiesta. Dall'aeroporto al tuo alloggio."
-            gygUrl="https://www.getyourguide.com/rome-l33/rome-private-transfer-from-to-fiumicino-airport-t676074/"
-            price="€55"
+            emoji="🌋"
+            title="Gita Pompei e Costiera Amalfitana"
+            description="Escursione da Roma a Pompei, Costiera Amalfitana e Sorrento. Giornata intera."
+            gygUrl="https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/"
+            price="€120"
           />
         </div>
 
         <div className="mt-12 text-center">
-          <GetYourGuideCTA text="Tutti i Transfer Fiumicino — Roma" url="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher" />
+          <GetYourGuideCTA text="Tutti i Tour e Attività a Roma" url="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher" />
         </div>
 
         {/* FAQ Section */}

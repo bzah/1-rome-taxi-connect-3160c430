@@ -288,21 +288,21 @@ function HotelAeroportoFiumicinoPage() {
                 description="Autista privato dall'aeroporto direttamente al tuo hotel a Roma centro. Servizio porta a porta con auto di lusso."
                 price="€45"
                 emoji="🚗"
-                gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-fiumicino-airport-to-rome-t189750/"
+                gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/"
               />
               <ActivityCard
                 title="Shuttle Condiviso Fiumicino → Roma"
                 description="Navetta condivisa economica dall'aeroporto di Fiumicino ai principali hotel di Roma. Ideale per viaggiatori singoli."
                 price="€12"
                 emoji="🚌"
-                gygUrl="https://www.getyourguide.com/rome-l33/shuttle-fiumicino-airport-to-rome-t67890/"
+                gygUrl="https://www.getyourguide.com/rome-l33/rome-big-bus-hop-on-hop-off-open-top-sightseeing-tour-t66064/"
               />
               <ActivityCard
                 title="Transfer VIP Mercedes"
                 description="Servizio premium con Mercedes. L'autista ti aspetta con il cartello all'uscita arrivi. Massimo comfort."
                 price="€65"
                 emoji="✨"
-                gygUrl="https://www.getyourguide.com/rome-l33/vip-transfer-fiumicino-rome-t456789/"
+                gygUrl="https://www.getyourguide.com/rome-l33/pasta-tiramisu-making-class-in-locally-loved-restaurant--t453961/"
               />
             </div>
 
