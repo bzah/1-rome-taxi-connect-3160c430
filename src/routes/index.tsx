@@ -137,12 +137,12 @@ function Index() {
         </div>
 
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="✈️" title="Transfer Aeroporto Fiumicino" description="Trasferimento privato dall'aeroporto di Fiumicino al centro di Roma." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" />
-          <ActivityCard emoji="🏛️" title="Tour Colosseo e Foro Romano" description="Visita guidata del Colosseo, Foro Romano e Palatino. Salta la fila." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" />
-          <ActivityCard emoji="🏟️" title="Vaticano — Musei e Cappella Sistina" description="Accesso prioritario ai Musei Vaticani e alla Cappella Sistina." gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-vatican-museums-sistine-chapel-ticket-t62214/" price="€30" />
-          <ActivityCard emoji="🚐" title="Transfer Condiviso Fiumicino" description="Navetta condivisa dall'aeroporto Fiumicino alla stazione Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" />
-          <ActivityCard emoji="🍝" title="Tour Gastronomico Trastevere" description="Scopri i sapori autentici di Roma con un tour gastronomico." gygUrl="https://www.getyourguide.com/rome-l33/pasta-tiramisu-making-class-in-locally-loved-restaurant--t453961/" price="€40" />
-          <ActivityCard emoji="🌅" title="Tour Roma di Notte" description="Ammira i monumenti illuminati di Roma in un tour serale." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-underground-and-ancient-rome-tour-t134577/" price="€25" />
+          <ActivityCard emoji="🏛️" title="Tour Colosseo, Foro Romano e Palatino" description="Visita guidata con accesso salta-fila. 2.5 ore, piccolo gruppo." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" />
+          <ActivityCard emoji="🏟️" title="Musei Vaticani e Cappella Sistina" description="Tour guidato salta-fila ai Musei Vaticani, Cappella Sistina e Basilica di San Pietro." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€30" />
+          <ActivityCard emoji="🎫" title="Biglietto Vaticano — Salta la Fila" description="Ingresso prioritario ai Musei Vaticani e Cappella Sistina. Accesso tutto il giorno." gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-vatican-museums-sistine-chapel-ticket-t62214/" price="€25" />
+          <ActivityCard emoji="⚔️" title="Colosseo Sotterraneo e Roma Antica" description="Esplora i sotterranei segreti del Colosseo con una guida esperta. 3 ore." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-underground-and-ancient-rome-tour-t134577/" price="€40" />
+          <ActivityCard emoji="🍝" title="Corso Pasta e Tiramisù" description="Impara a cucinare pasta e tiramisù in un ristorante locale vicino al Vaticano." gygUrl="https://www.getyourguide.com/rome-l33/pasta-tiramisu-making-class-in-locally-loved-restaurant--t453961/" price="€55" />
+          <ActivityCard emoji="🚌" title="Bus Hop-on Hop-off Roma" description="Esplora Roma al tuo ritmo con il bus turistico panoramico. Valido fino a 3 giorni." gygUrl="https://www.getyourguide.com/rome-l33/rome-big-bus-hop-on-hop-off-open-top-sightseeing-tour-t66064/" price="€25" />
         </div>
 
         <div className="mt-10 sm:mt-14 text-center">
