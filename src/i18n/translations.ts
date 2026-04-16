@@ -533,7 +533,7 @@ const es: Translations = {
       parkingText: "Varias opciones de parking: larga estancia desde €9/día, parking cubierto desde €24/día. Reserva online para ahorrar hasta el 40%.",
     },
     tariffe: {
-      meta: { title: "Tarifas Taxi Roma 2026 — Precios Oficiales y Tarifas Fijas", description: "Tarifas oficiales taxi Roma 2026: tarifa base €3, coste por km, suplementos, tarifas fijas Fiumicino €50 y Ciampino €31.", ogTitle: "Tarifas Taxi Roma 2026 — Precios Oficiales", ogDescription: "Tarifas taxi Roma actualizadas 2026.", keywords: "tarifas taxi roma, precio taxi roma, coste taxi roma, tarifa fija taxi fiumicino" },
+      meta: { title: "Tarifas Taxi Roma 2026 — Precios Oficiales y Tarifas Fijas", description: "Tarifas oficiales taxi Roma 2026: tarifa base €3, coste por km, suplementos nocturnos y festivos, tarifas fijas aeropuerto Fiumicino €50 y Ciampino €31.", ogTitle: "Tarifas Taxi Roma 2026 — Precios Oficiales", ogDescription: "Tarifas taxi Roma actualizadas 2026.", keywords: "tarifas taxi roma, precio taxi roma, coste taxi roma, tarifa fija taxi fiumicino" },
       hero: { title: "Tarifas Taxi Roma", subtitle: "Precios Oficiales 2026", description: "Todas las tarifas de taxi en Roma reguladas por el Ayuntamiento.", ctaText: "Reservar Transfer" },
       baseTitle: "Tarifas Base Taxi Roma",
       fareTable: [
@@ -611,7 +611,7 @@ const es: Translations = {
       ],
     },
     about: {
-      meta: { title: "Sobre Nosotros — TaxiFiumicino.com", description: "TaxiFiumicino.com es el portal de referencia para taxis en Roma, transfers aeropuerto Fiumicino y Ciampino.", ogTitle: "Sobre Nosotros — TaxiFiumicino.com", ogDescription: "Portal informativo sobre taxis en Roma.", keywords: "sobre nosotros taxifiumicino, guía taxi roma" },
+      meta: { title: "Sobre Nosotros — TaxiFiumicino.com", description: "Sobre nosotros: TaxiFiumicino.com es el portal de referencia para taxis en Roma, transfers desde el aeropuerto Fiumicino y Ciampino, tarifas y reservas online.", ogTitle: "Sobre Nosotros — TaxiFiumicino.com", ogDescription: "Portal informativo sobre taxis en Roma.", keywords: "sobre nosotros taxifiumicino, guía taxi roma" },
       title: "Sobre Nosotros",
       intro: "<strong>TaxiFiumicino.com</strong> es un portal informativo dedicado a los servicios de taxi en Roma y desde el aeropuerto de Fiumicino.",
       missionTitle: "Nuestra Misión",
@@ -624,7 +624,7 @@ const es: Translations = {
       contactText: "Para preguntas o colaboraciones, escríbenos a:",
     },
     contact: {
-      meta: { title: "Contacto — TaxiFiumicino.com", description: "Contacta con TaxiFiumicino.com para preguntas sobre taxis en Roma y transfers.", ogTitle: "Contacto — TaxiFiumicino.com", ogDescription: "¿Preguntas sobre taxis en Roma? Contáctanos.", keywords: "contacto taxifiumicino, contactar taxi roma" },
+      meta: { title: "Contacto — TaxiFiumicino.com", description: "Contacta con TaxiFiumicino.com para preguntas sobre taxis en Roma, transfers desde el aeropuerto Fiumicino y Ciampino, tarifas o reservas. Respuesta en 24h.", ogTitle: "Contacto — TaxiFiumicino.com", ogDescription: "¿Preguntas sobre taxis en Roma? Contáctanos.", keywords: "contacto taxifiumicino, contactar taxi roma" },
       formTitle: "Envíanos un Mensaje",
       formSubtitle: "Rellena el formulario y responderemos en 24 horas.",
       labels: { name: "Nombre Completo", email: "Email", subject: "Asunto", message: "Mensaje", send: "Enviar Mensaje", sending: "Enviando..." },
@@ -637,7 +637,7 @@ const es: Translations = {
     "aeroporto-fiumicino-roma-termini": { meta: { title: "De Fiumicino a Roma Termini — Tren, Taxi y Bus 2026", description: "Cómo ir de Fiumicino a Roma Termini: Leonardo Express, taxi tarifa fija €50, bus y transfers.", ogTitle: "Fiumicino a Roma Termini — Todas las Opciones", ogDescription: "Leonardo Express, taxi, bus y transfers de Fiumicino a Termini.", keywords: "fiumicino a roma termini, tren fiumicino termini, leonardo express" } },
     "aeroporto-fiumicino-roma-centro": { meta: { title: "De Fiumicino al Centro de Roma — Taxi, Tren y Transfer 2026", description: "Cómo ir de Fiumicino al centro de Roma: taxi €50, Leonardo Express €14, bus y transfers.", ogTitle: "Fiumicino al Centro de Roma — Todas las Opciones", ogDescription: "Todas las opciones de Fiumicino al centro de Roma.", keywords: "fiumicino al centro de roma, como llegar de fiumicino al centro" } },
     numeri: {
-      meta: { title: "Números Taxi Roma — Teléfonos Radio Taxi 2026", description: "Números de teléfono taxi Roma: Radio Taxi 3570, Samarcanda, La Capitale.", ogTitle: "Números Taxi Roma", ogDescription: "Números de radio taxi Roma actualizados.", keywords: "numero taxi roma, telefono taxi roma, radio taxi roma" },
+      meta: { title: "Números Taxi Roma — Teléfonos Radio Taxi 2026", description: "Números de teléfono taxi en Roma 2026: Radio Taxi 3570 (06.3570), Samarcanda (06.5551), La Capitale (06.4994). Disponibles 24/7 + apps itTaxi y Free Now.", ogTitle: "Números Taxi Roma", ogDescription: "Números de radio taxi Roma actualizados.", keywords: "numero taxi roma, telefono taxi roma, radio taxi roma" },
       hero: { title: "Números Taxi Roma", subtitle: "Llama a un Taxi Ya", description: "Todos los números de radio taxi de Roma. Llama, reserva por app o encuentra la parada más cercana.", ctaText: "Reservar Transfer" },
       radioTitle: "Radio Taxi Roma — Números de Teléfono",
       radioIntro: "Para llamar un taxi en Roma, contacta una de las cooperativas de radio taxi. Servicio disponible 24/7.",
@@ -850,7 +850,7 @@ const fr: Translations = {
       ],
     },
     fiumicino: {
-      meta: { title: "Aéroport Rome Fiumicino — Taxi, Transfert et Guide 2026", description: "Aéroport Rome Fiumicino : taxi tarif fixe €50, transferts privés, comment rejoindre le centre, terminaux et informations.", ogTitle: "Aéroport Rome Fiumicino — Taxi et Transferts", ogDescription: "Guide complet de l'aéroport Fiumicino : taxi €50, transferts et conseils.", keywords: "aéroport rome fiumicino, aéroport fiumicino, taxi aéroport fiumicino, transfert fiumicino rome" },
+      meta: { title: "Aéroport Rome Fiumicino — Taxi, Transfert et Guide 2026", description: "Aéroport Rome Fiumicino (Leonardo da Vinci) : taxi tarif fixe €50, transferts privés, comment rejoindre le centre de Rome, terminaux et conseils pratiques.", ogTitle: "Aéroport Rome Fiumicino — Taxi et Transferts", ogDescription: "Guide complet de l'aéroport Fiumicino : taxi €50, transferts et conseils.", keywords: "aéroport rome fiumicino, aéroport fiumicino, taxi aéroport fiumicino, transfert fiumicino rome" },
       hero: { title: "Aéroport Rome Fiumicino", subtitle: "Leonardo da Vinci (FCO)", description: "Guide complet de l'aéroport Fiumicino : taxi tarif fixe €50, transferts privés, Leonardo Express et toutes les infos.", ctaText: "Réserver Transfert Privé" },
       generalTitle: "Aéroport Fiumicino — Informations Générales",
       generalText: "L'aéroport de Rome Fiumicino (IATA : FCO) est le principal aéroport d'Italie, situé à environ 30 km du centre de Rome. Il gère plus de 40 millions de passagers par an.",
@@ -892,7 +892,7 @@ const fr: Translations = {
       parkingText: "Plusieurs options : longue durée dès €9/jour, parking couvert dès €24/jour. Réservez en ligne pour économiser jusqu'à 40%.",
     },
     tariffe: {
-      meta: { title: "Tarifs Taxi Rome 2026 — Prix Officiels et Tarifs Fixes", description: "Tarifs officiels taxi Rome 2026 : tarif de base €3, prix au km, suppléments, tarifs fixes Fiumicino €50 et Ciampino €31.", ogTitle: "Tarifs Taxi Rome 2026", ogDescription: "Tarifs taxi Rome mis à jour 2026.", keywords: "tarifs taxi rome, prix taxi rome, coût taxi rome, tarif fixe taxi fiumicino" },
+      meta: { title: "Tarifs Taxi Rome 2026 — Prix Officiels et Tarifs Fixes", description: "Tarifs officiels taxi Rome 2026 : tarif de base €3, prix au km, suppléments nuit et fériés, tarifs fixes aéroports Fiumicino €50 et Ciampino €31.", ogTitle: "Tarifs Taxi Rome 2026", ogDescription: "Tarifs taxi Rome mis à jour 2026.", keywords: "tarifs taxi rome, prix taxi rome, coût taxi rome, tarif fixe taxi fiumicino" },
       hero: { title: "Tarifs Taxi Rome", subtitle: "Prix Officiels 2026", description: "Tous les tarifs taxi à Rome réglementés par la Ville.", ctaText: "Réserver Transfert" },
       baseTitle: "Tarifs de Base Taxi Rome",
       fareTable: [
@@ -950,7 +950,7 @@ const fr: Translations = {
       ],
     },
     prenota: {
-      meta: { title: "Réserver un Taxi à Rome — Réservation de Transferts en Ligne", description: "Comment réserver un taxi à Rome en ligne : transfert privé Fiumicino et Ciampino, navette partagée.", ogTitle: "Réserver Taxi Rome — Transferts en Ligne", ogDescription: "Réservez votre taxi ou transfert à Rome en ligne.", keywords: "réserver taxi rome, réservation taxi rome, transfert privé rome" },
+      meta: { title: "Réserver un Taxi à Rome — Réservation de Transferts en Ligne", description: "Comment réserver un taxi à Rome en ligne : transfert privé aéroport Fiumicino et Ciampino, navette partagée, transferts vers Naples et Civitavecchia.", ogTitle: "Réserver Taxi Rome — Transferts en Ligne", ogDescription: "Réservez votre taxi ou transfert à Rome en ligne.", keywords: "réserver taxi rome, réservation taxi rome, transfert privé rome" },
       hero: { title: "Réserver un Taxi à Rome", subtitle: "Réservation Facile", description: "Réservez votre taxi ou transfert privé en quelques clics. Annulation gratuite.", ctaText: "Réserver Maintenant" },
       mainTitle: "Transferts et Taxis Réservables en Ligne",
       mainSubtitle: "Réservez avec annulation gratuite. Chauffeur avec pancarte, véhicule moderne, prix garanti.",
@@ -970,7 +970,7 @@ const fr: Translations = {
       ],
     },
     about: {
-      meta: { title: "À Propos — TaxiFiumicino.com", description: "TaxiFiumicino.com est le portail de référence pour les taxis à Rome et les transferts aéroport.", ogTitle: "À Propos — TaxiFiumicino.com", ogDescription: "Portail informatif sur les taxis à Rome.", keywords: "à propos taxifiumicino, guide taxi rome" },
+      meta: { title: "À Propos — TaxiFiumicino.com", description: "À propos : TaxiFiumicino.com est le portail de référence pour les taxis à Rome, les transferts depuis l'aéroport Fiumicino et Ciampino, tarifs et réservations.", ogTitle: "À Propos — TaxiFiumicino.com", ogDescription: "Portail informatif sur les taxis à Rome.", keywords: "à propos taxifiumicino, guide taxi rome" },
       title: "À Propos de Nous",
       intro: "<strong>TaxiFiumicino.com</strong> est un portail informatif dédié aux services de taxi à Rome et depuis l'aéroport de Fiumicino.",
       missionTitle: "Notre Mission",
@@ -983,7 +983,7 @@ const fr: Translations = {
       contactText: "Pour questions ou collaborations, écrivez-nous à :",
     },
     contact: {
-      meta: { title: "Contact — TaxiFiumicino.com", description: "Contactez TaxiFiumicino.com pour vos questions sur les taxis à Rome.", ogTitle: "Contact — TaxiFiumicino.com", ogDescription: "Questions sur les taxis à Rome ? Contactez-nous.", keywords: "contact taxifiumicino, contacter taxi rome" },
+      meta: { title: "Contact — TaxiFiumicino.com", description: "Contactez TaxiFiumicino.com pour vos questions sur les taxis à Rome, transferts aéroport Fiumicino et Ciampino, tarifs et réservations. Réponse sous 24h.", ogTitle: "Contact — TaxiFiumicino.com", ogDescription: "Questions sur les taxis à Rome ? Contactez-nous.", keywords: "contact taxifiumicino, contacter taxi rome" },
       formTitle: "Envoyez-Nous un Message",
       formSubtitle: "Remplissez le formulaire et nous vous répondrons sous 24 heures.",
       labels: { name: "Nom Complet", email: "Email", subject: "Objet", message: "Message", send: "Envoyer le Message", sending: "Envoi en cours..." },
@@ -996,7 +996,7 @@ const fr: Translations = {
     "aeroporto-fiumicino-roma-termini": { meta: { title: "De Fiumicino à Roma Termini — Train, Taxi et Bus 2026", description: "Comment aller de Fiumicino à Roma Termini : Leonardo Express, taxi, bus et transferts.", ogTitle: "Fiumicino à Roma Termini", ogDescription: "Leonardo Express, taxi, bus et transferts.", keywords: "fiumicino roma termini, train fiumicino termini, leonardo express" } },
     "aeroporto-fiumicino-roma-centro": { meta: { title: "De Fiumicino au Centre de Rome — Taxi, Train et Transfert 2026", description: "Comment aller de Fiumicino au centre de Rome : taxi €50, Leonardo Express €14, bus et transferts.", ogTitle: "Fiumicino au Centre de Rome", ogDescription: "Toutes les options Fiumicino vers le centre.", keywords: "fiumicino centre rome, comment aller de fiumicino au centre" } },
     numeri: {
-      meta: { title: "Numéros Taxi Rome — Téléphones Radio Taxi 2026", description: "Numéros de téléphone taxi Rome : Radio Taxi 3570, Samarcanda, La Capitale.", ogTitle: "Numéros Taxi Rome", ogDescription: "Numéros de radio taxi Rome.", keywords: "numéro taxi rome, téléphone taxi rome, radio taxi rome" },
+      meta: { title: "Numéros Taxi Rome — Téléphones Radio Taxi 2026", description: "Numéros taxi Rome 2026 : Radio Taxi 3570 (06.3570), Samarcanda (06.5551), La Capitale (06.4994), Roma Taxi (06.6645). Disponibles 24h/24 + app itTaxi.", ogTitle: "Numéros Taxi Rome", ogDescription: "Numéros de radio taxi Rome.", keywords: "numéro taxi rome, téléphone taxi rome, radio taxi rome" },
       hero: { title: "Numéros Taxi Rome", subtitle: "Appelez un Taxi", description: "Tous les numéros de radio taxi à Rome. Appelez, réservez via app ou trouvez la station la plus proche.", ctaText: "Réserver un Transfert" },
       radioTitle: "Radio Taxi Rome — Numéros de Téléphone",
       radioIntro: "Pour appeler un taxi à Rome, contactez l'une des coopératives de radio taxi. Service disponible 24h/24, 7j/7.",
@@ -1175,7 +1175,7 @@ const ru: Translations = {
   },
   pages: {
     index: {
-      meta: { title: "Такси Рим Фьюмичино — Трансферы и Тарифы 2026", description: "Такси и трансферы в Риме: фиксированный тариф €50 из Фьюмичино, номера радио такси, онлайн бронирование. Полный гид 2026.", ogTitle: "Такси Рим — Полный Гид по Такси в Риме", ogDescription: "Тарифы, номера, бронирование такси в Риме. Трансферы из аэропорта Фьюмичино.", keywords: "такси рим, аэропорт рим фьюмичино, такси рим фьюмичино, трансфер фьюмичино рим, тариф такси рим" },
+      meta: { title: "Такси Рим Фьюмичино — Трансферы и Тарифы 2026", description: "Такси и трансферы в Риме: фиксированный тариф €50 из Фьюмичино, номера радио такси, онлайн бронирование. Полный гид 2026 для туристов и жителей.", ogTitle: "Такси Рим — Полный Гид по Такси в Риме", ogDescription: "Тарифы, номера, бронирование такси в Риме. Трансферы из аэропорта Фьюмичино.", keywords: "такси рим, аэропорт рим фьюмичино, такси рим фьюмичино, трансфер фьюмичино рим, тариф такси рим" },
       hero: { title: "Такси Рим", subtitle: "Полный Гид", description: "Всё о такси в Риме: официальные тарифы, полезные номера, трансферы из аэропорта Фьюмичино.", ctaText: "Забронировать трансфер" },
       secondaryCta: "Тарифы",
       infoTitle: "Информация о Такси в Риме",
@@ -1209,7 +1209,7 @@ const ru: Translations = {
       ],
     },
     fiumicino: {
-      meta: { title: "Аэропорт Рим Фьюмичино — Такси, Трансфер и Гид 2026", description: "Аэропорт Рим Фьюмичино: такси фиксированный тариф €50, частные трансферы, как добраться до центра, терминалы.", ogTitle: "Аэропорт Рим Фьюмичино — Такси и Трансферы", ogDescription: "Полный гид по аэропорту Фьюмичино: такси €50, трансферы и советы.", keywords: "аэропорт рим фьюмичино, аэропорт фьюмичино, такси фьюмичино, трансфер фьюмичино рим" },
+      meta: { title: "Аэропорт Рим Фьюмичино — Такси, Трансфер и Гид 2026", description: "Аэропорт Рим Фьюмичино (Леонардо да Винчи): такси по фиксированному тарифу €50, частные трансферы, как добраться до центра, терминалы и советы.", ogTitle: "Аэропорт Рим Фьюмичино — Такси и Трансферы", ogDescription: "Полный гид по аэропорту Фьюмичино: такси €50, трансферы и советы.", keywords: "аэропорт рим фьюмичино, аэропорт фьюмичино, такси фьюмичино, трансфер фьюмичино рим" },
       hero: { title: "Аэропорт Рим Фьюмичино", subtitle: "Леонардо да Винчи (FCO)", description: "Полный гид по аэропорту Фьюмичино: такси €50, частные трансферы, Leonardo Express и как добраться до центра Рима.", ctaText: "Забронировать трансфер" },
       generalTitle: "Аэропорт Фьюмичино — Общая Информация",
       generalText: "Аэропорт Рим Фьюмичино (IATA: FCO) — главный аэропорт Италии, расположен в 30 км от центра Рима. Обслуживает более 40 млн пассажиров в год.",
@@ -1309,7 +1309,7 @@ const ru: Translations = {
       ],
     },
     prenota: {
-      meta: { title: "Забронировать Такси в Риме — Онлайн Бронирование Трансферов", description: "Как забронировать такси в Риме онлайн: частный трансфер из Фьюмичино и Чампино, шаттл.", ogTitle: "Забронировать Такси Рим — Трансферы Онлайн", ogDescription: "Забронируйте такси или трансфер в Риме онлайн.", keywords: "забронировать такси рим, бронирование такси рим, трансфер рим, частный трансфер рим" },
+      meta: { title: "Забронировать Такси в Риме — Онлайн Бронирование Трансферов", description: "Как забронировать такси в Риме онлайн: частный трансфер из аэропортов Фьюмичино и Чампино, шаттл, трансферы до Неаполя и Чивитавеккии.", ogTitle: "Забронировать Такси Рим — Трансферы Онлайн", ogDescription: "Забронируйте такси или трансфер в Риме онлайн.", keywords: "забронировать такси рим, бронирование такси рим, трансфер рим, частный трансфер рим" },
       hero: { title: "Забронировать Такси в Риме", subtitle: "Простое Бронирование", description: "Забронируйте такси или частный трансфер в Риме в несколько кликов. Бесплатная отмена.", ctaText: "Забронировать" },
       mainTitle: "Трансферы и Такси для Бронирования Онлайн",
       mainSubtitle: "Бронируйте с бесплатной отменой. Водитель с табличкой, современный автомобиль, гарантированная цена.",
@@ -1329,7 +1329,7 @@ const ru: Translations = {
       ],
     },
     about: {
-      meta: { title: "О Нас — TaxiFiumicino.com", description: "TaxiFiumicino.com — справочный портал по такси в Риме и трансферам из аэропорта.", ogTitle: "О Нас — TaxiFiumicino.com", ogDescription: "Информационный портал о такси в Риме.", keywords: "о нас taxifiumicino, гид такси рим" },
+      meta: { title: "О Нас — TaxiFiumicino.com", description: "О нас: TaxiFiumicino.com — справочный портал по такси в Риме, трансферам из аэропортов Фьюмичино и Чампино, официальным тарифам и онлайн-бронированию.", ogTitle: "О Нас — TaxiFiumicino.com", ogDescription: "Информационный портал о такси в Риме.", keywords: "о нас taxifiumicino, гид такси рим" },
       title: "О Нас",
       intro: "<strong>TaxiFiumicino.com</strong> — информационный портал, посвящённый такси в Риме и трансферам из аэропорта Фьюмичино.",
       missionTitle: "Наша Миссия",
@@ -1342,7 +1342,7 @@ const ru: Translations = {
       contactText: "По вопросам и предложениям пишите на:",
     },
     contact: {
-      meta: { title: "Контакты — TaxiFiumicino.com", description: "Свяжитесь с TaxiFiumicino.com по вопросам о такси в Риме и трансферах.", ogTitle: "Контакты — TaxiFiumicino.com", ogDescription: "Вопросы о такси в Риме? Напишите нам.", keywords: "контакты taxifiumicino, связаться такси рим" },
+      meta: { title: "Контакты — TaxiFiumicino.com", description: "Свяжитесь с TaxiFiumicino.com по вопросам о такси в Риме, трансферах из аэропортов Фьюмичино и Чампино, тарифах и бронировании. Ответ в течение 24 часов.", ogTitle: "Контакты — TaxiFiumicino.com", ogDescription: "Вопросы о такси в Риме? Напишите нам.", keywords: "контакты taxifiumicino, связаться такси рим" },
       formTitle: "Отправьте Нам Сообщение",
       formSubtitle: "Заполните форму, и мы ответим в течение 24 часов.",
       labels: { name: "Полное имя", email: "Email", subject: "Тема", message: "Сообщение", send: "Отправить", sending: "Отправка..." },
@@ -1355,7 +1355,7 @@ const ru: Translations = {
     "aeroporto-fiumicino-roma-termini": { meta: { title: "Из Фьюмичино в Рим Термини — Поезд, Такси и Автобус 2026", description: "Как добраться из Фьюмичино в Рим Термини: Leonardo Express, такси, автобус и трансферы.", ogTitle: "Фьюмичино — Рим Термини", ogDescription: "Leonardo Express, такси, автобус из Фьюмичино.", keywords: "фьюмичино рим термини, поезд фьюмичино термини, leonardo express" } },
     "aeroporto-fiumicino-roma-centro": { meta: { title: "Из Фьюмичино в Центр Рима — Такси, Поезд и Трансфер 2026", description: "Как добраться из Фьюмичино в центр Рима: такси €50, Leonardo Express €14, автобус и трансферы.", ogTitle: "Фьюмичино — Центр Рима", ogDescription: "Все варианты из Фьюмичино в центр.", keywords: "фьюмичино центр рим, как добраться из фьюмичино в центр рима" } },
     numeri: {
-      meta: { title: "Номера Такси Рим — Телефоны Радио Такси 2026", description: "Номера такси в Риме: Radio Taxi 3570, Samarcanda, La Capitale.", ogTitle: "Номера Такси Рим", ogDescription: "Актуальные номера радио такси Рим.", keywords: "номер такси рим, телефон такси рим, радио такси рим" },
+      meta: { title: "Номера Такси Рим — Телефоны Радио Такси 2026", description: "Номера такси в Риме 2026: Radio Taxi 3570 (06.3570), Samarcanda (06.5551), La Capitale (06.4994), Roma Taxi (06.6645). 24/7 + приложение itTaxi.", ogTitle: "Номера Такси Рим", ogDescription: "Актуальные номера радио такси Рим.", keywords: "номер такси рим, телефон такси рим, радио такси рим" },
       hero: { title: "Номера Такси Рим", subtitle: "Вызовите Такси Сейчас", description: "Все номера радио такси в Риме. Звоните, бронируйте через приложение или найдите ближайшую стоянку.", ctaText: "Забронировать трансфер" },
       radioTitle: "Радио Такси Рим — Номера Телефонов",
       radioIntro: "Чтобы вызвать такси в Риме, позвоните в одну из кооперативов радио такси. Сервис доступен 24/7.",
