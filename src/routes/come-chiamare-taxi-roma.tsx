@@ -11,7 +11,7 @@ export const Route = createFileRoute("/come-chiamare-taxi-roma")({
     links: i18nLinks("/come-chiamare-taxi-roma", "it"),
     meta: [
       { title: "Come Chiamare un Taxi a Roma — Guida Completa 2026 | TaxiFiumicino.com" },
-      { name: "description", content: "Come chiamare un taxi a Roma nel 2026: 4 metodi spiegati passo passo — telefono (06.3570), app itTaxi e Free Now, postazioni taxi e fermata per strada. Numeri, tempi di attesa e consigli per turisti." },
+      { name: "description", content: "Come chiamare un taxi a Roma 2026: 4 metodi passo passo — telefono (06.3570), app itTaxi e Free Now, postazioni ufficiali e fermarne uno per strada." },
       { property: "og:title", content: "Come Chiamare un Taxi a Roma — 4 Metodi Spiegati Passo Passo" },
       { property: "og:description", content: "Guida completa 2026 su come chiamare un taxi a Roma: telefono, app, postazioni e strada." },
       { name: "keywords", content: "come chiamare taxi a roma, come chiamare un taxi a roma, che numero fare per chiamare taxi a roma, come prenotare un taxi a roma, chiamare taxi roma" },

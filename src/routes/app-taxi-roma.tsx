@@ -11,7 +11,7 @@ export const Route = createFileRoute("/app-taxi-roma")({
     links: i18nLinks("/app-taxi-roma", "it"),
     meta: [
       { title: "App Taxi Roma — Le Migliori App per Prenotare un Taxi | TaxiFiumicino.com" },
-      { name: "description", content: "Le migliori app per prenotare un taxi a Roma nel 2026: itTaxi (app ufficiale), Free Now, Uber Black. Confronto completo con funzionalità, prezzi, disponibilità e pagamento in-app." },
+      { name: "description", content: "Le migliori app per prenotare un taxi a Roma 2026: itTaxi (app ufficiale), Free Now e Uber Black. Confronto funzionalità, prezzi e link al download." },
       { property: "og:title", content: "App Taxi Roma 2026 — itTaxi, Free Now, Uber: Quale Scegliere?" },
       { property: "og:description", content: "Confronto completo delle app taxi a Roma: itTaxi, Free Now, Uber. Funzionalità, prezzi e quale scegliere." },
       { name: "keywords", content: "app taxi roma, app per taxi roma, ittaxi roma, free now roma, uber roma, prenotare taxi app roma, migliore app taxi roma" },

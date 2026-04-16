@@ -6,7 +6,7 @@ export const Route = createFileRoute("/terms-of-service")({
     links: i18nLinks("/terms-of-service", "it"),
     meta: [
       { title: "Termini di Servizio — TaxiFiumicino.com | Condizioni d'Uso" },
-      { name: "description", content: "Termini e condizioni d'uso di TaxiFiumicino.com: regole per l'utilizzo del portale informativo taxi Roma, responsabilità, link affiliati GetYourGuide, proprietà intellettuale e limitazioni di responsabilità." },
+      { name: "description", content: "Termini e condizioni TaxiFiumicino.com: regole d'uso del portale informativo taxi Roma, responsabilità, link affiliati GetYourGuide e foro competente." },
       { property: "og:title", content: "Termini di Servizio — TaxiFiumicino.com" },
       { property: "og:description", content: "Condizioni generali di utilizzo del sito TaxiFiumicino.com. Leggi le regole e responsabilità." },
       { name: "keywords", content: "termini servizio taxifiumicino, condizioni uso taxi roma, regolamento sito taxi, termini e condizioni transfer roma" },

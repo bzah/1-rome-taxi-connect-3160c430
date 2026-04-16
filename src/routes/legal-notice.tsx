@@ -6,7 +6,7 @@ export const Route = createFileRoute("/legal-notice")({
     links: i18nLinks("/legal-notice", "it"),
     meta: [
       { title: "Note Legali — TaxiFiumicino.com | Disclaimer e Avvisi Legali" },
-      { name: "description", content: "Note legali e disclaimer di TaxiFiumicino.com: natura informativa del sito, link affiliati, limitazioni di responsabilità, proprietà intellettuale dei contenuti e informazioni sulla giurisdizione italiana applicabile." },
+      { name: "description", content: "Note legali TaxiFiumicino.com: natura informativa, link affiliati, limitazioni di responsabilità, proprietà intellettuale e legge italiana applicabile." },
       { property: "og:title", content: "Note Legali — TaxiFiumicino.com | Disclaimer" },
       { property: "og:description", content: "Informazioni legali, disclaimer e avvisi importanti del sito TaxiFiumicino.com." },
       { name: "keywords", content: "note legali taxifiumicino, disclaimer taxi roma, avviso legale, informazioni legali sito taxi, responsabilità contenuti" },

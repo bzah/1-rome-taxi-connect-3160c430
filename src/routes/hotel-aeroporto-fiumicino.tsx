@@ -20,7 +20,7 @@ export const Route = createFileRoute("/hotel-aeroporto-fiumicino")({
     links: i18nLinks("/hotel-aeroporto-fiumicino", "it"),
     meta: [
       { title: "Hotel Fiumicino 2026 — Hotels Near Fiumicino Rome, Migliori Hotel Aeroporto | TaxiFiumicino.com" },
-      { name: "description", content: "Hotels near Fiumicino Rome: i migliori hotel Fiumicino vicino all'aeroporto con navetta gratuita, prezzi da €60/notte. Hotel Fiumicino per voli mattutini e arrivi tardivi." },
+      { name: "description", content: "I migliori hotel vicino all'aeroporto Fiumicino: navetta gratuita 24h, parcheggio incluso e prezzi da €60/notte. Ideali per voli early morning e scali." },
       { property: "og:title", content: "Hotel Fiumicino — Hotels Near Fiumicino Rome Airport 2026" },
       { property: "og:description", content: "I migliori hotel Fiumicino vicino all'aeroporto di Roma: con navetta, parcheggio e a pochi minuti dal terminal." },
       { name: "keywords", content: "hotels near fiumicino rome, hotel fiumicino, hotel aeroporto fiumicino, fiumicino airport hotels rome italy, hotel at fiumicino airport rome, hotels at fiumicino airport italy" },

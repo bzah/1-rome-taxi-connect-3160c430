@@ -6,7 +6,7 @@ export const Route = createFileRoute("/cookie-policy")({
     links: i18nLinks("/cookie-policy", "it"),
     meta: [
       { title: "Cookie Policy — TaxiFiumicino.com | Gestione Cookie e Tracciamento" },
-      { name: "description", content: "Informativa sui cookie di TaxiFiumicino.com: cookie tecnici, analitici e di terze parti (Google Analytics, GetYourGuide). Come disabilitarli, gestire le preferenze e i tuoi diritti secondo il GDPR." },
+      { name: "description", content: "Cookie policy TaxiFiumicino.com: cookie tecnici, analitici e di terze parti (Google Analytics, GetYourGuide) e come disabilitarli dal browser." },
       { property: "og:title", content: "Cookie Policy — TaxiFiumicino.com" },
       { property: "og:description", content: "Scopri quali cookie utilizziamo, perché e come gestirli nelle impostazioni del browser." },
       { name: "keywords", content: "cookie policy taxifiumicino, cookie taxi roma, gestione cookie, GDPR cookie, informativa cookie sito taxi" },
