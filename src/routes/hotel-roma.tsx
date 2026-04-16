@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 import { i18nLinks } from "@/i18n/hreflang";
 import { RomeDiscoverGrid, ROME_ATTRACTIONS, ROME_FOOD, ROME_NIGHTLIFE } from "@/components/RomeDiscoverSection";
+import { discoverJsonLdScript } from "@/lib/discover-jsonld";
 import {
   GYG_COLOSSEUM_TOUR,
   GYG_VATICAN_TICKET,

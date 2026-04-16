@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { i18nLinks } from "@/i18n/hreflang";
 import { RomeDiscoverGrid, ROME_TRANSFERS, ROME_ATTRACTIONS, ROME_HISTORY } from "@/components/RomeDiscoverSection";
+import { discoverJsonLdScript } from "@/lib/discover-jsonld";
 import { GYG_ROME_ALL } from "@/lib/gyg-links";
 import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
 
