@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
-import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
-import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
 import { i18nLinks } from "@/i18n/hreflang";
+import { RomeDiscoverGrid, ROME_TRANSFERS, ROME_ATTRACTIONS, ROME_HISTORY } from "@/components/RomeDiscoverSection";
+import { GYG_ROME_ALL } from "@/lib/gyg-links";
+import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
 
 export const Route = createFileRoute("/aeroporto-fiumicino-roma-centro")({
   component: FiumicinoCentroPage,
@@ -208,6 +209,13 @@ function FiumicinoCentroPage() {
           </Link>
         </div>
       </section>
+
+      <RomeDiscoverGrid
+        title="Cosa Fare a Roma"
+        subtitle="Attrazioni, tour guidati e Roma antica. Prenota online con cancellazione gratuita."
+        categories={[ROME_TRANSFERS, ROME_ATTRACTIONS, ROME_HISTORY]}
+        ctaUrl={GYG_ROME_ALL}
+      />
     </>
   );
 }

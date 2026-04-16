@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
-import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
-import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
 import { i18nLinks } from "@/i18n/hreflang";
+import { RomeDiscoverGrid, ROME_TRANSFERS, ROME_TOURS, ROME_PANORAMIC } from "@/components/RomeDiscoverSection";
+import { GYG_ROME_ALL } from "@/lib/gyg-links";
+import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
 
 export const Route = createFileRoute("/aeroporto-fiumicino-roma-termini")({
   component: FiumicinoTerminiPage,
@@ -181,6 +182,13 @@ function FiumicinoTerminiPage() {
           </Link>
         </div>
       </section>
+
+      <RomeDiscoverGrid
+        title="Scopri Roma"
+        subtitle="Transfer, tour e panorami mozzafiato. Cancellazione gratuita."
+        categories={[ROME_TRANSFERS, ROME_TOURS, ROME_PANORAMIC]}
+        ctaUrl={GYG_ROME_ALL}
+      />
     </>
   );
 }
