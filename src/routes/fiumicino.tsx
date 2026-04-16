@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
-import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 import { i18nLinks } from "@/i18n/hreflang";
+import { RomeDiscoverGrid, ROME_TRANSFERS, ROME_ATTRACTIONS, ROME_TOURS } from "@/components/RomeDiscoverSection";
+import { GYG_ROME_ALL } from "@/lib/gyg-links";
 import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
 
 export const Route = createFileRoute("/fiumicino")({
@@ -244,6 +245,15 @@ function FiumicinoPage() {
           ))}
         </div>
       </section>
+
+      {/* HCMC-style Discover Section */}
+      <RomeDiscoverGrid
+        title="Cosa Fare a Roma"
+        subtitle="Transfer, attrazioni e tour con cancellazione gratuita. Prenota online e risparmia."
+        categories={[ROME_TRANSFERS, ROME_ATTRACTIONS, ROME_TOURS]}
+        ctaUrl={GYG_ROME_ALL}
+        ctaText="Vedi Tutte le Esperienze a Roma"
+      />
     </>
   );
 }
