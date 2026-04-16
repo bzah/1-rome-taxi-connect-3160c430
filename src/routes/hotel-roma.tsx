@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 import { i18nLinks } from "@/i18n/hreflang";
+import { RomeDiscoverGrid, ROME_ATTRACTIONS, ROME_FOOD, ROME_NIGHTLIFE } from "@/components/RomeDiscoverSection";
 import {
   GYG_COLOSSEUM_TOUR,
   GYG_VATICAN_TICKET,
@@ -196,6 +197,13 @@ function HotelRomaPage() {
           </div>
         </div>
       </section>
+
+      <RomeDiscoverGrid
+        title="Scopri Roma"
+        subtitle="Attrazioni, gastronomia e vita notturna. Prenota con cancellazione gratuita."
+        categories={[ROME_ATTRACTIONS, ROME_FOOD, ROME_NIGHTLIFE]}
+        ctaUrl={GYG_ROME_ALL}
+      />
 
       {/* Cross-linking */}
       <section className="mx-auto max-w-7xl px-5 py-16 sm:py-24 sm:px-8">

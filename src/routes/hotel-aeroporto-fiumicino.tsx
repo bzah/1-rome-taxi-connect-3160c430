@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 import { i18nLinks } from "@/i18n/hreflang";
+import { RomeDiscoverGrid, ROME_TRANSFERS, ROME_TOURS, ROME_ACTIVITIES } from "@/components/RomeDiscoverSection";
 import {
   GYG_COLOSSEUM_TOUR,
   GYG_VATICAN_TOUR,
@@ -9,6 +10,7 @@ import {
   GYG_HOP_ON_BUS,
   GYG_PASTA_CLASS,
   GYG_VATICAN_TICKET,
+  GYG_ROME_ALL,
 } from "@/lib/gyg-links";
 
 export const Route = createFileRoute("/hotel-aeroporto-fiumicino")({
@@ -147,6 +149,13 @@ function HotelAeroportoFiumicinoPage() {
           <GetYourGuideCTA text="Scopri tutti i transfer per Roma" url={GYG_ROME_TRANSFERS} />
         </div>
       </section>
+
+      <RomeDiscoverGrid
+        title="Scopri Roma"
+        subtitle="Transfer, tour e attività con cancellazione gratuita."
+        categories={[ROME_TRANSFERS, ROME_TOURS, ROME_ACTIVITIES]}
+        ctaUrl={GYG_ROME_ALL}
+      />
 
       {/* Cross-linking */}
       <section className="section-warm py-16 sm:py-24">

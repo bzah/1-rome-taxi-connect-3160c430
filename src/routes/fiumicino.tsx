@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
-import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 import { i18nLinks } from "@/i18n/hreflang";
+import { RomeDiscoverGrid, ROME_TRANSFERS, ROME_ATTRACTIONS, ROME_TOURS } from "@/components/RomeDiscoverSection";
+import { GYG_ROME_ALL } from "@/lib/gyg-links";
 import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
 
 export const Route = createFileRoute("/fiumicino")({
@@ -157,23 +158,6 @@ function FiumicinoPage() {
           </table>
         </div>
 
-        {/* Transfer booking */}
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mt-20 mb-10 gap-4">
-          <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">Prenota Online</h2>
-          <p className="text-muted-foreground max-w-xs text-sm leading-relaxed text-pretty">
-            Transfer privato o condiviso, cancellazione gratuita.
-          </p>
-        </div>
-
-        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🏛️" title="Tour Colosseo, Foro e Palatino" description="Visita guidata salta-fila al Colosseo, Foro Romano e Palatino. 2.5 ore, piccolo gruppo." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" />
-          <ActivityCard emoji="🏟️" title="Tour Musei Vaticani e Sistina" description="Tour guidato salta-fila ai Musei Vaticani, Cappella Sistina e Basilica." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€30" />
-          <ActivityCard emoji="🌋" title="Gita Pompei e Costiera Amalfitana" description="Escursione da Roma a Pompei, Costiera Amalfitana e Sorrento. Giornata intera." gygUrl="https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/" price="€120" />
-        </div>
-
-        <div className="mt-14 text-center">
-          <GetYourGuideCTA text="Tutti i Tour e Attività a Roma" url="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher" />
-        </div>
 
         {/* Leonardo Express & Parking */}
         <div className="mt-20 space-y-6">
@@ -244,6 +228,15 @@ function FiumicinoPage() {
           ))}
         </div>
       </section>
+
+      {/* HCMC-style Discover Section */}
+      <RomeDiscoverGrid
+        title="Cosa Fare a Roma"
+        subtitle="Transfer, attrazioni e tour con cancellazione gratuita. Prenota online e risparmia."
+        categories={[ROME_TRANSFERS, ROME_ATTRACTIONS, ROME_TOURS]}
+        ctaUrl={GYG_ROME_ALL}
+        ctaText="Vedi Tutte le Esperienze a Roma"
+      />
     </>
   );
 }

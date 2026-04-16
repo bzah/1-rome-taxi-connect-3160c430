@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 import { i18nLinks } from "@/i18n/hreflang";
+import { RomeDiscoverGrid, ROME_TRANSFERS, ROME_HISTORY, ROME_PANORAMIC } from "@/components/RomeDiscoverSection";
 import {
   GYG_COLOSSEUM_TOUR,
   GYG_ROME_TRANSFERS,
@@ -202,6 +203,13 @@ function ParcheggioFiumicinoPage() {
           ))}
         </div>
       </section>
+
+      <RomeDiscoverGrid
+        title="Scopri Roma"
+        subtitle="Transfer, storia antica e panorami mozzafiato. Prenota online."
+        categories={[ROME_TRANSFERS, ROME_HISTORY, ROME_PANORAMIC]}
+        ctaUrl={GYG_ROME_ALL}
+      />
 
       {/* Cross-linking */}
       <section className="section-warm py-16 sm:py-24">
