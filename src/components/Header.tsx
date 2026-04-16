@@ -1,38 +1,20 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useState, useRef, useEffect } from "react";
 import logoImg from "@/assets/logo.png";
-import { foreignLocales, localeFlags, localeNames, type Locale } from "@/i18n/config";
+import { foreignLocales, localeFlags, localeNames, localizedPath, type Locale } from "@/i18n/config";
+import { getTranslations } from "@/i18n/translations";
 
-const navLinks = [
-  { to: "/", label: "Home" },
-  { to: "/fiumicino", label: "Aeroporto Fiumicino" },
-  { to: "/aeroporti-di-roma", label: "Aeroporti Roma" },
-  { to: "/tariffe", label: "Tariffe" },
-  { to: "/prenota", label: "Prenota" },
-] as const;
-
-const infoDropdownItems = [
-  { to: "/aeroporto-fiumicino-roma-termini", label: "Transfer Privati", icon: "🚐" },
-  { to: "/aeroporto-fiumicino-roma-centro", label: "Guida Shuttle", icon: "🚌" },
-  { to: "/parcheggio-fiumicino", label: "Guida Parcheggio", icon: "🅿️" },
-  { to: "/hotel-roma", label: "Hotel Roma", icon: "🏨" },
-  { to: "/hotel-aeroporto-fiumicino", label: "Hotel Aeroporto", icon: "✈️" },
-  { to: "/numeri", label: "Numeri Taxi", icon: "📞" },
-  { to: "/app-taxi-roma", label: "App Taxi Roma", icon: "📱" },
-] as const;
-
-const gygLinks = [
-  {
-    href: "https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher",
-    label: "Cose da Fare a Roma",
-    icon: "🏛️",
-  },
-  {
-    href: "https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher",
-    label: "Attività a Roma",
-    icon: "🎭",
-  },
-];
+/* Italian fallback (no IT entry exists in translations.ts) */
+const IT_NAV = { home: "Home", airport: "Aeroporto Fiumicino", airports: "Aeroporti Roma", fares: "Tariffe", book: "Prenota", info: "Info" };
+const IT_DROPDOWN = {
+  transfers: "Transfer Privati", shuttle: "Guida Shuttle", parking: "Guida Parcheggio",
+  hotelRoma: "Hotel Roma", hotelAirport: "Hotel Aeroporto", numbers: "Numeri Taxi",
+  appTaxi: "App Taxi Roma", activities: "Cose da Fare a Roma", tours: "Attività a Roma",
+};
+const IT_CTA_BOOK = "Prenota un Transfer";
+const LANG_HEADING: Record<Locale, string> = {
+  it: "🌐 Lingua", en: "🌐 Language", fr: "🌐 Langue", es: "🌐 Idioma", ru: "🌐 Язык",
+};
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
