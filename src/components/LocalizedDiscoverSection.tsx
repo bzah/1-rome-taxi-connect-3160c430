@@ -12,10 +12,11 @@ import panoramicImg from "@/assets/rome-panoramic-sunset.jpg";
 import transferImg from "@/assets/rome-private-transfer.jpg";
 import activitiesImg from "@/assets/rome-activities-pasta.jpg";
 
-type Locale = "en" | "fr" | "es" | "ru" | "it";
+export type Locale = "en" | "fr" | "es" | "ru" | "it";
 
-interface DiscoverItem { title: string; desc: string; url: string; price?: string; badge?: string }
-interface DiscoverCategory { title: string; subtitle: string; image: string; alt: string; items: DiscoverItem[] }
+export interface DiscoverItem { title: string; desc: string; url: string; price?: string; badge?: string }
+export interface DiscoverCategory { title: string; subtitle: string; image: string; alt: string; items: DiscoverItem[] }
+export type CatKey = "attractions" | "tours" | "food" | "activities" | "nightlife" | "transfers" | "panoramic";
 
 function gyg(path: string): string {
   const base = `https://www.getyourguide.com${path}`;
@@ -33,9 +34,8 @@ const UI: Record<Locale, { bookNow: string; from: string; bestSeller: string; mu
 };
 
 /* ─── Category builders per locale ─── */
-type CatKey = "attractions" | "tours" | "food" | "activities" | "nightlife" | "transfers" | "panoramic";
 
-function buildCategory(locale: Locale, key: CatKey): DiscoverCategory {
+export function buildCategory(locale: Locale, key: CatKey): DiscoverCategory {
   const ui = UI[locale];
   const T: Record<CatKey, Record<Locale, { title: string; subtitle: string; alt: string; items: DiscoverItem[] }>> = {
     attractions: {
@@ -295,44 +295,15 @@ interface LocalizedRomeDiscoverGridProps {
   ctaUrl?: string;
 }
 
-function buildJsonLd(cats: DiscoverCategory[]) {
-  const allItems = cats.flatMap((c) => c.items.map((i) => ({ ...i, category: c.title })));
-  return {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    itemListElement: allItems.map((item, idx) => ({
-      "@type": "ListItem",
-      position: idx + 1,
-      item: {
-        "@type": "Product",
-        name: item.title,
-        description: item.desc,
-        category: item.category,
-        ...(item.price && {
-          offers: {
-            "@type": "Offer",
-            price: item.price.replace(/[^\d.]/g, ""),
-            priceCurrency: "EUR",
-            availability: "https://schema.org/InStock",
-            url: item.url,
-          },
-        }),
-      },
-    })),
-  };
-}
-
 export function LocalizedRomeDiscoverGrid({ locale, title, subtitle, categories, ctaText, ctaUrl }: LocalizedRomeDiscoverGridProps) {
   const safeLocale: Locale = (["en", "fr", "es", "ru", "it"].includes(locale) ? locale : "en") as Locale;
   const cats = categories.map((k) => buildCategory(safeLocale, k));
   const ui = UI[safeLocale];
   const finalCta = ctaText || ui.viewAll;
   const finalUrl = ctaUrl || gyg("/rome-l33/");
-  const jsonLd = buildJsonLd(cats);
 
   return (
     <section className="section-warm py-16 sm:py-24">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mb-12 sm:mb-16 gap-4">
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">{title}</h2>

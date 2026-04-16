@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { i18nLinks } from "@/i18n/hreflang";
 import { RomeDiscoverGrid, ROME_TRANSFERS, ROME_ATTRACTIONS, ROME_NIGHTLIFE } from "@/components/RomeDiscoverSection";
+import { discoverJsonLdScript } from "@/lib/discover-jsonld";
 import { GYG_ROME_ALL } from "@/lib/gyg-links";
 
 export const Route = createFileRoute("/numeri")({
@@ -15,6 +16,7 @@ export const Route = createFileRoute("/numeri")({
       { property: "og:description", content: "Numeri radio taxi Roma aggiornati: 06.3570, 06.5551, 06.4994. Disponibili 24/7 per chiamare un taxi a Roma." },
       { name: "keywords", content: "numero taxi roma, taxi roma numero, numero di taxi a roma, radio taxi roma, che numero fare per chiamare taxi a roma, taxi roma numeri, 06 3570, radio taxi 3570, taxi roma telefono, numero verde taxi roma" },
     ],
+    scripts: [discoverJsonLdScript([ROME_TRANSFERS, ROME_ATTRACTIONS, ROME_NIGHTLIFE])],
   }),
 });
 
