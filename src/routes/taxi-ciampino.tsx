@@ -127,21 +127,6 @@ function CiampinoPage() {
         </div>
 
         {/* Transfer options */}
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mt-20 mb-10 gap-4">
-          <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">Alternative al Taxi</h2>
-          <p className="text-muted-foreground max-w-xs text-sm leading-relaxed text-pretty">
-            Transfer privato o navetta condivisa, cancellazione gratuita.
-          </p>
-        </div>
-
-        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🏛️" title="Tour Colosseo, Foro e Palatino" description="Visita guidata salta-fila al Colosseo, Foro Romano e Palatino. 2.5 ore." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" />
-          <ActivityCard emoji="🏟️" title="Musei Vaticani e Cappella Sistina" description="Ingresso salta-fila ai Musei Vaticani e Cappella Sistina. Guida esperta." gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-vatican-museums-sistine-chapel-ticket-t62214/" price="€25" />
-          <ActivityCard emoji="⚔️" title="Colosseo Sotterraneo e Roma Antica" description="Esplora i sotterranei segreti del Colosseo con guida esperta. 3 ore." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-underground-and-ancient-rome-tour-t134577/" price="€40" />
-          <ActivityCard emoji="🌋" title="Gita Pompei e Costiera Amalfitana" description="Escursione da Roma a Pompei, Costiera e Sorrento. Giornata intera." gygUrl="https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/" price="€120" />
-          <ActivityCard emoji="🍝" title="Corso Pasta e Tiramisù" description="Impara a cucinare pasta e tiramisù in un ristorante locale." gygUrl="https://www.getyourguide.com/rome-l33/pasta-tiramisu-making-class-in-locally-loved-restaurant--t453961/" price="€55" />
-          <ActivityCard emoji="🚌" title="Bus Hop-on Hop-off Roma" description="Esplora Roma al tuo ritmo col bus turistico panoramico." gygUrl="https://www.getyourguide.com/rome-l33/rome-big-bus-hop-on-hop-off-open-top-sightseeing-tour-t66064/" price="€25" />
-        </div>
 
         {/* FAQ Section */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mt-20 mb-10 gap-4">
