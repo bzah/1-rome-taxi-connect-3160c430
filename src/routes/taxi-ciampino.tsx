@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
-import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 import { i18nLinks } from "@/i18n/hreflang";
+import { RomeDiscoverGrid, ROME_TRANSFERS, ROME_TOURS, ROME_FOOD } from "@/components/RomeDiscoverSection";
+import { GYG_ROME_ALL } from "@/lib/gyg-links";
 
 export const Route = createFileRoute("/taxi-ciampino")({
   component: CiampinoPage,
@@ -192,12 +193,16 @@ function CiampinoPage() {
               {link.label}
             </Link>
           ))}
-        </div>
-
-        <div className="mt-14 text-center">
-          <GetYourGuideCTA text="Tutti i Transfer da Ciampino" url="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher" />
-        </div>
       </section>
+
+      {/* HCMC-style Discover Section */}
+      <RomeDiscoverGrid
+        title="Cosa Fare a Roma"
+        subtitle="Transfer, tour guidati e esperienze gastronomiche. Prenota online con cancellazione gratuita."
+        categories={[ROME_TRANSFERS, ROME_TOURS, ROME_FOOD]}
+        ctaUrl={GYG_ROME_ALL}
+        ctaText="Vedi Tutte le Esperienze a Roma"
+      />
     </>
   );
 }

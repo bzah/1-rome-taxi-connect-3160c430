@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
-import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 import { i18nLinks } from "@/i18n/hreflang";
+import { RomeDiscoverGrid, ROME_TRANSFERS, ROME_ATTRACTIONS, ROME_NIGHTLIFE } from "@/components/RomeDiscoverSection";
+import { GYG_ROME_ALL } from "@/lib/gyg-links";
 
 export const Route = createFileRoute("/numeri")({
   component: NumeriPage,
@@ -103,27 +104,16 @@ function NumeriPage() {
           </div>
         </div>
 
-        {/* Affiliate Section */}
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mt-20 mb-10 gap-4">
-          <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">Preferisci<br className="hidden sm:block" /> Prenotare Online?</h2>
-          <p className="text-muted-foreground max-w-xs text-sm leading-relaxed text-pretty">
-            Niente attese al telefono. Cancellazione gratuita.
-          </p>
-        </div>
-
-        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🏛️" title="Tour Colosseo, Foro e Palatino" description="Visita guidata salta-fila al Colosseo, Foro Romano e Palatino. 2.5 ore." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" />
-          <ActivityCard emoji="🏟️" title="Tour Musei Vaticani e Sistina" description="Tour guidato salta-fila ai Musei Vaticani, Cappella Sistina e Basilica." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€30" />
-          <ActivityCard emoji="🎫" title="Biglietto Vaticano — Salta la Fila" description="Ingresso prioritario ai Musei Vaticani e Cappella Sistina. Tutto il giorno." gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-vatican-museums-sistine-chapel-ticket-t62214/" price="€25" />
-          <ActivityCard emoji="⚔️" title="Colosseo Sotterraneo" description="Esplora i sotterranei del Colosseo e Roma antica con guida esperta." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-underground-and-ancient-rome-tour-t134577/" price="€40" />
-          <ActivityCard emoji="🍝" title="Corso Pasta e Tiramisù" description="Impara a cucinare pasta e tiramisù in un ristorante locale vicino al Vaticano." gygUrl="https://www.getyourguide.com/rome-l33/pasta-tiramisu-making-class-in-locally-loved-restaurant--t453961/" price="€55" />
-          <ActivityCard emoji="🚌" title="Bus Hop-on Hop-off Roma" description="Esplora Roma al tuo ritmo con il bus turistico panoramico." gygUrl="https://www.getyourguide.com/rome-l33/rome-big-bus-hop-on-hop-off-open-top-sightseeing-tour-t66064/" price="€25" />
-        </div>
-
-        <div className="mt-14 text-center">
-          <GetYourGuideCTA text="Vedi Tutti i Transfer e Tour" />
-        </div>
       </section>
+
+      {/* HCMC-style Discover Section */}
+      <RomeDiscoverGrid
+        title="Preferisci Prenotare Online?"
+        subtitle="Niente attese al telefono. Transfer e tour con cancellazione gratuita."
+        categories={[ROME_TRANSFERS, ROME_ATTRACTIONS, ROME_NIGHTLIFE]}
+        ctaUrl={GYG_ROME_ALL}
+        ctaText="Vedi Tutti i Transfer e Tour"
+      />
     </>
   );
 }
