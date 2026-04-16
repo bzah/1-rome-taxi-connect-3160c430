@@ -92,28 +92,28 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-stone-warm/60">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8">
-        <Link to="/" className="flex items-center gap-2 shrink-0">
+        <a href={pageHref("/")} className="flex items-center gap-2 shrink-0">
           <img src={logoImg} alt="TaxiFiumicino.com" width={180} height={90} className="h-8 sm:h-10 w-auto" />
-        </Link>
+        </a>
 
         {/* Desktop nav */}
         <nav className="hidden gap-1 lg:flex items-center">
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className={`px-3.5 py-2 text-[13px] font-medium tracking-wide transition-colors ${
-                isActive(link.to)
-                  ? "text-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {link.label}
-              {isActive(link.to) && (
-                <span className="block h-0.5 mt-0.5 rounded-full bg-primary" />
-              )}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const href = pageHref(link.slug);
+            const active = location.pathname === href;
+            return (
+              <a
+                key={link.slug}
+                href={href}
+                className={`px-3.5 py-2 text-[13px] font-medium tracking-wide transition-colors ${
+                  active ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {link.label}
+                {active && <span className="block h-0.5 mt-0.5 rounded-full bg-primary" />}
+              </a>
+            );
+          })}
 
           {/* Info dropdown */}
           <div className="relative" ref={dropdownRef}>
@@ -123,7 +123,7 @@ export function Header() {
                 infoOpen ? "text-foreground" : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              Info
+              {navL.info}
               <svg className={`h-3.5 w-3.5 transition-transform ${infoOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
@@ -132,15 +132,15 @@ export function Header() {
             {infoOpen && (
               <div className="absolute right-0 top-full mt-3 w-64 rounded-lg border border-stone-warm bg-card editorial-shadow-lg py-2 z-50">
                 {infoDropdownItems.map((item) => (
-                  <Link
-                    key={item.to}
-                    to={item.to}
+                  <a
+                    key={item.slug}
+                    href={pageHref(item.slug)}
                     className="flex items-center gap-3 px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-accent/50 transition-colors"
                     onClick={() => setInfoOpen(false)}
                   >
                     <span className="text-base">{item.icon}</span>
                     {item.label}
-                  </Link>
+                  </a>
                 ))}
                 <div className="my-1 border-t border-stone-warm" />
                 {gygLinks.map((item) => (
