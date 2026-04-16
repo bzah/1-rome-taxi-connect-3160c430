@@ -3,6 +3,15 @@ import { getTranslations } from "@/i18n";
 import { canonicalLink, hreflangLinks } from "@/i18n/hreflang";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
+import { LocalizedRomeDiscoverGrid } from "@/components/LocalizedDiscoverSection";
+
+const DISCOVER_TITLES: Record<string, { title: string; subtitle: string }> = {
+  en: { title: "Discover Rome", subtitle: "Top attractions, tours and authentic experiences. Book online with free cancellation." },
+  fr: { title: "Découvrir Rome", subtitle: "Attractions, visites et expériences authentiques. Réservez en ligne avec annulation gratuite." },
+  es: { title: "Descubre Roma", subtitle: "Atracciones, tours y experiencias auténticas. Reserva online con cancelación gratuita." },
+  ru: { title: "Откройте Рим", subtitle: "Достопримечательности, туры и аутентичные впечатления. Бронируйте онлайн с бесплатной отменой." },
+  it: { title: "Scopri Roma", subtitle: "Attrazioni, tour ed esperienze autentiche. Prenota online con cancellazione gratuita." },
+};
 import { useState } from "react";
 import { sendContactEmail } from "@/utils/contact.functions";
 import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
@@ -140,6 +149,7 @@ function FiumicinoPage({ t, locale }: { t: any; locale: string }) {
           <p className="text-sm text-muted-foreground leading-relaxed">{p.parkingText}</p>
         </div>
       </section>
+      <LocalizedRomeDiscoverGrid locale={locale} title={DISCOVER_TITLES[locale]?.title || DISCOVER_TITLES.en.title} subtitle={DISCOVER_TITLES[locale]?.subtitle || DISCOVER_TITLES.en.subtitle} categories={["transfers", "attractions", "food"]} />
     </>
   );
 }
@@ -186,6 +196,7 @@ function TariffePage({ t, locale }: { t: any; locale: string }) {
           <GetYourGuideCTA text={p.ctaButton} url="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher" />
         </div>
       </section>
+      <LocalizedRomeDiscoverGrid locale={locale} title={DISCOVER_TITLES[locale]?.title || DISCOVER_TITLES.en.title} subtitle={DISCOVER_TITLES[locale]?.subtitle || DISCOVER_TITLES.en.subtitle} categories={["transfers", "tours", "activities"]} />
     </>
   );
 }
@@ -232,6 +243,7 @@ function CiampinoPage({ t, locale }: { t: any; locale: string }) {
         </div>
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} url="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher" /></div>
       </section>
+      <LocalizedRomeDiscoverGrid locale={locale} title={DISCOVER_TITLES[locale]?.title || DISCOVER_TITLES.en.title} subtitle={DISCOVER_TITLES[locale]?.subtitle || DISCOVER_TITLES.en.subtitle} categories={["transfers", "attractions", "nightlife"]} />
     </>
   );
 }
@@ -273,6 +285,7 @@ function PrenotaPage({ t, locale }: { t: any; locale: string }) {
         </div>
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} url={GYG} /></div>
       </section>
+      <LocalizedRomeDiscoverGrid locale={locale} title={DISCOVER_TITLES[locale]?.title || DISCOVER_TITLES.en.title} subtitle={DISCOVER_TITLES[locale]?.subtitle || DISCOVER_TITLES.en.subtitle} categories={["tours", "activities", "food"]} />
     </>
   );
 }
@@ -397,6 +410,7 @@ function NumeriPage({ t, locale }: { t: any; locale: string }) {
         </div>
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
       </section>
+      <LocalizedRomeDiscoverGrid locale={locale} title={DISCOVER_TITLES[locale]?.title || DISCOVER_TITLES.en.title} subtitle={DISCOVER_TITLES[locale]?.subtitle || DISCOVER_TITLES.en.subtitle} categories={["transfers", "attractions", "nightlife"]} />
     </>
   );
 }
@@ -464,6 +478,7 @@ function AppTaxiPage({ t, locale }: { t: any; locale: string }) {
         </div>
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
       </section>
+      <LocalizedRomeDiscoverGrid locale={locale} title={DISCOVER_TITLES[locale]?.title || DISCOVER_TITLES.en.title} subtitle={DISCOVER_TITLES[locale]?.subtitle || DISCOVER_TITLES.en.subtitle} categories={["transfers", "activities", "panoramic"]} />
     </>
   );
 }
@@ -514,6 +529,7 @@ function HotelRomaPage({ t, locale }: { t: any; locale: string }) {
         )}
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
       </section>
+      <LocalizedRomeDiscoverGrid locale={locale} title={DISCOVER_TITLES[locale]?.title || DISCOVER_TITLES.en.title} subtitle={DISCOVER_TITLES[locale]?.subtitle || DISCOVER_TITLES.en.subtitle} categories={["attractions", "food", "nightlife"]} />
     </>
   );
 }
@@ -569,6 +585,7 @@ function ParcheggioPage({ t, locale }: { t: any; locale: string }) {
         )}
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
       </section>
+      <LocalizedRomeDiscoverGrid locale={locale} title={DISCOVER_TITLES[locale]?.title || DISCOVER_TITLES.en.title} subtitle={DISCOVER_TITLES[locale]?.subtitle || DISCOVER_TITLES.en.subtitle} categories={["transfers", "attractions", "panoramic"]} />
     </>
   );
 }
@@ -656,6 +673,7 @@ function AeroportiPage({ t, locale }: { t: any; locale: string }) {
         )}
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} url={GYG} /></div>
       </section>
+      <LocalizedRomeDiscoverGrid locale={locale} title={DISCOVER_TITLES[locale]?.title || DISCOVER_TITLES.en.title} subtitle={DISCOVER_TITLES[locale]?.subtitle || DISCOVER_TITLES.en.subtitle} categories={["transfers", "tours", "activities"]} />
     </>
   );
 }
@@ -725,6 +743,7 @@ function HotelAeroportoPage({ t, locale }: { t: any; locale: string }) {
         )}
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
       </section>
+      <LocalizedRomeDiscoverGrid locale={locale} title={DISCOVER_TITLES[locale]?.title || DISCOVER_TITLES.en.title} subtitle={DISCOVER_TITLES[locale]?.subtitle || DISCOVER_TITLES.en.subtitle} categories={["transfers", "food", "attractions"]} />
     </>
   );
 }
@@ -784,6 +803,7 @@ function ComeChiamarePage({ t, locale }: { t: any; locale: string }) {
         </div>
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
       </section>
+      <LocalizedRomeDiscoverGrid locale={locale} title={DISCOVER_TITLES[locale]?.title || DISCOVER_TITLES.en.title} subtitle={DISCOVER_TITLES[locale]?.subtitle || DISCOVER_TITLES.en.subtitle} categories={["transfers", "nightlife", "food"]} />
     </>
   );
 }
