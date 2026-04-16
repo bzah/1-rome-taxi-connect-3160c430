@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
-import { hreflangLinks } from "@/i18n/hreflang";
+import { i18nLinks } from "@/i18n/hreflang";
 import {
   GYG_COLOSSEUM_TOUR,
   GYG_COLOSSEUM_UNDERGROUND,
@@ -14,7 +14,7 @@ import {
 export const Route = createFileRoute("/app-taxi-roma")({
   component: AppTaxiPage,
   head: () => ({
-    links: hreflangLinks("/app-taxi-roma"),
+    links: i18nLinks("/app-taxi-roma", "it"),
     meta: [
       { title: "App Taxi Roma — Le Migliori App per Prenotare un Taxi | TaxiFiumicino.com" },
       { name: "description", content: "Le migliori app per prenotare un taxi a Roma nel 2026: itTaxi (app ufficiale), Free Now, Uber Black. Confronto completo con funzionalità, prezzi, disponibilità e pagamento in-app." },

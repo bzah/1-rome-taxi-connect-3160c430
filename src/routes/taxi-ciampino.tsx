@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
-import { hreflangLinks } from "@/i18n/hreflang";
+import { i18nLinks } from "@/i18n/hreflang";
 
 export const Route = createFileRoute("/taxi-ciampino")({
   component: CiampinoPage,
   head: () => ({
-    links: hreflangLinks("/taxi-ciampino"),
+    links: i18nLinks("/taxi-ciampino", "it"),
     meta: [
       { title: "Taxi Roma Ciampino — Transfer Aeroporto, Tariffa Fissa €31 | TaxiFiumicino.com" },
       { name: "description", content: "Taxi dall'aeroporto di Ciampino a Roma centro 2026: tariffa fissa €31, durata 20-40 min, come prenotare, postazione taxi al terminal, bus navetta e transfer privati. Guida completa con prezzi, consigli e alternative economiche." },
