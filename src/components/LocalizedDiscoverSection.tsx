@@ -295,15 +295,44 @@ interface LocalizedRomeDiscoverGridProps {
   ctaUrl?: string;
 }
 
+function buildJsonLd(cats: DiscoverCategory[]) {
+  const allItems = cats.flatMap((c) => c.items.map((i) => ({ ...i, category: c.title })));
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: allItems.map((item, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      item: {
+        "@type": "Product",
+        name: item.title,
+        description: item.desc,
+        category: item.category,
+        ...(item.price && {
+          offers: {
+            "@type": "Offer",
+            price: item.price.replace(/[^\d.]/g, ""),
+            priceCurrency: "EUR",
+            availability: "https://schema.org/InStock",
+            url: item.url,
+          },
+        }),
+      },
+    })),
+  };
+}
+
 export function LocalizedRomeDiscoverGrid({ locale, title, subtitle, categories, ctaText, ctaUrl }: LocalizedRomeDiscoverGridProps) {
   const safeLocale: Locale = (["en", "fr", "es", "ru", "it"].includes(locale) ? locale : "en") as Locale;
   const cats = categories.map((k) => buildCategory(safeLocale, k));
   const ui = UI[safeLocale];
   const finalCta = ctaText || ui.viewAll;
   const finalUrl = ctaUrl || gyg("/rome-l33/");
+  const jsonLd = buildJsonLd(cats);
 
   return (
     <section className="section-warm py-16 sm:py-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mb-12 sm:mb-16 gap-4">
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">{title}</h2>
