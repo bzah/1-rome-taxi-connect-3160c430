@@ -1,15 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
-import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 import { i18nLinks } from "@/i18n/hreflang";
-import {
-  GYG_COLOSSEUM_TOUR,
-  GYG_COLOSSEUM_UNDERGROUND,
-  GYG_POMPEII_DAY_TRIP,
-  GYG_VATICAN_TOUR,
-  GYG_ROME_TRANSFERS,
-  GYG_ROME_ALL,
-} from "@/lib/gyg-links";
+import { RomeDiscoverGrid, ROME_TRANSFERS, ROME_ACTIVITIES, ROME_PANORAMIC } from "@/components/RomeDiscoverSection";
+import { GYG_ROME_ALL } from "@/lib/gyg-links";
 
 export const Route = createFileRoute("/app-taxi-roma")({
   component: AppTaxiPage,
@@ -128,30 +121,13 @@ function AppTaxiPage() {
         </div>
       </section>
 
-      {/* Affiliate Section */}
-      <section className="section-warm py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mb-12 sm:mb-16 gap-4">
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Prenota un Transfer<br className="hidden sm:block" /> Più Comodo di Qualsiasi App</h2>
-            <p className="text-muted-foreground max-w-sm text-sm sm:text-base leading-relaxed text-pretty">
-              Autista con cartello, prezzo fisso, cancellazione gratuita.
-            </p>
-          </div>
-
-          <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <ActivityCard emoji="✈️" title="Transfer Aeroporto Fiumicino" description="Trova e prenota il trasferimento dall'aeroporto di Fiumicino al centro di Roma." gygUrl={GYG_ROME_TRANSFERS} />
-            <ActivityCard emoji="🏛️" title="Tour Colosseo Salta la Fila" description="Visita guidata Colosseo, Foro Romano e Palatino. Accesso prioritario." gygUrl={GYG_COLOSSEUM_TOUR} price="€35" />
-            <ActivityCard emoji="🏟️" title="Tour Musei Vaticani e Sistina" description="Tour guidato salta-fila ai Musei Vaticani, Cappella Sistina e Basilica." gygUrl={GYG_VATICAN_TOUR} price="€30" />
-            <ActivityCard emoji="⚔️" title="Colosseo Sotterraneo" description="Esplora i sotterranei segreti del Colosseo con guida esperta. 3 ore." gygUrl={GYG_COLOSSEUM_UNDERGROUND} price="€40" />
-            <ActivityCard emoji="🌋" title="Gita Pompei da Roma" description="Escursione a Pompei, Costiera Amalfitana e Sorrento. Giornata intera." gygUrl={GYG_POMPEII_DAY_TRIP} price="€120" />
-            <ActivityCard emoji="✈️" title="Tutti i Transfer Roma" description="Cerca tra tutti i transfer e tour disponibili a Roma." gygUrl={GYG_ROME_ALL} />
-          </div>
-
-          <div className="mt-10 sm:mt-14 text-center">
-            <GetYourGuideCTA text="Vedi Tutti i Transfer e Tour" url={GYG_ROME_ALL} />
-          </div>
-        </div>
-      </section>
+      <RomeDiscoverGrid
+        title="Prenota un Transfer Più Comodo di Qualsiasi App"
+        subtitle="Autista con cartello, prezzo fisso, cancellazione gratuita."
+        categories={[ROME_TRANSFERS, ROME_ACTIVITIES, ROME_PANORAMIC]}
+        ctaUrl={GYG_ROME_ALL}
+        ctaText="Vedi Tutti i Transfer e Tour"
+      />
     </>
   );
 }
