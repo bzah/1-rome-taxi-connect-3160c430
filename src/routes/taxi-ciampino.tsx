@@ -193,6 +193,7 @@ function CiampinoPage() {
               {link.label}
             </Link>
           ))}
+        </div>
       </section>
 
       {/* HCMC-style Discover Section */}
