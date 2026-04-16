@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { i18nLinks } from "@/i18n/hreflang";
 
 export const Route = createFileRoute("/legal-notice")({
   head: () => ({
+    links: i18nLinks("/legal-notice", "it"),
     meta: [
       { title: "Note Legali — TaxiFiumicino.com | Disclaimer e Avvisi Legali" },
       { name: "description", content: "Note legali e disclaimer di TaxiFiumicino.com: natura informativa del sito, link affiliati, limitazioni di responsabilità, proprietà intellettuale dei contenuti e informazioni sulla giurisdizione italiana applicabile." },
