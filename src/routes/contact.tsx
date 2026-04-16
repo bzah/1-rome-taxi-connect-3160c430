@@ -8,7 +8,7 @@ export const Route = createFileRoute("/contact")({
     links: i18nLinks("/contact", "it"),
     meta: [
       { title: "Contatti — TaxiFiumicino.com | Scrivici per Info Taxi Roma" },
-      { name: "description", content: "Contatta TaxiFiumicino.com per domande su taxi Roma, transfer aeroporto Fiumicino e Ciampino, tariffe, prenotazioni o collaborazioni. Rispondiamo entro 24 ore via email a tutte le richieste di informazioni." },
+      { name: "description", content: "Contatta TaxiFiumicino.com per domande su taxi Roma, transfer aeroporto Fiumicino e Ciampino, tariffe e prenotazioni. Rispondiamo entro 24 ore via email." },
       { property: "og:title", content: "Contatti — TaxiFiumicino.com | Info Taxi Roma e Fiumicino" },
       { property: "og:description", content: "Hai domande su taxi Roma, transfer aeroporto o tariffe? Contattaci via email. Rispondiamo entro 24 ore." },
       { name: "keywords", content: "contatti taxifiumicino, contattare taxi roma, informazioni taxi fiumicino, email taxi roma, assistenza transfer roma" },

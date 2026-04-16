@@ -6,7 +6,7 @@ export const Route = createFileRoute("/about")({
     links: i18nLinks("/about", "it"),
     meta: [
       { title: "Chi Siamo — TaxiFiumicino.com | Guida Taxi Roma e Fiumicino" },
-      { name: "description", content: "Scopri chi siamo: TaxiFiumicino.com è il portale italiano di riferimento per taxi a Roma, transfer aeroporto Fiumicino e Ciampino, tariffe ufficiali, numeri radio taxi e prenotazioni online. La nostra missione è aiutare turisti e residenti." },
+      { name: "description", content: "Chi siamo: TaxiFiumicino.com, portale italiano di riferimento per taxi a Roma, transfer aeroporto Fiumicino e Ciampino, tariffe e prenotazioni online." },
       { property: "og:title", content: "Chi Siamo — TaxiFiumicino.com | Guida Taxi Roma" },
       { property: "og:description", content: "TaxiFiumicino.com: portale informativo su taxi Roma, transfer aeroporto Fiumicino, tariffe e prenotazioni. Scopri la nostra missione." },
       { name: "keywords", content: "chi siamo taxifiumicino, taxi roma guida, informazioni taxi roma, portale taxi fiumicino, servizio taxi roma aeroporto" },

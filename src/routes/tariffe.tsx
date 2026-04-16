@@ -12,7 +12,7 @@ export const Route = createFileRoute("/tariffe")({
     links: i18nLinks("/tariffe", "it"),
     meta: [
       { title: "Tariffe Taxi Roma 2026 — Prezzi Ufficiali e Tariffe Fisse | TaxiFiumicino.com" },
-      { name: "description", content: "Tariffe ufficiali taxi Roma 2026: tariffa base €3, costo al km (€1.10 diurno/€1.30 notturno), supplementi bagagli e festivi, tariffe fisse aeroporto Fiumicino €50 e Ciampino €31. Guida completa ai prezzi con tabella comparativa." },
+      { name: "description", content: "Tariffe ufficiali taxi Roma 2026: base €3, €1.10/km diurno, supplementi notturni e bagagli, tariffe fisse aeroporti Fiumicino €50 e Ciampino €31." },
       { property: "og:title", content: "Tariffe Taxi Roma 2026 — Prezzi Ufficiali, Supplementi e Tariffe Fisse" },
       { property: "og:description", content: "Tariffe taxi Roma aggiornate 2026: tariffa base, costo al km, supplementi, tariffe fisse Fiumicino €50 e Ciampino €31." },
       { name: "keywords", content: "tariffe taxi roma, taxi roma prezzo, costo taxi roma, tariffa fissa taxi roma fiumicino, roma fiumicino taxi tariffa, quanto costa taxi roma, supplemento taxi roma, tariffa notturna taxi roma, prezzo taxi roma aeroporto, costo taxi roma centro" },

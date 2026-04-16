@@ -6,7 +6,7 @@ export const Route = createFileRoute("/dmca")({
     links: i18nLinks("/dmca", "it"),
     meta: [
       { title: "DMCA — TaxiFiumicino.com | Segnalazione Violazioni Copyright" },
-      { name: "description", content: "Procedura DMCA per la segnalazione di violazioni del copyright su TaxiFiumicino.com. Come inviare un reclamo per contenuti protetti da diritto d'autore, tempi di risposta e procedura di contro-notifica." },
+      { name: "description", content: "Procedura DMCA TaxiFiumicino.com per la segnalazione di violazioni del copyright e l'invio di reclami su contenuti protetti da diritti d'autore." },
       { property: "og:title", content: "DMCA — TaxiFiumicino.com | Copyright e Proprietà Intellettuale" },
       { property: "og:description", content: "Come segnalare violazioni del diritto d'autore su TaxiFiumicino.com secondo la procedura DMCA." },
       { name: "keywords", content: "DMCA taxifiumicino, copyright taxi roma, segnalazione violazione, diritto autore, proprietà intellettuale" },

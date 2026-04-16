@@ -6,7 +6,7 @@ export const Route = createFileRoute("/privacy-policy")({
     links: i18nLinks("/privacy-policy", "it"),
     meta: [
       { title: "Privacy Policy — TaxiFiumicino.com | Protezione Dati GDPR" },
-      { name: "description", content: "Informativa sulla privacy di TaxiFiumicino.com conforme al GDPR: come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali. Cookie, analytics, diritti dell'utente e modalità di contatto per la cancellazione dei dati." },
+      { name: "description", content: "Privacy policy TaxiFiumicino.com conforme al GDPR: come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali. Cookie, analitiche e i tuoi diritti." },
       { property: "og:title", content: "Privacy Policy — TaxiFiumicino.com" },
       { property: "og:description", content: "Informativa sulla privacy e protezione dei dati personali conforme al GDPR. Scopri i tuoi diritti." },
       { name: "keywords", content: "privacy policy taxifiumicino, protezione dati personali, GDPR taxi roma, informativa privacy, cookie policy taxi roma" },
