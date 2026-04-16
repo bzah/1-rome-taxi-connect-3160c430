@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { hreflangLinks } from "@/i18n/hreflang";
+import { i18nLinks } from "@/i18n/hreflang";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
-    links: hreflangLinks("/about"),
+    links: i18nLinks("/about", "it"),
     meta: [
       { title: "Chi Siamo — TaxiFiumicino.com | Guida Taxi Roma e Fiumicino" },
       { name: "description", content: "Scopri chi siamo: TaxiFiumicino.com è il portale italiano di riferimento per taxi a Roma, transfer aeroporto Fiumicino e Ciampino, tariffe ufficiali, numeri radio taxi e prenotazioni online. La nostra missione è aiutare turisti e residenti." },
