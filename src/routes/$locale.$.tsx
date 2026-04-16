@@ -4,6 +4,23 @@ import { canonicalLink, hreflangLinks } from "@/i18n/hreflang";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 import { LocalizedRomeDiscoverGrid } from "@/components/LocalizedDiscoverSection";
+import type { CatKey } from "@/components/LocalizedDiscoverSection";
+import { localizedDiscoverJsonLdScript } from "@/lib/discover-jsonld";
+
+/** Categories rendered by each translated sub-page (mirrors what each Page component passes to <LocalizedRomeDiscoverGrid />). */
+const SLUG_DISCOVER_CATEGORIES: Record<string, CatKey[]> = {
+  fiumicino: ["transfers", "attractions", "food"],
+  tariffe: ["transfers", "tours", "activities"],
+  "taxi-ciampino": ["transfers", "attractions", "nightlife"],
+  prenota: ["tours", "activities", "food"],
+  numeri: ["transfers", "attractions", "nightlife"],
+  "app-taxi-roma": ["transfers", "activities", "panoramic"],
+  "hotel-roma": ["attractions", "food", "nightlife"],
+  "parcheggio-fiumicino": ["transfers", "attractions", "panoramic"],
+  "aeroporti-di-roma": ["transfers", "tours", "activities"],
+  "hotel-aeroporto-fiumicino": ["transfers", "tours", "activities"],
+  "come-chiamare-taxi-roma": ["transfers", "nightlife", "food"],
+};
 
 const DISCOVER_TITLES: Record<string, { title: string; subtitle: string }> = {
   en: { title: "Discover Rome", subtitle: "Top attractions, tours and authentic experiences. Book online with free cancellation." },
