@@ -50,8 +50,8 @@ function CiampinoPage() {
         title="Taxi Roma Ciampino"
         subtitle="Transfer Aeroporto"
         description="Tutto sul trasferimento in taxi dall'aeroporto di Ciampino al centro di Roma. Tariffa fissa €31, durata circa 30 minuti."
-        ctaText="Prenota Transfer Ciampino"
-        ctaHref="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/?partner_id=0IQTGX8&utm_medium=online_publisher"
+        ctaText="Scopri Tour e Attività a Roma"
+        ctaHref="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher"
       />
 
       <section className="mx-auto max-w-4xl px-5 py-16 sm:py-24 sm:px-8">
@@ -134,12 +134,12 @@ function CiampinoPage() {
         </div>
 
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Privato Ciampino — Roma" description="Autista privato con cartello al tuo nome. Veicolo moderno, A/C, prezzo fisso garantito." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" />
-          <ActivityCard emoji="🚐" title="Navetta Bus Ciampino — Termini" description="Bus navetta economico dall'aeroporto di Ciampino alla stazione Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-big-bus-hop-on-hop-off-open-top-sightseeing-tour-t66064/" price="€5" />
-          <ActivityCard emoji="👨‍👩‍👧‍👦" title="Transfer Famiglia (Minivan)" description="Minivan per famiglie con bambini. Seggiolini disponibili su richiesta." gygUrl="https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/" price="€55" />
-          <ActivityCard emoji="🏛️" title="Tour Colosseo — Salta la Fila" description="Visita guidata del Colosseo, Foro Romano e Palatino. Accesso prioritario." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" />
-          <ActivityCard emoji="⛪" title="Musei Vaticani e Sistina" description="Accesso prioritario ai Musei Vaticani e alla Cappella Sistina. Guida esperta." gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-vatican-museums-sistine-chapel-ticket-t62214/" price="€30" />
-          <ActivityCard emoji="🌅" title="Tour Roma di Notte" description="Ammira i monumenti illuminati di Roma in un tour serale indimenticabile." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-underground-and-ancient-rome-tour-t134577/" price="€25" />
+          <ActivityCard emoji="🏛️" title="Tour Colosseo, Foro e Palatino" description="Visita guidata salta-fila al Colosseo, Foro Romano e Palatino. 2.5 ore." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" />
+          <ActivityCard emoji="🏟️" title="Musei Vaticani e Cappella Sistina" description="Ingresso salta-fila ai Musei Vaticani e Cappella Sistina. Guida esperta." gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-vatican-museums-sistine-chapel-ticket-t62214/" price="€25" />
+          <ActivityCard emoji="⚔️" title="Colosseo Sotterraneo e Roma Antica" description="Esplora i sotterranei segreti del Colosseo con guida esperta. 3 ore." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-underground-and-ancient-rome-tour-t134577/" price="€40" />
+          <ActivityCard emoji="🌋" title="Gita Pompei e Costiera Amalfitana" description="Escursione da Roma a Pompei, Costiera e Sorrento. Giornata intera." gygUrl="https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/" price="€120" />
+          <ActivityCard emoji="🍝" title="Corso Pasta e Tiramisù" description="Impara a cucinare pasta e tiramisù in un ristorante locale." gygUrl="https://www.getyourguide.com/rome-l33/pasta-tiramisu-making-class-in-locally-loved-restaurant--t453961/" price="€55" />
+          <ActivityCard emoji="🚌" title="Bus Hop-on Hop-off Roma" description="Esplora Roma al tuo ritmo col bus turistico panoramico." gygUrl="https://www.getyourguide.com/rome-l33/rome-big-bus-hop-on-hop-off-open-top-sightseeing-tour-t66064/" price="€25" />
         </div>
 
         {/* FAQ Section */}

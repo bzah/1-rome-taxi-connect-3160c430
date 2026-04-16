@@ -37,12 +37,12 @@ function PrenotaPage() {
         </div>
 
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="✈️" title="Transfer Privato Fiumicino — Roma" description="Autista privato dall'aeroporto di Fiumicino al tuo hotel a Roma. Meet & greet incluso." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" />
-          <ActivityCard emoji="🚐" title="Navetta Condivisa Fiumicino" description="Shuttle bus dall'aeroporto di Fiumicino alla stazione Termini. La soluzione più economica." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" />
-          <ActivityCard emoji="🏛️" title="Transfer Privato Ciampino — Roma" description="Trasferimento dall'aeroporto di Ciampino al centro di Roma con autista." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" />
-          <ActivityCard emoji="🚂" title="Transfer Roma — Napoli" description="Trasferimento privato da Roma a Napoli o viceversa. Comodo e diretto." gygUrl="https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/" price="€180" />
-          <ActivityCard emoji="⛵" title="Transfer Roma — Civitavecchia" description="Trasferimento al porto crociere di Civitavecchia. Perfetto per le crociere." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-palatine-hill-and-roman-forum-guided-tour-t408602/" price="€95" />
-          <ActivityCard emoji="🏖️" title="Transfer Roma — Tivoli" description="Escursione a Villa d'Este e Villa Adriana con trasporto privato incluso." gygUrl="https://www.getyourguide.com/rome-l33/vatican-sistine-chapel-st-peter-s-skip-the-line-tour-t709427/" price="€75" />
+          <ActivityCard emoji="🏛️" title="Tour Colosseo, Foro e Palatino" description="Visita guidata salta-fila al Colosseo, Foro Romano e Palatino. 2.5 ore, piccolo gruppo." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" />
+          <ActivityCard emoji="🏟️" title="Tour Musei Vaticani e Sistina" description="Tour guidato salta-fila ai Musei Vaticani, Cappella Sistina e Basilica." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€30" />
+          <ActivityCard emoji="🎫" title="Biglietto Vaticano — Salta la Fila" description="Ingresso prioritario ai Musei Vaticani e Cappella Sistina. Tutto il giorno." gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-vatican-museums-sistine-chapel-ticket-t62214/" price="€25" />
+          <ActivityCard emoji="🌋" title="Gita Pompei e Costiera Amalfitana" description="Escursione giornaliera da Roma a Pompei, Costiera Amalfitana e Sorrento." gygUrl="https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/" price="€120" />
+          <ActivityCard emoji="🍝" title="Corso Pasta e Tiramisù" description="Impara a cucinare pasta e tiramisù in un ristorante locale vicino al Vaticano." gygUrl="https://www.getyourguide.com/rome-l33/pasta-tiramisu-making-class-in-locally-loved-restaurant--t453961/" price="€55" />
+          <ActivityCard emoji="🚌" title="Bus Hop-on Hop-off Roma" description="Esplora Roma al tuo ritmo con il bus turistico panoramico. Valido fino a 3 giorni." gygUrl="https://www.getyourguide.com/rome-l33/rome-big-bus-hop-on-hop-off-open-top-sightseeing-tour-t66064/" price="€25" />
         </div>
 
         {/* How to book */}
