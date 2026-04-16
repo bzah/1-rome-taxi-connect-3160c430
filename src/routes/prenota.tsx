@@ -25,7 +25,7 @@ function PrenotaPage() {
         subtitle="Prenotazione Facile"
         description="Prenota il tuo taxi o transfer privato a Roma in pochi click. Cancellazione gratuita, autisti professionisti, prezzi trasparenti."
         ctaText="Prenota Ora"
-        ctaHref="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher"
+        ctaHref="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher"
       />
 
       <section className="mx-auto max-w-4xl px-5 py-16 sm:py-24 sm:px-8">
@@ -37,12 +37,12 @@ function PrenotaPage() {
         </div>
 
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="✈️" title="Transfer Privato Fiumicino — Roma" description="Autista privato dall'aeroporto di Fiumicino al tuo hotel a Roma. Meet & greet incluso." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" />
-          <ActivityCard emoji="🚐" title="Navetta Condivisa Fiumicino" description="Shuttle bus dall'aeroporto di Fiumicino alla stazione Termini. La soluzione più economica." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" />
-          <ActivityCard emoji="🏛️" title="Transfer Privato Ciampino — Roma" description="Trasferimento dall'aeroporto di Ciampino al centro di Roma con autista." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" />
-          <ActivityCard emoji="🚂" title="Transfer Roma — Napoli" description="Trasferimento privato da Roma a Napoli o viceversa. Comodo e diretto." gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-rome-naples-t226/" price="€180" />
-          <ActivityCard emoji="⛵" title="Transfer Roma — Civitavecchia" description="Trasferimento al porto crociere di Civitavecchia. Perfetto per le crociere." gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-civitavecchia-t123/" price="€95" />
-          <ActivityCard emoji="🏖️" title="Transfer Roma — Tivoli" description="Escursione a Villa d'Este e Villa Adriana con trasporto privato incluso." gygUrl="https://www.getyourguide.com/rome-l33/tivoli-tour-t456/" price="€75" />
+          <ActivityCard emoji="✈️" title="Transfer Privato Fiumicino — Roma" description="Autista privato dall'aeroporto di Fiumicino al tuo hotel a Roma. Meet & greet incluso." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" />
+          <ActivityCard emoji="🚐" title="Navetta Condivisa Fiumicino" description="Shuttle bus dall'aeroporto di Fiumicino alla stazione Termini. La soluzione più economica." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" />
+          <ActivityCard emoji="🏛️" title="Transfer Privato Ciampino — Roma" description="Trasferimento dall'aeroporto di Ciampino al centro di Roma con autista." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" />
+          <ActivityCard emoji="🚂" title="Transfer Roma — Napoli" description="Trasferimento privato da Roma a Napoli o viceversa. Comodo e diretto." gygUrl="https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/" price="€180" />
+          <ActivityCard emoji="⛵" title="Transfer Roma — Civitavecchia" description="Trasferimento al porto crociere di Civitavecchia. Perfetto per le crociere." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-palatine-hill-and-roman-forum-guided-tour-t408602/" price="€95" />
+          <ActivityCard emoji="🏖️" title="Transfer Roma — Tivoli" description="Escursione a Villa d'Este e Villa Adriana con trasporto privato incluso." gygUrl="https://www.getyourguide.com/rome-l33/vatican-sistine-chapel-st-peter-s-skip-the-line-tour-t709427/" price="€75" />
         </div>
 
         {/* How to book */}

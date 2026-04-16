@@ -28,14 +28,14 @@ function LocaleIndex() {
   const t = getTranslations(locale);
   if (!t) return null;
   const p = t.pages.index;
-  const GYG_TRANSFER = "https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher";
+  const GYG_TRANSFER = "https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher";
   const GYG_ACTIVITIES = [
-    "https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/",
-    "https://www.getyourguide.com/rome-l33/skip-the-line-colosseum-roman-forum-palatine-hill-t67792/",
-    "https://www.getyourguide.com/rome-l33/vatican-museums-sistine-chapel-skip-the-line-ticket-t44089/",
-    "https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/",
-    "https://www.getyourguide.com/rome-l33/trastevere-food-tour-t226/",
-    "https://www.getyourguide.com/rome-l33/rome-by-night-walking-tour-t392/",
+    "https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/",
+    "https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/",
+    "https://www.getyourguide.com/rome-l33/skip-the-line-vatican-museums-sistine-chapel-ticket-t62214/",
+    "https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/",
+    "https://www.getyourguide.com/rome-l33/pasta-tiramisu-making-class-in-locally-loved-restaurant--t453961/",
+    "https://www.getyourguide.com/rome-l33/colosseum-underground-and-ancient-rome-tour-t134577/",
   ];
 
   return (

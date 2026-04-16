@@ -205,42 +205,42 @@ function AeroportiDiRomaPage() {
                 description="Autista dedicato, auto di lusso, servizio porta a porta. Ideale per famiglie e gruppi fino a 8 persone."
                 price="€45"
                 emoji="🚗"
-                gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-fiumicino-airport-to-rome-t189750/"
+                gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/"
               />
               <ActivityCard
                 title="Transfer Privato Ciampino → Roma"
                 description="Transfer privato dall'aeroporto di Ciampino al centro di Roma. Auto confortevole con autista professionista."
                 price="€35"
                 emoji="🚐"
-                gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-ciampino-airport-to-rome-t234567/"
+                gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/"
               />
               <ActivityCard
                 title="Shuttle Condiviso Fiumicino"
                 description="La soluzione più economica per raggiungere Roma dall'aeroporto. Navetta condivisa con altri viaggiatori."
                 price="€12"
                 emoji="🚌"
-                gygUrl="https://www.getyourguide.com/rome-l33/shuttle-fiumicino-airport-to-rome-t67890/"
+                gygUrl="https://www.getyourguide.com/rome-l33/rome-big-bus-hop-on-hop-off-open-top-sightseeing-tour-t66064/"
               />
               <ActivityCard
                 title="Tour Roma dal Aeroporto"
                 description="Atterri a Roma? Inizia il tuo viaggio con un tour guidato dal aeroporto, con sosta al Colosseo e Vaticano."
                 price="€89"
                 emoji="🏛️"
-                gygUrl="https://www.getyourguide.com/rome-l33/rome-airport-layover-tour-t345678/"
+                gygUrl="https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/"
               />
               <ActivityCard
                 title="Transfer VIP con Mercedes"
                 description="Servizio VIP con Mercedes Classe E o Classe V. Autista in attesa con cartello. Massimo comfort."
                 price="€65"
                 emoji="✨"
-                gygUrl="https://www.getyourguide.com/rome-l33/vip-transfer-fiumicino-rome-t456789/"
+                gygUrl="https://www.getyourguide.com/rome-l33/pasta-tiramisu-making-class-in-locally-loved-restaurant--t453961/"
               />
               <ActivityCard
                 title="Roma Card + Transfer"
                 description="Combinazione transfer aeroporto + Roma City Card con trasporti pubblici e ingressi ai musei inclusi."
                 price="€55"
                 emoji="🎫"
-                gygUrl="https://www.getyourguide.com/rome-l33/rome-card-airport-transfer-t567890/"
+                gygUrl="https://www.getyourguide.com/rome-l33/vatican-museums-sistine-chapel-st-peter-s-square-tour-t69620/"
               />
             </div>
 

@@ -72,7 +72,7 @@ function CatchAllPage() {
 // ────── FIUMICINO PAGE ──────
 function FiumicinoPage({ t, locale }: { t: any; locale: string }) {
   const p = t.pages.fiumicino;
-  const GYG = "https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/?partner_id=0IQTGX8&utm_medium=online_publisher";
+  const GYG = "https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/?partner_id=0IQTGX8&utm_medium=online_publisher";
   return (
     <>
       <HeroSection title={p.hero.title} subtitle={p.hero.subtitle} description={p.hero.description} ctaText={p.hero.ctaText} ctaHref={GYG} image={fiumicinoImg} />
@@ -122,7 +122,7 @@ function FiumicinoPage({ t, locale }: { t: any; locale: string }) {
             <ActivityCard key={c.title} emoji={c.emoji} title={c.title} description={c.description} gygUrl={GYG} price={c.price} pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
           ))}
         </div>
-        <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} url="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher" /></div>
+        <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} url="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher" /></div>
         <div className="mt-16 rounded-sm border border-stone-warm bg-card p-8">
           <h3 className="font-display text-xl font-semibold mb-4">{p.leonardoTitle}</h3>
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">{p.leonardoText}</p>
@@ -178,7 +178,7 @@ function TariffePage({ t, locale }: { t: any; locale: string }) {
         </div>
         <div className="mt-12 text-center">
           <p className="text-muted-foreground mb-4">{p.ctaText}</p>
-          <GetYourGuideCTA text={p.ctaButton} url="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher" />
+          <GetYourGuideCTA text={p.ctaButton} url="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher" />
         </div>
       </section>
     </>
@@ -188,7 +188,7 @@ function TariffePage({ t, locale }: { t: any; locale: string }) {
 // ────── CIAMPINO PAGE ──────
 function CiampinoPage({ t, locale }: { t: any; locale: string }) {
   const p = t.pages["taxi-ciampino"];
-  const GYG = "https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/?partner_id=0IQTGX8&utm_medium=online_publisher";
+  const GYG = "https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/?partner_id=0IQTGX8&utm_medium=online_publisher";
   return (
     <>
       <HeroSection title={p.hero.title} subtitle={p.hero.subtitle} description={p.hero.description} ctaText={p.hero.ctaText} ctaHref={GYG} />
@@ -225,7 +225,7 @@ function CiampinoPage({ t, locale }: { t: any; locale: string }) {
             {p.tips.map((tip: string) => <li key={tip} dangerouslySetInnerHTML={{ __html: `• ${tip}` }} />)}
           </ul>
         </div>
-        <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} url="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher" /></div>
+        <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} url="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher" /></div>
       </section>
     </>
   );
@@ -234,14 +234,14 @@ function CiampinoPage({ t, locale }: { t: any; locale: string }) {
 // ────── PRENOTA PAGE ──────
 function PrenotaPage({ t, locale }: { t: any; locale: string }) {
   const p = t.pages.prenota;
-  const GYG = "https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher";
+  const GYG = "https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher";
   const GYG_URLS = [
-    "https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/",
-    "https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/",
-    "https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/",
-    "https://www.getyourguide.com/rome-l33/private-transfer-rome-naples-t226/",
-    "https://www.getyourguide.com/rome-l33/private-transfer-civitavecchia-t123/",
-    "https://www.getyourguide.com/rome-l33/tivoli-tour-t456/",
+    "https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/",
+    "https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/",
+    "https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/",
+    "https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/",
+    "https://www.getyourguide.com/rome-l33/rome-colosseum-palatine-hill-and-roman-forum-guided-tour-t408602/",
+    "https://www.getyourguide.com/rome-l33/vatican-sistine-chapel-st-peter-s-skip-the-line-tour-t709427/",
   ];
   return (
     <>
@@ -386,9 +386,9 @@ function NumeriPage({ t, locale }: { t: any; locale: string }) {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.affiliateTitle}</h2>
         <p className="text-muted-foreground mb-8">{p.affiliateSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private transfer from Fiumicino airport." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini station." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private transfer from Ciampino airport." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private transfer from Fiumicino airport." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini station." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private transfer from Ciampino airport." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
         </div>
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
       </section>
@@ -453,9 +453,9 @@ function AppTaxiPage({ t, locale }: { t: any; locale: string }) {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.affiliateTitle}</h2>
         <p className="text-muted-foreground mb-8">{p.affiliateSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
         </div>
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
       </section>
@@ -490,9 +490,9 @@ function HotelRomaPage({ t, locale }: { t: any; locale: string }) {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.transferTitle}</h2>
         <p className="text-muted-foreground mb-8">{p.transferSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer to your hotel." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer to your hotel." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
         </div>
         {p.faqs && (
           <div className="mt-16">
@@ -545,9 +545,9 @@ function ParcheggioPage({ t, locale }: { t: any; locale: string }) {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.transferTitle}</h2>
         <p className="text-muted-foreground mb-8">{p.transferSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
         </div>
         {p.faqs && (
           <div className="mt-16">
@@ -571,7 +571,7 @@ function ParcheggioPage({ t, locale }: { t: any; locale: string }) {
 // ────── AEROPORTI DI ROMA PAGE ──────
 function AeroportiPage({ t, locale }: { t: any; locale: string }) {
   const p = t.pages["aeroporti-di-roma"];
-  const GYG = "https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher";
+  const GYG = "https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher";
   return (
     <>
       <HeroSection title={p.hero.title} subtitle={p.hero.subtitle} description={p.hero.description} />
@@ -631,9 +631,9 @@ function AeroportiPage({ t, locale }: { t: any; locale: string }) {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.transferTitle}</h2>
         <p className="text-muted-foreground mb-8">{p.transferSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
         </div>
 
         {p.faqs && (
@@ -700,9 +700,9 @@ function HotelAeroportoPage({ t, locale }: { t: any; locale: string }) {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.transferTitle}</h2>
         <p className="text-muted-foreground mb-8">{p.transferSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer to your hotel." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer to your hotel." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
         </div>
 
         {p.faqs && (
@@ -773,9 +773,9 @@ function ComeChiamarePage({ t, locale }: { t: any; locale: string }) {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.transferTitle}</h2>
         <p className="text-muted-foreground mb-8">{p.transferSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/ciampino-airport-private-transfer-t419284/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
         </div>
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
       </section>

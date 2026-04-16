@@ -59,7 +59,7 @@ function Index() {
         subtitle="La Guida Completa"
         description="Tutto quello che devi sapere sui taxi a Roma: tariffe ufficiali, numeri utili, trasferimenti aeroporto Fiumicino e come prenotare il tuo taxi."
         ctaText="Prenota un Transfer"
-        ctaHref="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher"
+        ctaHref="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher"
         secondaryCtaText="Vedi Tariffe"
         secondaryCtaHref="/tariffe"
       />
@@ -137,12 +137,12 @@ function Index() {
         </div>
 
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="✈️" title="Transfer Aeroporto Fiumicino" description="Trasferimento privato dall'aeroporto di Fiumicino al centro di Roma." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" />
-          <ActivityCard emoji="🏛️" title="Tour Colosseo e Foro Romano" description="Visita guidata del Colosseo, Foro Romano e Palatino. Salta la fila." gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-colosseum-roman-forum-palatine-hill-t67792/" price="€35" />
-          <ActivityCard emoji="🏟️" title="Vaticano — Musei e Cappella Sistina" description="Accesso prioritario ai Musei Vaticani e alla Cappella Sistina." gygUrl="https://www.getyourguide.com/rome-l33/vatican-museums-sistine-chapel-skip-the-line-ticket-t44089/" price="€30" />
-          <ActivityCard emoji="🚐" title="Transfer Condiviso Fiumicino" description="Navetta condivisa dall'aeroporto Fiumicino alla stazione Termini." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" />
-          <ActivityCard emoji="🍝" title="Tour Gastronomico Trastevere" description="Scopri i sapori autentici di Roma con un tour gastronomico." gygUrl="https://www.getyourguide.com/rome-l33/trastevere-food-tour-t226/" price="€40" />
-          <ActivityCard emoji="🌅" title="Tour Roma di Notte" description="Ammira i monumenti illuminati di Roma in un tour serale." gygUrl="https://www.getyourguide.com/rome-l33/rome-by-night-walking-tour-t392/" price="€25" />
+          <ActivityCard emoji="✈️" title="Transfer Aeroporto Fiumicino" description="Trasferimento privato dall'aeroporto di Fiumicino al centro di Roma." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" />
+          <ActivityCard emoji="🏛️" title="Tour Colosseo e Foro Romano" description="Visita guidata del Colosseo, Foro Romano e Palatino. Salta la fila." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" />
+          <ActivityCard emoji="🏟️" title="Vaticano — Musei e Cappella Sistina" description="Accesso prioritario ai Musei Vaticani e alla Cappella Sistina." gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-vatican-museums-sistine-chapel-ticket-t62214/" price="€30" />
+          <ActivityCard emoji="🚐" title="Transfer Condiviso Fiumicino" description="Navetta condivisa dall'aeroporto Fiumicino alla stazione Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" />
+          <ActivityCard emoji="🍝" title="Tour Gastronomico Trastevere" description="Scopri i sapori autentici di Roma con un tour gastronomico." gygUrl="https://www.getyourguide.com/rome-l33/pasta-tiramisu-making-class-in-locally-loved-restaurant--t453961/" price="€40" />
+          <ActivityCard emoji="🌅" title="Tour Roma di Notte" description="Ammira i monumenti illuminati di Roma in un tour serale." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-underground-and-ancient-rome-tour-t134577/" price="€25" />
         </div>
 
         <div className="mt-10 sm:mt-14 text-center">

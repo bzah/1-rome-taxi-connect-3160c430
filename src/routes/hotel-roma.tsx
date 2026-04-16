@@ -259,42 +259,42 @@ function HotelRomaPage() {
                 description="Visita guidata al Colosseo con accesso prioritario, Foro Romano e Colle Palatino. La migliore esperienza di Roma."
                 price="€45"
                 emoji="🏛️"
-                gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-tour-t12345/"
+                gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/"
               />
               <ActivityCard
                 title="Musei Vaticani e Cappella Sistina"
                 description="Salta la fila ai Musei Vaticani e ammira la Cappella Sistina di Michelangelo con guida esperta."
                 price="€55"
                 emoji="⛪"
-                gygUrl="https://www.getyourguide.com/rome-l33/vatican-museums-sistine-chapel-skip-line-t23456/"
+                gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-vatican-museums-sistine-chapel-ticket-t62214/"
               />
               <ActivityCard
                 title="Transfer Privato Aeroporto → Hotel"
                 description="Autista privato dall'aeroporto di Fiumicino direttamente al tuo hotel a Roma. Servizio porta a porta."
                 price="€45"
                 emoji="🚗"
-                gygUrl="https://www.getyourguide.com/rome-l33/private-transfer-fiumicino-airport-to-rome-t189750/"
+                gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/"
               />
               <ActivityCard
                 title="Roma Pass 48h — Trasporti + Musei"
                 description="Card turistica con trasporti pubblici illimitati, ingresso gratuito a 1 museo e sconti su tutti gli altri."
                 price="€33"
                 emoji="🎫"
-                gygUrl="https://www.getyourguide.com/rome-l33/roma-pass-48-hours-t34567/"
+                gygUrl="https://www.getyourguide.com/rome-l33/rome-big-bus-hop-on-hop-off-open-top-sightseeing-tour-t66064/"
               />
               <ActivityCard
                 title="Tour Gastronomico Trastevere"
                 description="Scopri i sapori autentici di Roma con un food tour a Trastevere: pasta, supplì, pizza al taglio e gelato artigianale."
                 price="€65"
                 emoji="🍝"
-                gygUrl="https://www.getyourguide.com/rome-l33/trastevere-food-tour-t45678/"
+                gygUrl="https://www.getyourguide.com/rome-l33/pasta-tiramisu-making-class-in-locally-loved-restaurant--t453961/"
               />
               <ActivityCard
                 title="Gita Pompei da Roma"
                 description="Escursione giornaliera da Roma a Pompei con trasporto incluso e guida archeologica professionale."
                 price="€95"
                 emoji="🌋"
-                gygUrl="https://www.getyourguide.com/rome-l33/pompeii-day-trip-from-rome-t56789/"
+                gygUrl="https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/"
               />
             </div>
 

@@ -55,7 +55,7 @@ function FiumicinoPage() {
         subtitle="Leonardo da Vinci (FCO)"
         description="Guida completa all'aeroporto di Roma Fiumicino: taxi a tariffa fissa €50, transfer privati, Leonardo Express, terminal e tutte le informazioni per raggiungere Roma centro."
         ctaText="Prenota Transfer Privato"
-        ctaHref="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/?partner_id=0IQTGX8&utm_medium=online_publisher"
+        ctaHref="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/?partner_id=0IQTGX8&utm_medium=online_publisher"
         image={fiumicinoImg}
       />
 
@@ -166,13 +166,13 @@ function FiumicinoPage() {
         </div>
 
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Privato Fiumicino — Roma" description="Autista privato con cartello al tuo nome. Veicolo moderno con A/C. Cancellazione gratuita." gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/" price="€45" />
-          <ActivityCard emoji="🚐" title="Navetta Condivisa Fiumicino — Termini" description="Navetta economica, partenze frequenti, prezzo imbattibile." gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/" price="€7" />
-          <ActivityCard emoji="🚐" title="Transfer Privato per Gruppi" description="Minivan per famiglie o gruppi fino a 8 persone. Seggiolini disponibili." gygUrl="https://www.getyourguide.com/rome-l33/rome-private-transfer-from-to-fiumicino-airport-t676074/" price="€55" />
+          <ActivityCard emoji="🚗" title="Transfer Privato Fiumicino — Roma" description="Autista privato con cartello al tuo nome. Veicolo moderno con A/C. Cancellazione gratuita." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" />
+          <ActivityCard emoji="🚐" title="Navetta Condivisa Fiumicino — Termini" description="Navetta economica, partenze frequenti, prezzo imbattibile." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" />
+          <ActivityCard emoji="🚐" title="Transfer Privato per Gruppi" description="Minivan per famiglie o gruppi fino a 8 persone. Seggiolini disponibili." gygUrl="https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/" price="€55" />
         </div>
 
         <div className="mt-14 text-center">
-          <GetYourGuideCTA text="Tutti i Transfer dall'Aeroporto Fiumicino" url="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher" />
+          <GetYourGuideCTA text="Tutti i Transfer dall'Aeroporto Fiumicino" url="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher" />
         </div>
 
         {/* Leonardo Express & Parking */}

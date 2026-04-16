@@ -43,7 +43,7 @@ function FiumicinoCentroPage() {
         subtitle="Tutte le Opzioni"
         description="Guida completa su come raggiungere il centro di Roma dall'aeroporto di Fiumicino: taxi, treno, bus e transfer privati con prezzi e tempi aggiornati."
         ctaText="Prenota Transfer Privato"
-        ctaHref="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/?partner_id=0IQTGX8&utm_medium=online_publisher"
+        ctaHref="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/?partner_id=0IQTGX8&utm_medium=online_publisher"
         image={fiumicinoImg}
       />
 
@@ -136,27 +136,27 @@ function FiumicinoCentroPage() {
             emoji="🚗"
             title="Transfer Privato al tuo Hotel"
             description="Dall'aeroporto di Fiumicino direttamente al tuo hotel in centro Roma. Autista professionale, veicolo con A/C, cancellazione gratuita."
-            gygUrl="https://www.getyourguide.com/rome-l33/rome-fiumicino-airport-private-transfer-t419283/"
+            gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/"
             price="€45"
           />
           <ActivityCard
             emoji="🚐"
             title="Navetta Condivisa"
             description="Navetta economica dall'aeroporto Fiumicino alla stazione Termini, nel cuore di Roma centro."
-            gygUrl="https://www.getyourguide.com/rome-l33/fiumicino-airport-shuttle-transfer-to-from-rome-t120/"
+            gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/"
             price="€7"
           />
           <ActivityCard
             emoji="👨‍👩‍👧‍👦"
             title="Transfer per Famiglie"
             description="Minivan per famiglie con bambini. Seggiolini auto disponibili su richiesta. Dall'aeroporto al tuo alloggio."
-            gygUrl="https://www.getyourguide.com/rome-l33/rome-private-transfer-from-to-fiumicino-airport-t676074/"
+            gygUrl="https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/"
             price="€55"
           />
         </div>
 
         <div className="mt-12 text-center">
-          <GetYourGuideCTA text="Tutti i Transfer Fiumicino — Roma" url="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher" />
+          <GetYourGuideCTA text="Tutti i Transfer Fiumicino — Roma" url="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher" />
         </div>
 
         {/* FAQ Section */}
