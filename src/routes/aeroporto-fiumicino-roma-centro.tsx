@@ -128,37 +128,6 @@ function FiumicinoCentroPage() {
           </p>
         </div>
 
-        {/* Transfer options */}
-        <h2 className="font-display text-3xl font-bold mt-16 mb-4">Prenota Transfer Fiumicino — Roma Centro</h2>
-        <p className="text-muted-foreground mb-8">Il modo più comodo: autista che ti aspetta all'arrivo con cartello al tuo nome.</p>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard
-            emoji="🏛️"
-            title="Tour Colosseo, Foro e Palatino"
-            description="Visita guidata salta-fila al Colosseo, Foro Romano e Palatino. 2.5 ore, piccolo gruppo."
-            gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/"
-            price="€35"
-          />
-          <ActivityCard
-            emoji="🏟️"
-            title="Tour Musei Vaticani e Sistina"
-            description="Tour guidato salta-fila ai Musei Vaticani, Cappella Sistina e Basilica di San Pietro."
-            gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/"
-            price="€30"
-          />
-          <ActivityCard
-            emoji="🌋"
-            title="Gita Pompei e Costiera Amalfitana"
-            description="Escursione da Roma a Pompei, Costiera Amalfitana e Sorrento. Giornata intera."
-            gygUrl="https://www.getyourguide.com/rome-l33/from-rome-pompeii-amalfi-coast-and-sorrento-day-trip-t590375/"
-            price="€120"
-          />
-        </div>
-
-        <div className="mt-12 text-center">
-          <GetYourGuideCTA text="Tutti i Tour e Attività a Roma" url="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher" />
-        </div>
 
         {/* FAQ Section */}
         <h2 className="font-display text-3xl font-bold mt-16 mb-8">Domande Frequenti — Fiumicino a Roma Centro</h2>
