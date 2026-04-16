@@ -42,6 +42,7 @@ export const Route = createFileRoute("/$locale/$")({
     const slug = params._splat || "";
     const p = t?.pages?.[slug];
     if (!p?.meta) return {};
+    const cats = SLUG_DISCOVER_CATEGORIES[slug];
     return {
       links: [
         canonicalLink(`/${slug}`, params.locale as any),
@@ -54,6 +55,7 @@ export const Route = createFileRoute("/$locale/$")({
         { property: "og:description", content: p.meta.ogDescription },
         { name: "keywords", content: p.meta.keywords },
       ],
+      ...(cats && { scripts: [localizedDiscoverJsonLdScript(params.locale, cats)] }),
     };
   },
   component: CatchAllPage,
