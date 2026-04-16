@@ -2,8 +2,29 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 import { hreflangLinks } from "@/i18n/hreflang";
+import {
+  GYG_COLOSSEUM_TOUR,
+  GYG_VATICAN_TOUR,
+  GYG_COLOSSEUM_UNDERGROUND,
+  GYG_VATICAN_TICKET,
+  GYG_PASTA_CLASS,
+  GYG_HOP_ON_BUS,
+  GYG_POMPEII_DAY_TRIP,
+  GYG_COLOSSEUM_ARENA,
+  GYG_VATICAN_BASILICA,
+  GYG_COLOSSEUM_GUIDED,
+  GYG_VATICAN_SKIP_LINE,
+  GYG_VATICAN_SQUARE,
+  GYG_ROME_ALL,
+  GYG_ROME_TRANSFERS,
+} from "@/lib/gyg-links";
 import taxiRomaImg from "@/assets/taxi-roma.jpg";
 import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
+import colosseumImg from "@/assets/rome-colosseum-golden.jpg";
+import vaticanImg from "@/assets/rome-vatican-tour.jpg";
+import hotelImg from "@/assets/rome-hotel-stay.jpg";
+import eventsImg from "@/assets/rome-events.jpg";
+import activitiesImg from "@/assets/rome-activities-pasta.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -51,6 +72,120 @@ export const Route = createFileRoute("/")({
   }),
 });
 
+const CATEGORIES = [
+  {
+    title: "Attrazioni",
+    subtitle: "I monumenti iconici della Città Eterna",
+    image: colosseumImg,
+    alt: "Il Colosseo al tramonto a Roma",
+    items: [
+      { title: "Tour Colosseo, Foro e Palatino", desc: "Visita guidata salta-fila al Colosseo, Foro Romano e Colle Palatino. 2.5 ore, piccolo gruppo.", url: GYG_COLOSSEUM_TOUR, price: "€35" },
+      { title: "Colosseo Arena e Sotterranei", desc: "Accesso esclusivo all'arena del Colosseo, al piano sotterraneo e al Foro Romano.", url: GYG_COLOSSEUM_ARENA, price: "€50" },
+      { title: "Colosseo Sotterraneo e Roma Antica", desc: "Esplora i sotterranei segreti del Colosseo con guida esperta. 3 ore.", url: GYG_COLOSSEUM_UNDERGROUND, price: "€40" },
+    ],
+  },
+  {
+    title: "Tour",
+    subtitle: "Tour guidati con salta-fila incluso",
+    image: vaticanImg,
+    alt: "Tour guidato ai Musei Vaticani",
+    items: [
+      { title: "Tour Musei Vaticani e Cappella Sistina", desc: "Tour guidato salta-fila ai Musei Vaticani, Cappella Sistina e Basilica.", url: GYG_VATICAN_TOUR, price: "€30" },
+      { title: "Vaticano, Sistina e Basilica di San Pietro", desc: "Musei Vaticani, Cappella Sistina e Basilica di San Pietro con guida esperta.", url: GYG_VATICAN_BASILICA, price: "€45" },
+      { title: "Gita a Pompei e Costiera Amalfitana", desc: "Escursione giornaliera da Roma a Pompei, Costiera Amalfitana e Sorrento.", url: GYG_POMPEII_DAY_TRIP, price: "€120" },
+    ],
+  },
+  {
+    title: "Soggiorno",
+    subtitle: "Trova l'hotel perfetto a Roma",
+    image: hotelImg,
+    alt: "Hotel di lusso a Roma con vista sui tetti",
+    items: [
+      { title: "Hotel Roma Centro", desc: "Scopri i migliori hotel nel cuore di Roma: zona Termini, Trastevere, Vaticano.", url: GYG_ROME_ALL, price: "" },
+      { title: "Hotel Aeroporto Fiumicino", desc: "Hotel comodi vicino all'aeroporto Leonardo da Vinci per partenze e arrivi.", url: GYG_ROME_ALL, price: "" },
+      { title: "Transfer Hotel ↔ Aeroporto", desc: "Trasferimento privato dall'aeroporto al tuo hotel a Roma. Autista con cartello.", url: GYG_ROME_TRANSFERS, price: "" },
+    ],
+  },
+  {
+    title: "Eventi",
+    subtitle: "Esperienze serali e spettacoli",
+    image: eventsImg,
+    alt: "Serata in una piazza romana con luci",
+    items: [
+      { title: "Tour Vaticano Salta la Fila", desc: "Vaticano, Cappella Sistina e Piazza San Pietro senza attese.", url: GYG_VATICAN_SKIP_LINE, price: "€35" },
+      { title: "Bus Hop-on Hop-off Roma", desc: "Esplora Roma al tuo ritmo con il bus turistico panoramico. Valido fino a 3 giorni.", url: GYG_HOP_ON_BUS, price: "€25" },
+      { title: "Tour Vaticano e Piazza San Pietro", desc: "Musei Vaticani, Cappella Sistina e Piazza San Pietro con guida.", url: GYG_VATICAN_SQUARE, price: "€40" },
+    ],
+  },
+  {
+    title: "Attività",
+    subtitle: "Esperienze gastronomiche e culturali",
+    image: activitiesImg,
+    alt: "Corso di cucina pasta fresca a Roma",
+    items: [
+      { title: "Corso Pasta e Tiramisù", desc: "Impara a cucinare pasta e tiramisù in un ristorante locale vicino al Vaticano.", url: GYG_PASTA_CLASS, price: "€55" },
+      { title: "Biglietto Vaticano — Salta la Fila", desc: "Ingresso prioritario ai Musei Vaticani e Cappella Sistina. Tutto il giorno.", url: GYG_VATICAN_TICKET, price: "€25" },
+      { title: "Tour Colosseo Guidato", desc: "Colosseo, Palatino e Foro Romano con guida esperta e accesso prioritario.", url: GYG_COLOSSEUM_GUIDED, price: "€35" },
+    ],
+  },
+];
+
+function CategoryCard({ cat, index }: { cat: typeof CATEGORIES[number]; index: number }) {
+  const isReversed = index % 2 === 1;
+
+  return (
+    <div className={`flex flex-col ${isReversed ? "lg:flex-row-reverse" : "lg:flex-row"} gap-6 lg:gap-10 items-stretch`}>
+      {/* Image */}
+      <div className="lg:w-1/2 relative overflow-hidden rounded-sm group">
+        <img
+          src={cat.image}
+          alt={cat.alt}
+          className="w-full h-64 sm:h-80 lg:h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
+          width={800}
+          height={544}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-espresso/70 via-transparent to-transparent" />
+        <div className="absolute bottom-0 left-0 p-6 sm:p-8">
+          <h3 className="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">{cat.title}</h3>
+          <p className="text-white/80 text-sm mt-1">{cat.subtitle}</p>
+        </div>
+      </div>
+
+      {/* Activity cards */}
+      <div className="lg:w-1/2 flex flex-col gap-4">
+        {cat.items.map((item) => (
+          <a
+            key={item.title}
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group/card flex items-start gap-4 rounded-sm border border-stone-warm bg-card p-5 sm:p-6 transition-all hover:border-primary/30 hover:editorial-shadow-lg hover:-translate-y-0.5 active:scale-[0.99]"
+          >
+            <div className="flex-1 min-w-0">
+              <h4 className="font-display text-base sm:text-lg font-semibold text-card-foreground group-hover/card:text-primary transition-colors leading-snug">
+                {item.title}
+              </h4>
+              <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed line-clamp-2">{item.desc}</p>
+              <div className="mt-2.5 flex items-center gap-3">
+                {item.price && (
+                  <span className="text-sm font-semibold text-primary">Da {item.price}</span>
+                )}
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-primary">
+                  Prenota ora
+                  <svg className="h-4 w-4 transition-transform group-hover/card:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function Index() {
   return (
     <>
@@ -59,7 +194,7 @@ function Index() {
         subtitle="La Guida Completa"
         description="Tutto quello che devi sapere sui taxi a Roma: tariffe ufficiali, numeri utili, trasferimenti aeroporto Fiumicino e come prenotare il tuo taxi."
         ctaText="Prenota un Transfer"
-        ctaHref="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher"
+        ctaHref={GYG_ROME_TRANSFERS}
         secondaryCtaText="Vedi Tariffe"
         secondaryCtaHref="/tariffe"
       />
@@ -106,8 +241,31 @@ function Index() {
         </div>
       </section>
 
-      {/* Why use taxi — editorial numbered grid */}
+      {/* ═══ HCMC-style Category Sections: Attractions, Tours, Stay, Events, Activities ═══ */}
       <section className="section-warm py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="text-center mb-14 sm:mb-20">
+            <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3">Scopri Roma</p>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Attrazioni, Tour e Attività</h2>
+            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+              Prenota le migliori esperienze a Roma con cancellazione gratuita. Tour guidati, biglietti salta-fila, corsi di cucina e molto altro.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-14 sm:gap-20">
+            {CATEGORIES.map((cat, i) => (
+              <CategoryCard key={cat.title} cat={cat} index={i} />
+            ))}
+          </div>
+
+          <div className="mt-14 sm:mt-20 text-center">
+            <GetYourGuideCTA text="Scopri Tutte le Esperienze a Roma" url={GYG_ROME_ALL} />
+          </div>
+        </div>
+      </section>
+
+      {/* Why use taxi — editorial numbered grid */}
+      <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-center mb-12 sm:mb-16">Perché Prendere un Taxi a Roma?</h2>
           <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
@@ -127,31 +285,33 @@ function Index() {
         </div>
       </section>
 
-      {/* GetYourGuide Activities */}
-      <section className="mx-auto max-w-7xl px-5 py-16 sm:py-24 sm:px-8">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mb-12 sm:mb-16 gap-4">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Transfer e Tour<br className="hidden sm:block" /> Consigliati</h2>
-          <p className="text-muted-foreground max-w-sm text-sm sm:text-base leading-relaxed text-pretty">
-            Prenota i migliori trasferimenti e tour a Roma con cancellazione gratuita.
-          </p>
-        </div>
+      {/* Quick GYG Activity Grid */}
+      <section className="section-warm py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mb-12 sm:mb-16 gap-4">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Transfer e Tour<br className="hidden sm:block" /> Più Popolari</h2>
+            <p className="text-muted-foreground max-w-sm text-sm sm:text-base leading-relaxed text-pretty">
+              I tour e le esperienze più prenotati a Roma. Cancellazione gratuita su tutti.
+            </p>
+          </div>
 
-        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🏛️" title="Tour Colosseo, Foro Romano e Palatino" description="Visita guidata con accesso salta-fila. 2.5 ore, piccolo gruppo." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" />
-          <ActivityCard emoji="🏟️" title="Musei Vaticani e Cappella Sistina" description="Tour guidato salta-fila ai Musei Vaticani, Cappella Sistina e Basilica di San Pietro." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€30" />
-          <ActivityCard emoji="🎫" title="Biglietto Vaticano — Salta la Fila" description="Ingresso prioritario ai Musei Vaticani e Cappella Sistina. Accesso tutto il giorno." gygUrl="https://www.getyourguide.com/rome-l33/skip-the-line-vatican-museums-sistine-chapel-ticket-t62214/" price="€25" />
-          <ActivityCard emoji="⚔️" title="Colosseo Sotterraneo e Roma Antica" description="Esplora i sotterranei segreti del Colosseo con una guida esperta. 3 ore." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-underground-and-ancient-rome-tour-t134577/" price="€40" />
-          <ActivityCard emoji="🍝" title="Corso Pasta e Tiramisù" description="Impara a cucinare pasta e tiramisù in un ristorante locale vicino al Vaticano." gygUrl="https://www.getyourguide.com/rome-l33/pasta-tiramisu-making-class-in-locally-loved-restaurant--t453961/" price="€55" />
-          <ActivityCard emoji="🚌" title="Bus Hop-on Hop-off Roma" description="Esplora Roma al tuo ritmo con il bus turistico panoramico. Valido fino a 3 giorni." gygUrl="https://www.getyourguide.com/rome-l33/rome-big-bus-hop-on-hop-off-open-top-sightseeing-tour-t66064/" price="€25" />
-        </div>
+          <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <ActivityCard emoji="🏛️" title="Tour Colosseo, Foro Romano e Palatino" description="Visita guidata con accesso salta-fila. 2.5 ore, piccolo gruppo." gygUrl={GYG_COLOSSEUM_TOUR} price="€35" />
+            <ActivityCard emoji="🏟️" title="Musei Vaticani e Cappella Sistina" description="Tour guidato salta-fila ai Musei Vaticani, Cappella Sistina e Basilica di San Pietro." gygUrl={GYG_VATICAN_TOUR} price="€30" />
+            <ActivityCard emoji="🎫" title="Biglietto Vaticano — Salta la Fila" description="Ingresso prioritario ai Musei Vaticani e Cappella Sistina. Accesso tutto il giorno." gygUrl={GYG_VATICAN_TICKET} price="€25" />
+            <ActivityCard emoji="⚔️" title="Colosseo Sotterraneo e Roma Antica" description="Esplora i sotterranei segreti del Colosseo con una guida esperta. 3 ore." gygUrl={GYG_COLOSSEUM_UNDERGROUND} price="€40" />
+            <ActivityCard emoji="🍝" title="Corso Pasta e Tiramisù" description="Impara a cucinare pasta e tiramisù in un ristorante locale vicino al Vaticano." gygUrl={GYG_PASTA_CLASS} price="€55" />
+            <ActivityCard emoji="🚌" title="Bus Hop-on Hop-off Roma" description="Esplora Roma al tuo ritmo con il bus turistico panoramico. Valido fino a 3 giorni." gygUrl={GYG_HOP_ON_BUS} price="€25" />
+          </div>
 
-        <div className="mt-10 sm:mt-14 text-center">
-          <GetYourGuideCTA />
+          <div className="mt-10 sm:mt-14 text-center">
+            <GetYourGuideCTA />
+          </div>
         </div>
       </section>
 
       {/* FAQ — Editorial numbered style */}
-      <section className="section-warm py-16 sm:py-24">
+      <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
           <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-center mb-12 sm:mb-16">Domande Frequenti</h2>
           <div className="flex flex-col border-t border-stone-warm">
