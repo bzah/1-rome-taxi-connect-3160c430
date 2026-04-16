@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
-import { hreflangLinks } from "@/i18n/hreflang";
+import { i18nLinks } from "@/i18n/hreflang";
 
 export const Route = createFileRoute("/prenota")({
   component: PrenotaPage,
   head: () => ({
-    links: hreflangLinks("/prenota"),
+    links: i18nLinks("/prenota", "it"),
     meta: [
       { title: "Prenota Taxi Roma — Come Prenotare un Taxi Online | TaxiFiumicino.com" },
       { name: "description", content: "Come prenotare un taxi a Roma online: transfer privato aeroporto Fiumicino e Ciampino, navetta condivisa, trasferimenti per Napoli e Civitavecchia. Prenotazione facile con cancellazione gratuita, autista con cartello e prezzi garantiti." },
