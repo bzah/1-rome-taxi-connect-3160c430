@@ -35,9 +35,9 @@ export const Route = createFileRoute("/parcheggio-fiumicino")({
             { "@type": "Question", "name": "Conviene prendere un taxi o parcheggiare a Fiumicino?", "acceptedAnswer": { "@type": "Answer", "text": "Per soggiorni brevi (1-3 giorni), il taxi €50 dal centro è più conveniente. Per 7+ giorni, il parcheggio low cost a €5/giorno conviene di più." } }
           ]
         })
-      }
-          discoverJsonLdScript([ROME_TRANSFERS, ROME_HISTORY, ROME_PANORAMIC]),
-    ]
+      },
+      discoverJsonLdScript([ROME_TRANSFERS, ROME_HISTORY, ROME_PANORAMIC]),
+    ],
   }),
 });
 

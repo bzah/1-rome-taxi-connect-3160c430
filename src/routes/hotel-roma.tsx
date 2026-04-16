@@ -40,9 +40,9 @@ export const Route = createFileRoute("/hotel-roma")({
             { "@type": "Question", "name": "Quali sono i migliori hotel vicino al Colosseo?", "acceptedAnswer": { "@type": "Answer", "text": "I migliori hotel vicino al Colosseo includono: Palazzo Manfredi (vista diretta sul Colosseo), Hotel Capo d'Africa (4 stelle, ottimo rapporto qualità-prezzo), The Inn at the Roman Forum (boutique di charme). La zona Celio-Monti offre le migliori opzioni." } }
           ]
         })
-      }
-          discoverJsonLdScript([ROME_ATTRACTIONS, ROME_FOOD, ROME_NIGHTLIFE]),
-    ]
+      },
+      discoverJsonLdScript([ROME_ATTRACTIONS, ROME_FOOD, ROME_NIGHTLIFE]),
+    ],
   }),
 });
 
