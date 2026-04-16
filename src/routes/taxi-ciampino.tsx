@@ -8,9 +8,7 @@ import { GYG_ROME_ALL } from "@/lib/gyg-links";
 export const Route = createFileRoute("/taxi-ciampino")({
   component: CiampinoPage,
   head: () => ({
-    links: i18nLinks("/taxi-ciampino", "it"
-    scripts: [discoverJsonLdScript([ROME_TRANSFERS, ROME_TOURS, ROME_FOOD])],
-  ),
+    links: i18nLinks("/taxi-ciampino", "it"),
     meta: [
       { title: "Taxi Roma Ciampino — Transfer Aeroporto, Tariffa Fissa €31 | TaxiFiumicino.com" },
       { name: "description", content: "Taxi dall'aeroporto di Ciampino a Roma centro 2026: tariffa fissa €31, durata 20-40 min, come prenotare, postazione taxi al terminal, bus navetta e transfer privati. Guida completa con prezzi, consigli e alternative economiche." },
@@ -43,6 +41,7 @@ export const Route = createFileRoute("/taxi-ciampino")({
           ]
         }),
       },
+          discoverJsonLdScript([ROME_TRANSFERS, ROME_TOURS, ROME_FOOD]),
     ],
   }),
 });
