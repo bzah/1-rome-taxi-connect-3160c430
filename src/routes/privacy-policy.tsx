@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { i18nLinks } from "@/i18n/hreflang";
 
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
+    links: i18nLinks("/privacy-policy", "it"),
     meta: [
       { title: "Privacy Policy — TaxiFiumicino.com | Protezione Dati GDPR" },
       { name: "description", content: "Informativa sulla privacy di TaxiFiumicino.com conforme al GDPR: come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali. Cookie, analytics, diritti dell'utente e modalità di contatto per la cancellazione dei dati." },

@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { i18nLinks } from "@/i18n/hreflang";
 
 export const Route = createFileRoute("/cookie-policy")({
   head: () => ({
+    links: i18nLinks("/cookie-policy", "it"),
     meta: [
       { title: "Cookie Policy — TaxiFiumicino.com | Gestione Cookie e Tracciamento" },
       { name: "description", content: "Informativa sui cookie di TaxiFiumicino.com: cookie tecnici, analitici e di terze parti (Google Analytics, GetYourGuide). Come disabilitarli, gestire le preferenze e i tuoi diritti secondo il GDPR." },

@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { i18nLinks } from "@/i18n/hreflang";
 
 export const Route = createFileRoute("/terms-of-service")({
   head: () => ({
+    links: i18nLinks("/terms-of-service", "it"),
     meta: [
       { title: "Termini di Servizio — TaxiFiumicino.com | Condizioni d'Uso" },
       { name: "description", content: "Termini e condizioni d'uso di TaxiFiumicino.com: regole per l'utilizzo del portale informativo taxi Roma, responsabilità, link affiliati GetYourGuide, proprietà intellettuale e limitazioni di responsabilità." },
