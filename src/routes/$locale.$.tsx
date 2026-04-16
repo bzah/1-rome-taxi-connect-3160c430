@@ -386,9 +386,9 @@ function NumeriPage({ t, locale }: { t: any; locale: string }) {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.affiliateTitle}</h2>
         <p className="text-muted-foreground mb-8">{p.affiliateSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private transfer from Fiumicino airport." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini station." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private transfer from Ciampino airport." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🏛️" title="Colosseum, Forum & Palatine Tour" description="Skip-the-line guided tour of the Colosseum, Roman Forum and Palatine Hill." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🏟️" title="Vatican Museums & Sistine Chapel" description="Skip-the-line guided tour of Vatican Museums, Sistine Chapel & Basilica." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€30" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="⚔️" title="Colosseum Arena Floor Tour" description="Skip-the-line tour of the Colosseum arena floor, Palatine Hill and Forum." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€40" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
         </div>
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
       </section>
@@ -453,9 +453,9 @@ function AppTaxiPage({ t, locale }: { t: any; locale: string }) {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.affiliateTitle}</h2>
         <p className="text-muted-foreground mb-8">{p.affiliateSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🏛️" title="Colosseum & Roman Forum Tour" description="Skip-the-line guided tour of the Colosseum and Roman Forum." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🏟️" title="Vatican Museums & Sistine Chapel" description="Skip-the-line guided tour of Vatican Museums and Sistine Chapel." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€30" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="⚔️" title="Colosseum Arena Floor Tour" description="Guided tour of the Colosseum arena floor and ancient Rome." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€40" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
         </div>
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
       </section>
@@ -490,9 +490,9 @@ function HotelRomaPage({ t, locale }: { t: any; locale: string }) {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.transferTitle}</h2>
         <p className="text-muted-foreground mb-8">{p.transferSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer to your hotel." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🏛️" title="Colosseum, Forum & Palatine Tour" description="Skip-the-line guided tour. 2.5 hours, small group." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="⚔️" title="Colosseum Arena Floor Tour" description="Guided tour of the Colosseum arena floor and ancient Rome." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€40" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🏟️" title="Vatican Museums & Sistine Chapel" description="Skip-the-line guided tour of Vatican Museums and Sistine Chapel." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€30" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
         </div>
         {p.faqs && (
           <div className="mt-16">
@@ -545,9 +545,9 @@ function ParcheggioPage({ t, locale }: { t: any; locale: string }) {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.transferTitle}</h2>
         <p className="text-muted-foreground mb-8">{p.transferSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🏛️" title="Colosseum & Roman Forum Tour" description="Skip-the-line guided tour of the Colosseum and Roman Forum." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="⚔️" title="Colosseum Arena Floor Tour" description="Guided tour of the Colosseum arena floor and ancient Rome." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€40" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🏟️" title="Vatican Museums & Sistine Chapel" description="Skip-the-line guided tour of Vatican Museums and Sistine Chapel." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€30" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
         </div>
         {p.faqs && (
           <div className="mt-16">
@@ -631,9 +631,9 @@ function AeroportiPage({ t, locale }: { t: any; locale: string }) {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.transferTitle}</h2>
         <p className="text-muted-foreground mb-8">{p.transferSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🏛️" title="Colosseum & Roman Forum Tour" description="Skip-the-line guided tour of the Colosseum and Roman Forum." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="⚔️" title="Colosseum Arena Floor Tour" description="Guided tour of the Colosseum arena floor and ancient Rome." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€40" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🏟️" title="Vatican Museums & Sistine Chapel" description="Skip-the-line guided tour of Vatican Museums and Sistine Chapel." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€30" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
         </div>
 
         {p.faqs && (
@@ -700,9 +700,9 @@ function HotelAeroportoPage({ t, locale }: { t: any; locale: string }) {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.transferTitle}</h2>
         <p className="text-muted-foreground mb-8">{p.transferSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer to your hotel." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🏛️" title="Colosseum, Forum & Palatine Tour" description="Skip-the-line guided tour. 2.5 hours, small group." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="⚔️" title="Colosseum Arena Floor Tour" description="Guided tour of the Colosseum arena floor and ancient Rome." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€40" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🏟️" title="Vatican Museums & Sistine Chapel" description="Skip-the-line guided tour of Vatican Museums and Sistine Chapel." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€30" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
         </div>
 
         {p.faqs && (
@@ -773,9 +773,9 @@ function ComeChiamarePage({ t, locale }: { t: any; locale: string }) {
         <h2 className="font-display text-3xl font-bold mt-16 mb-4">{p.transferTitle}</h2>
         <p className="text-muted-foreground mb-8">{p.transferSubtitle}</p>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <ActivityCard emoji="🚗" title="Transfer Fiumicino" description="Private airport transfer." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€45" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚕" title="Transfer Ciampino" description="Private Ciampino transfer." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
-          <ActivityCard emoji="🚐" title="Shuttle Fiumicino" description="Shared shuttle to Termini." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€7" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🏛️" title="Colosseum & Roman Forum Tour" description="Skip-the-line guided tour of the Colosseum and Roman Forum." gygUrl="https://www.getyourguide.com/rome-l33/colosseum-roman-forum-palatine-hill-guided-tour-t195566/" price="€35" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="⚔️" title="Colosseum Arena Floor Tour" description="Guided tour of the Colosseum arena floor and ancient Rome." gygUrl="https://www.getyourguide.com/rome-l33/rome-colosseum-arena-floor-palatine-forum-guided-tour-t217332/" price="€40" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
+          <ActivityCard emoji="🏟️" title="Vatican Museums & Sistine Chapel" description="Skip-the-line guided tour of Vatican Museums and Sistine Chapel." gygUrl="https://www.getyourguide.com/rome-l33/rome-vatican-museums-sistine-chapel-basilica-tour-t429439/" price="€30" pricePrefix={t.common.cta.pricePrefix} bookLabel={t.common.cta.bookNow} />
         </div>
         <div className="mt-12 text-center"><GetYourGuideCTA text={t.common.cta.viewAll} /></div>
       </section>
