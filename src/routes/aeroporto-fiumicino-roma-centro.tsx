@@ -9,7 +9,9 @@ import fiumicinoImg from "@/assets/fiumicino-airport.jpg";
 export const Route = createFileRoute("/aeroporto-fiumicino-roma-centro")({
   component: FiumicinoCentroPage,
   head: () => ({
-    links: i18nLinks("/aeroporto-fiumicino-roma-centro", "it"),
+    links: i18nLinks("/aeroporto-fiumicino-roma-centro", "it"
+    scripts: [discoverJsonLdScript([ROME_TRANSFERS, ROME_ATTRACTIONS, ROME_HISTORY])],
+  ),
     meta: [
       { title: "Da Aeroporto Fiumicino a Roma Centro — Taxi, Treno e Transfer 2026" },
       { name: "description", content: "Come arrivare dall'aeroporto di Fiumicino a Roma centro nel 2026: taxi tariffa fissa €50, Leonardo Express €14 (32 min), treno regionale FL1 €8, bus navetta €5-7 e transfer privati da €45. Confronto completo con prezzi, tempi e consigli." },
