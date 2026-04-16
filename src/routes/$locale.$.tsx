@@ -1,5 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { getTranslations } from "@/i18n";
+import { canonicalLink, hreflangLinks } from "@/i18n/hreflang";
 import { HeroSection } from "@/components/HeroSection";
 import { ActivityCard, GetYourGuideCTA } from "@/components/GetYourGuideWidget";
 import { useState } from "react";
@@ -16,6 +17,10 @@ export const Route = createFileRoute("/$locale/$")({
     const p = t?.pages?.[slug];
     if (!p?.meta) return {};
     return {
+      links: [
+        canonicalLink(`/${slug}`, params.locale as any),
+        ...hreflangLinks(`/${slug}`),
+      ],
       meta: [
         { title: p.meta.title },
         { name: "description", content: p.meta.description },
