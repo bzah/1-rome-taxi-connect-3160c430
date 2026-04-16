@@ -23,12 +23,12 @@ const infoDropdownItems = [
 
 const gygLinks = [
   {
-    href: "https://www.getyourguide.com/rome-l31/?partner_id=0IQTGX8&utm_medium=online_publisher",
+    href: "https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher",
     label: "Cose da Fare a Roma",
     icon: "🏛️",
   },
   {
-    href: "https://www.getyourguide.com/rome-l31/activities/?partner_id=0IQTGX8&utm_medium=online_publisher",
+    href: "https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher",
     label: "Attività a Roma",
     icon: "🎭",
   },
@@ -278,7 +278,7 @@ export function Header() {
             {/* CTA */}
             <div className="pt-4 mt-4 border-t border-stone-warm">
               <a
-                href="https://www.getyourguide.com/rome-l33/airport-transfer-c100/?partner_id=0IQTGX8&utm_medium=online_publisher"
+                href="https://www.getyourguide.com/rome-l33/?partner_id=0IQTGX8&utm_medium=online_publisher"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full rounded-lg gold-gradient px-6 py-3.5 text-sm font-semibold text-primary-foreground amber-glow active:scale-[0.98] transition-transform"
