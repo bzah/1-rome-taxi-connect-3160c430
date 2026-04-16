@@ -87,7 +87,7 @@ export function Header() {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
-  const isActive = (path: string) => location.pathname === path;
+  
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-stone-warm/60">
@@ -274,7 +274,7 @@ export function Header() {
 
             {/* Language */}
             <div className="pt-4 mt-4 border-t border-stone-warm">
-              <p className="px-4 pb-2 text-xs font-semibold text-muted-foreground uppercase tracking-widest">🌐 Language</p>
+              <p className="px-4 pb-2 text-xs font-semibold text-muted-foreground uppercase tracking-widest">{langHeading}</p>
               <div className="flex flex-wrap gap-2 px-4">
                 {(["it", ...foreignLocales] as Locale[]).map((loc) => (
                   <a
@@ -303,7 +303,7 @@ export function Header() {
                 className="flex items-center justify-center gap-2 w-full rounded-lg gold-gradient px-6 py-3.5 text-sm font-semibold text-primary-foreground amber-glow active:scale-[0.98] transition-transform"
                 onClick={() => setMenuOpen(false)}
               >
-                Prenota un Transfer
+                {ctaBook}
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
